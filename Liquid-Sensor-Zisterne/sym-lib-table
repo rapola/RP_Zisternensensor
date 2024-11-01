@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Liquid-Sensor-Zisterne-rescue")(type "KiCad")(uri "${KIPRJMOD}/Liquid-Sensor-Zisterne-rescue.kicad_sym")(options "")(descr ""))
+)

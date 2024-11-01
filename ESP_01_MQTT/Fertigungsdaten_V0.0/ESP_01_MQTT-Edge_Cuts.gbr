@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.1*%
+%TF.CreationDate,2024-10-28T19:37:42+01:00*%
+%TF.ProjectId,ESP_01_MQTT,4553505f-3031-45f4-9d51-54542e6b6963,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.1) date 2024-10-28 19:37:42*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X114026000Y-44627000D02*
+X158730000Y-44627000D01*
+X158730000Y-137591000D01*
+X114026000Y-137591000D01*
+X114026000Y-44627000D01*
+M02*
