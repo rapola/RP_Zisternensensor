@@ -3,6 +3,7 @@
 
 /*
 Software für ESP-01 Füllstand Zisterne zu MQTT
+Arduino 1.8.19
 
 https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMOSminiD1_x92.V1/Software/WemosD1min-U1_Hackschn_V0.2/WemosD1min-U1_Hackschn_V0.2.ino
 
