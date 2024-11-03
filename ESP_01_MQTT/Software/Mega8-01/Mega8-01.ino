@@ -41,9 +41,9 @@ void setup() {
   Serial.begin(115200);
   //---------------------------------------------------------------------
   // setup callbacks for serial commands
-  sdata.addCommand("#SW", SEND_SWVERSION);          			//send software version
-  sdata.addCommand("GETF", GET_FREQ);                     //set bit for getting and then sending ICP1_cnt
-  sdata.setDefaultHandler(unrecognized);            			//handling of not matching commands, send what?
+  sdata.addCommand("#SW", SEND_SWVERSION);          			    //send software version
+  sdata.addCommand("GETF", GET_FREQ);                         //set bit for getting and then sending ICP1_cnt
+  sdata.setDefaultHandler(unrecognized);            			    //handling of not matching commands, send what?
   Serial.printf("Software Version: %s \r\n", SW_Vers);
  //-------------------------------------------------------
   // Pins
@@ -51,7 +51,7 @@ void setup() {
   pinMode(AVR_ENA_Sen12V, OUTPUT);
   //-------------------------------------------------------
   // Timer1
-  noInterrupts();                                   //Timer 1 off
+  noInterrupts();                                             //Timer 1 off
   TCCR1A = 0;
   TCCR1B = 0;
   interrupts();
