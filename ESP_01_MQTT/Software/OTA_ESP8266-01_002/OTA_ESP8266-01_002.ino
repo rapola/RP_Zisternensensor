@@ -7,7 +7,13 @@ Arduino 1.8.19
 
 https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMOSminiD1_x92.V1/Software/WemosD1min-U1_Hackschn_V0.2/WemosD1min-U1_Hackschn_V0.2.ino
 
+- publish Softwarversion every 2s
+- listens to command "zisterne/cmd/get_freq", if payload "true" is received, send serial response to sensor (mega8) and wait for answer
+- Serial answer from mega8 will be "ICP1val: xx123xx" (value or timeout message)
+- publish "ICP1val:" on MQTT, topic "zisterne/freq"
 
+todo 
+zisterne umbenennen, hier veröffentlicht schon node red!!!
 */
 
 #include <ESP8266WiFi.h>
@@ -20,7 +26,13 @@ https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMO
 
 #include "src/MQTT_RP/MQTT.h"
 
+//-------------------------------------------------------
+//global variables / constants
+char SWVERSION[] = "OTA_ESP8266-01_002";                  		//current software version 
+const char* ssid = "KellerHorst";
+const char* password = "BIRP7913";
 
+//const uint8_t AVR_ENA_Serial        = 0;                     //GPIO0; set low to enable Serial Data connection
 
 
 //---------------------------------------------------------------------
@@ -37,15 +49,14 @@ const char* my_mqtt_username = "zisterne";                		//configured user in
 const char* my_mqtt_password = "zisterne";                		//configured password in raspi mosquitto credentials
 const int mqtt_alive_time = 2;
 
-const char* topic_lastWill      = "trock/offline";        		//publish tested: trock/offline Trockner1
-//const char* topic_master_hb     = "node-red/C0A80103/hb"; //receive, to get to know if server and node-red is running
-const char* topic_sw            = "zisterne/sw";          		//publish every 2s the Software Version
-const char* topic_freq          = "zisterne/freq";        		//publish frequenz füllstand
-const char* topic_err           = "zisterne/err";         		//publish error, payload is error reason
-
+const char* topic_lastWill      = "zisterne/offline";         //publish tested
+const char* topic_swOwn         = "zisterne/swown";           //publish every 2s the Software Version
+const char* topic_freq          = "zisterne/freq";        		//publish frequenz füllstand oder error
+const char* topic_swOf_Mega8    = "zisterne/swsen";           //publish Software Version of Sensor (mega8)
 const char* topic_cmd_get_freq  = "zisterne/cmd/get_freq";  	//subscribe to get freq
+const char* topic_cmd_get_senSW = "zisterne/cmd/senSW";       //subscribe to get softwareversion of mega8
 
-String cmd_true = "on";											//if command is received, do something
+String cmd_true = "true";											                //if command is received, do something
 
 /*
 anpassen
@@ -58,11 +69,7 @@ uint32_t mqtt_rcv_timeout = 3000;                         //alles aus, wenn dies
 uint32_t mqtt_rcv_lastms = 0;
 */
 
-char SWVERSION[] = "OTA_ESP8266-01_002";                  		//current software version 
-const char* ssid = "KellerHorst";
-const char* password = "BIRP7913";
 
-//const char* SW = "Software V0.2.2";
 
 //---------------------------------------------------------------------
 // webserver
@@ -75,10 +82,14 @@ void setup(void) {
   Serial.begin(115200);
   //---------------------------------------------------------------------
   // setup callbacks for serial commands
-  sdata.addCommand("#SW", SEND_SWVERSION);          			//send software version
-  sdata.setDefaultHandler(unrecognized);            			//handling of not matching commands, send what?
+  sdata.addCommand("#SW", SEND_SWVERSION);          			    //send software version
+  sdata.addCommand("ICP1val:", READ_Serial_ICP1);          	  //handle incomeing ICP1val
+  sdata.addCommand("SW_Vers:", READ_Serial_SW);          		//handle incomeing Softwareversion
+  sdata.setDefaultHandler(unrecognized);            			    //handling of not matching commands, send what?
   delay(10);
-  
+
+  //---------------------------------------------------------------------
+  // setup wifi
   IPAddress ip(192, 168, 0, 35);
   IPAddress dns(192, 168, 0, 1);
   IPAddress gateway(192, 168, 0, 1);
@@ -100,6 +111,8 @@ void setup(void) {
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 
+  //---------------------------------------------------------------------
+  // setup OTA
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
     request->send(200, "text/plain", "Hi! I am ESP8266, by Ralf.");
   });
@@ -108,6 +121,8 @@ void setup(void) {
   server.begin();
   Serial.println("HTTP server started");
   
+  //---------------------------------------------------------------------
+  // setup MQTT  
   client.begin(ip_of_mqtt_broker, net);
   client.onMessage(mqtt_messageReceived);
   mqtt_connect();
@@ -115,35 +130,64 @@ void setup(void) {
 
 //####################################################################
 void loop(void) {
+  //---------------------------------------------------------------------
   //call frequently to handle serial data communication
   sdata.readSerial(); 
-  client.loop();
+  client.loop();    //MQTT
   delay(10);  // <- fixes some issues with WiFi stability
-  static uint32_t last_ms;
   
+  //---------------------------------------------------------------------
+  // MQTT publish softwareversion
+  static uint32_t last_ms;
   if(millis() - last_ms > 2000){
     last_ms = millis();
-    MQTTpub_topic(topic_sw, SWVERSION);
+    MQTTpub_topic(topic_swOwn, SWVERSION);
   }
+  
+  
+  
+  
 }
 
 
-//####################################################################
+//### Serial #########################################################
 //--------------------------------------------------------------------
 //send software version
 void SEND_SWVERSION() {
-  Serial.print("SW: ");
-  Serial.println (SWVERSION);
+  Serial.printf ("SW: %s \r\n", SWVERSION);
 }
+
+//--------------------------------------------------------------------
+//handle incomeing ICP1val, publish MQTT
+void READ_Serial_ICP1(){
+  char *arg;
+  arg = sdata.next();                                         // Get the next argument from the SerialCommand object buffer
+  if (arg != NULL) {                                          // As long as it existed, take it
+    //Serial.printf("165 %s \r\n", arg);
+    MQTTpub_topic(topic_freq, arg);                           // MQTT publish data
+  }
+}
+
+//--------------------------------------------------------------------
+//handle incomeing softwareversion, publish MQTT
+void READ_Serial_SW(){
+  char *arg;
+  arg = sdata.next();                                         // Get the next argument from the SerialCommand object buffer
+  if (arg != NULL) {                                          // As long as it existed, take it
+    //Serial.printf("176 %s \r\n", arg);
+    MQTTpub_topic(topic_swOf_Mega8, arg);                     // MQTT publish data
+  } 
+}
+
 
 //-------------------------------------------------------------------
 // non usable data received
 void unrecognized(const char *command) {
-  Serial.println("What?");
+  //Serial.println("What?");                                  //debug only
 }
 
 
-//####################################################################
+//### MQTT ###########################################################
 //--------------------------------------------------------------------
 //MQTT conntect, internal timeout in lib is 5s
 void mqtt_connect(){
@@ -152,18 +196,15 @@ void mqtt_connect(){
   client.connect(my_mqtt_clientID, my_mqtt_username, my_mqtt_password);
 
   mqtt_subscribe(topic_cmd_get_freq);
-  //mqtt_subscribe(topic_cmd_out1);
-  //mqtt_subscribe(topic_master_hb);
-  //mqtt_subscribe(topic_cmd_rst);
 }
 
-//-------------------------------------------
+//--------------------------------------------------------------------
 //MQTT subscribe to topic
 void mqtt_subscribe(const char topic[]){
   client.subscribe(topic);
 }
 
-//-------------------------------------------
+//--------------------------------------------------------------------
 //MQTT publish topic
 void MQTTpub_topic(const char topic[], String val){
   client.publish(topic, val);
@@ -172,29 +213,15 @@ void MQTTpub_topic(const char topic[], String val){
 //-------------------------------------------
 //MQTT message empfangen
 void mqtt_messageReceived(String &topic, String &payload){
-  Serial.println("incoming: " + topic + " - " + payload);
-
-  //if(topic == String(topic_master_hb)) mqtt_rcv_lastms = millis();
-
+  //Serial.println("incoming: " + topic + " - " + payload);   //uncomment for debug only!   
   if(topic == String(topic_cmd_get_freq)){
-    Serial.println("line 169");
-	//if(payload == cmd_on) out0.rcv_val = 0;                      //Relais an (ist LOW aktiv)
-    //if(payload == cmd_off) out0.rcv_val = 1;                      //Relais aus (ist LOW aktiv) 
+    if(payload == cmd_true){
+      Serial.printf("GETF\r\n");                              //send serial command to get the value
+    }      
   }
-/*
-  if(topic == String(topic_cmd_out1)){
-    if(payload == cmd_on) out1.rcv_val = 0;                      //Relais an (ist LOW aktiv)
-    if(payload == cmd_off) out1.rcv_val = 1;                      //Relais aus (ist LOW aktiv) 
+  if(topic == String(topic_cmd_get_senSW)){
+    if(payload == cmd_true){
+      Serial.printf("#SW\r\n");                               //send serial command to get the softwareversion
+    }      
   }
-
-  if(topic == String(topic_cmd_rst)){
-    SenLuft.error = 0;
-    SenWasser.error = 0;
-    //PCA_err = 0;
-  }
-*/ 
-  // Note: Do not use the client in the callback to publish, subscribe or
-  // unsubscribe as it may cause deadlocks when other things arrive while
-  // sending and receiving acknowledgments. Instead, change a global variable,
-  // or push to a queue and handle it in the loop after calling `client.loop()`.
 }

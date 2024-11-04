@@ -6,16 +6,20 @@
  * PB0  AVR_ICP1          input from level-sensor
  * PD7  AVR_ENA_Sen12V    output, switch level-sensor on/off
  * 
+ * ToDo
+ * Serial erst einschalten, wenn ESP einen Eingang schaltet, sonst kommt Mist an...????
+ * 
  */
 
 #include "src/RP_Arduino-SerialCommand/SerialCommand.h"	  		//Serial Command
 
 //-------------------------------------------------------
 //global variables / constants
-char SW_Vers[] = "Mega8-01";
+char SW_Vers[] = "Mega8 V0.1";
 
 const uint8_t AVR_ICP1        = 8;                            //PB0;
 const uint8_t AVR_ENA_Sen12V  = 7;                            //PD7;
+//const uint8_t AVR_ENA_Serial  = 3;                            //PD3; GPIO0 from ESP
 
 union number{
   uint32_t val_32;                                            //32 bit val
@@ -71,11 +75,11 @@ void loop() {
     tm.val_32 = 0;                                            //val to zero
     ICP1_cnt = 0;                                       
     digitalWrite(AVR_ENA_Sen12V, HIGH);                       //switch sensor on
-    
+    delay(100);                                               //wait 100mS...
     noInterrupts();                                           //Timer 1 on, input capture Pin PB0 = ICP1 = 8
     TCCR1A = 0;
     TCCR1B = 0;
-    TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/8
+    TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/1
     TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //input capture interrupt, overflow interrupt
     interrupts();
     
@@ -128,7 +132,7 @@ ISR(TIMER1_CAPT_vect){
 //--------------------------------------------------------------------
 //send software version
 void SEND_SWVERSION() {
-  Serial.printf("Software Version: %s \r\n", SW_Vers);
+  Serial.printf("SW_Vers: %s \r\n", SW_Vers);
 }
 
 //--------------------------------------------------------------------
@@ -140,5 +144,6 @@ void GET_FREQ(){
 //-------------------------------------------------------------------
 // non usable data received
 void unrecognized(const char *command) {
-  Serial.printf("What? \r\n");
+  //Serial.printf("What? \r\n");                              //Debug only
+  __asm__("nop\n\t");                                         //Do nothing
 }
