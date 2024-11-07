@@ -5283,6 +5283,16 @@
 		)
 		(uuid "329b61a3-e435-433d-bfc0-7cab6a9c1c74")
 	)
+	(text "Layout LM2596 Modul passt nicht!!"
+		(exclude_from_sim no)
+		(at 80.645 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "60c0bb34-21b2-4fab-b288-a9e0363f1369")
+	)
 	(text "Sensoranschluss"
 		(exclude_from_sim no)
 		(at 96.52 181.61 0)

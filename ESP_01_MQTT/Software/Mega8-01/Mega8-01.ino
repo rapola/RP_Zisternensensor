@@ -19,6 +19,10 @@ char SW_Vers[] = "Mega8 V0.1";
 
 const uint8_t AVR_ICP1        = 8;                            //PB0;
 const uint8_t AVR_ENA_Sen12V  = 7;                            //PD7;
+const uint8_t PC_3            = 17;                           //not used, input pullup
+const uint8_t PC_4            = 18;                           //not used, input pullup
+const uint8_t PC_5            = 19;                           //not used, input pullup
+
 //const uint8_t AVR_ENA_Serial  = 3;                            //PD3; GPIO0 from ESP
 
 union number{
@@ -53,6 +57,9 @@ void setup() {
   // Pins
   pinMode(AVR_ICP1, INPUT);
   pinMode(AVR_ENA_Sen12V, OUTPUT);
+  pinMode(PC_3, INPUT_PULLUP);
+  pinMode(PC_4, INPUT_PULLUP);
+  pinMode(PC_5, INPUT_PULLUP);
   //-------------------------------------------------------
   // Timer1
   noInterrupts();                                             //Timer 1 off
