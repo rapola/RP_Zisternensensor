@@ -14,6 +14,11 @@ https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMO
 
 todo 
 zisterne umbenennen, hier veröffentlicht schon node red!!!
+
+Die Umwandlung der beiden Eingangsstrings in integer funktioniert nicht, verursacht absturz wenn ein wert Null ist!!
+sowohl atoi als auch strtoul
+
+
 */
 
 #include <ESP8266WiFi.h>
@@ -28,11 +33,11 @@ zisterne umbenennen, hier veröffentlicht schon node red!!!
 
 //-------------------------------------------------------
 //global variables / constants
-char SWVERSION[] = "OTA_ESP8266-01_002";                  		//current software version 
+char SWVERSION[] = "OTA_ESP8266-V0.4";                  		  //current software version 
 const char* ssid = "KellerHorst";
 const char* password = "BIRP7913";
 
-//const uint8_t AVR_ENA_Serial        = 0;                     //GPIO0; set low to enable Serial Data connection
+const uint8_t Rdy_Pin        = 0;                             //GPIO0; set low to enable Mega8 connection
 
 
 //---------------------------------------------------------------------
@@ -78,13 +83,17 @@ WiFiClient net;
 
 //####################################################################
 void setup(void) {
+  //-------------------------------------------------------
+  // Pins
+  pinMode(Rdy_Pin, OUTPUT);  
   
   Serial.begin(115200);
   //---------------------------------------------------------------------
   // setup callbacks for serial commands
   sdata.addCommand("#SW", SEND_SWVERSION);          			    //send software version
-  sdata.addCommand("ICP1val:", READ_Serial_ICP1);          	  //handle incomeing ICP1val
-  sdata.addCommand("SW_Vers:", READ_Serial_SW);          		//handle incomeing Softwareversion
+  sdata.addCommand("ICP1val:", READ_Serial_ICP1val);          //handle incomeing ICP1 values
+  sdata.addCommand("ICP1err:", READ_Serial_ICP1err);          //handle incomeing ICP1 error
+  sdata.addCommand("SW_Vers:", READ_Serial_SW);          		  //handle incomeing Softwareversion
   sdata.setDefaultHandler(unrecognized);            			    //handling of not matching commands, send what?
   delay(10);
 
@@ -130,6 +139,8 @@ void setup(void) {
 
 //####################################################################
 void loop(void) {
+  digitalWrite(Rdy_Pin, LOW);                                 //Enable Mega8
+  
   //---------------------------------------------------------------------
   //call frequently to handle serial data communication
   sdata.readSerial(); 
@@ -159,11 +170,32 @@ void SEND_SWVERSION() {
 
 //--------------------------------------------------------------------
 //handle incomeing ICP1val, publish MQTT
-void READ_Serial_ICP1(){
+void READ_Serial_ICP1val(){
+  char *arg;
+  uint32_t val;
+  uint32_t h_val = 0;
+  uint32_t l_val = 0;
+  arg = sdata.next();                                         // Get the next argument from the SerialCommand object buffer
+  if (arg != NULL) {                                          // As long as it existed, take it
+    //h_val = atoi(arg);
+    h_val = strtoul (arg, NULL, 0);
+    Serial.printf("177 %si \r\n", h_val);
+  }
+  if (arg != NULL) {                                          // As long as it existed, take it
+    //l_val = atoi(arg);
+    l_val = strtoul (arg, NULL, 0);
+    val = (h_val << 16) + l_val;
+    String stringVal = String(val);
+    MQTTpub_topic(topic_freq, stringVal);                           // MQTT publish data
+  }
+}
+
+//--------------------------------------------------------------------
+//handle incomeing ICP1err, publish MQTT
+void READ_Serial_ICP1err(){
   char *arg;
   arg = sdata.next();                                         // Get the next argument from the SerialCommand object buffer
   if (arg != NULL) {                                          // As long as it existed, take it
-    //Serial.printf("165 %s \r\n", arg);
     MQTTpub_topic(topic_freq, arg);                           // MQTT publish data
   }
 }
@@ -196,6 +228,7 @@ void mqtt_connect(){
   client.connect(my_mqtt_clientID, my_mqtt_username, my_mqtt_password);
 
   mqtt_subscribe(topic_cmd_get_freq);
+  mqtt_subscribe(topic_cmd_get_senSW);
 }
 
 //--------------------------------------------------------------------
@@ -219,7 +252,7 @@ void mqtt_messageReceived(String &topic, String &payload){
       Serial.printf("GETF\r\n");                              //send serial command to get the value
     }      
   }
-  if(topic == String(topic_cmd_get_senSW)){
+  else if(topic == String(topic_cmd_get_senSW)){
     if(payload == cmd_true){
       Serial.printf("#SW\r\n");                               //send serial command to get the softwareversion
     }      

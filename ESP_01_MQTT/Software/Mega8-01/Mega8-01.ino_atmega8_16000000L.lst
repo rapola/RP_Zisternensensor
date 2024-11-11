@@ -1,0 +1,3807 @@
+
+C:\Users\ralfp\AppData\Local\Temp\arduino_build_457621/Mega8-01.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+       0:	40 c0       	rjmp	.+128    	; 0x82 <__ctors_end>
+       2:	64 c0       	rjmp	.+200    	; 0xcc <__bad_interrupt>
+       4:	63 c0       	rjmp	.+198    	; 0xcc <__bad_interrupt>
+       6:	62 c0       	rjmp	.+196    	; 0xcc <__bad_interrupt>
+       8:	61 c0       	rjmp	.+194    	; 0xcc <__bad_interrupt>
+       a:	4d c3       	rjmp	.+1690   	; 0x6a6 <__vector_5>
+       c:	5f c0       	rjmp	.+190    	; 0xcc <__bad_interrupt>
+       e:	5e c0       	rjmp	.+188    	; 0xcc <__bad_interrupt>
+      10:	77 c3       	rjmp	.+1774   	; 0x700 <__vector_8>
+      12:	ff c2       	rjmp	.+1534   	; 0x612 <__vector_9>
+      14:	5b c0       	rjmp	.+182    	; 0xcc <__bad_interrupt>
+      16:	cb c2       	rjmp	.+1430   	; 0x5ae <__vector_11>
+      18:	a5 c2       	rjmp	.+1354   	; 0x564 <__vector_12>
+      1a:	58 c0       	rjmp	.+176    	; 0xcc <__bad_interrupt>
+      1c:	57 c0       	rjmp	.+174    	; 0xcc <__bad_interrupt>
+      1e:	56 c0       	rjmp	.+172    	; 0xcc <__bad_interrupt>
+      20:	55 c0       	rjmp	.+170    	; 0xcc <__bad_interrupt>
+      22:	54 c0       	rjmp	.+168    	; 0xcc <__bad_interrupt>
+      24:	53 c0       	rjmp	.+166    	; 0xcc <__bad_interrupt>
+
+00000026 <__trampolines_end>:
+__trampolines_start():
+      26:	00 00       	nop
+      28:	00 00       	nop
+      2a:	37 00       	.word	0x0037	; ????
+      2c:	34 00       	.word	0x0034	; ????
+      2e:	31 00       	.word	0x0031	; ????
+
+00000030 <port_to_output_PGM>:
+      30:	00 00 00 00 38 00 35 00 32 00                       ....8.5.2.
+
+0000003a <digital_pin_to_port_PGM>:
+      3a:	04 04 04 04 04 04 04 04 02 02 02 02 02 02 03 03     ................
+      4a:	03 03 03 03 02 02 03                                .......
+
+00000051 <digital_pin_to_bit_mask_PGM>:
+      51:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 01 02     ..... @...... ..
+      61:	04 08 10 20 40 80 40                                ... @.@
+
+00000068 <digital_pin_to_timer_PGM>:
+	...
+      70:	00 04 05 07 00 00 00 00 00 00 00 00 00 00 00 00     ................
+
+00000080 <__ctors_start>:
+__ctors_start():
+      80:	9f 03       	fmulsu	r17, r23
+
+00000082 <__ctors_end>:
+__dtors_end():
+      82:	11 24       	eor	r1, r1
+      84:	1f be       	out	0x3f, r1	; 63
+      86:	cf e5       	ldi	r28, 0x5F	; 95
+      88:	d4 e0       	ldi	r29, 0x04	; 4
+      8a:	de bf       	out	0x3e, r29	; 62
+      8c:	cd bf       	out	0x3d, r28	; 61
+
+0000008e <__do_copy_data>:
+__do_copy_data():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2409
+      8e:	10 e0       	ldi	r17, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+      90:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+      92:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+      94:	ec e8       	ldi	r30, 0x8C	; 140
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+      96:	f4 e1       	ldi	r31, 0x14	; 20
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+      98:	02 c0       	rjmp	.+4      	; 0x9e <__do_copy_data+0x10>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2417
+      9a:	05 90       	lpm	r0, Z+
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2422
+      9c:	0d 92       	st	X+, r0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2424
+      9e:	aa 3d       	cpi	r26, 0xDA	; 218
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+      a0:	b1 07       	cpc	r27, r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+      a2:	d9 f7       	brne	.-10     	; 0x9a <__do_copy_data+0xc>
+
+000000a4 <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+      a4:	21 e0       	ldi	r18, 0x01	; 1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+      a6:	aa ed       	ldi	r26, 0xDA	; 218
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+      a8:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+      aa:	01 c0       	rjmp	.+2      	; 0xae <.do_clear_bss_start>
+
+000000ac <.do_clear_bss_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+      ac:	1d 92       	st	X+, r1
+
+000000ae <.do_clear_bss_start>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+      ae:	ab 3d       	cpi	r26, 0xDB	; 219
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+      b0:	b2 07       	cpc	r27, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+      b2:	e1 f7       	brne	.-8      	; 0xac <.do_clear_bss_loop>
+
+000000b4 <__do_global_ctors>:
+__do_global_ctors():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
+      b4:	10 e0       	ldi	r17, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2467
+      b6:	c1 e4       	ldi	r28, 0x41	; 65
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2468
+      b8:	d0 e0       	ldi	r29, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2472
+      ba:	03 c0       	rjmp	.+6      	; 0xc2 <__do_global_ctors+0xe>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2474
+      bc:	21 97       	sbiw	r28, 0x01	; 1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2480
+      be:	fe 01       	movw	r30, r28
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2481
+      c0:	ca d7       	rcall	.+3988   	; 0x1056 <__tablejump2__>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2483
+      c2:	c0 34       	cpi	r28, 0x40	; 64
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2484
+      c4:	d1 07       	cpc	r29, r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2489
+      c6:	d1 f7       	brne	.-12     	; 0xbc <__do_global_ctors+0x8>
+      c8:	7e d3       	rcall	.+1788   	; 0x7c6 <main>
+      ca:	de c9       	rjmp	.-3140   	; 0xfffff488 <__eeprom_end+0xff7ef488>
+
+000000cc <__bad_interrupt>:
+__vector_1():
+      cc:	99 cf       	rjmp	.-206    	; 0x0 <__vectors>
+
+000000ce <printf_putchar(char, __file*)>:
+printf_putchar():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:204
+}
+
+// Custom implementation of printf borrowed from the teensy core files
+static int16_t printf_putchar(char c, FILE *fp)
+{
+  ((class Print *)(fdev_get_udata(fp)))->write((uint8_t)c);
+      ce:	fb 01       	movw	r30, r22
+      d0:	a4 85       	ldd	r26, Z+12	; 0x0c
+      d2:	b5 85       	ldd	r27, Z+13	; 0x0d
+      d4:	ed 91       	ld	r30, X+
+      d6:	fc 91       	ld	r31, X
+      d8:	11 97       	sbiw	r26, 0x01	; 1
+      da:	01 90       	ld	r0, Z+
+      dc:	f0 81       	ld	r31, Z
+      de:	e0 2d       	mov	r30, r0
+      e0:	68 2f       	mov	r22, r24
+      e2:	cd 01       	movw	r24, r26
+      e4:	09 95       	icall
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:206
+  return 0;
+}
+      e6:	90 e0       	ldi	r25, 0x00	; 0
+      e8:	80 e0       	ldi	r24, 0x00	; 0
+      ea:	08 95       	ret
+
+000000ec <digitalWrite.constprop.9>:
+digitalWrite():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:189
+  }
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+  uint8_t timer = digitalPinToTimer(pin);
+      ec:	ef e6       	ldi	r30, 0x6F	; 111
+      ee:	f0 e0       	ldi	r31, 0x00	; 0
+      f0:	24 91       	lpm	r18, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:190
+  uint8_t bit = digitalPinToBitMask(pin);
+      f2:	e8 e5       	ldi	r30, 0x58	; 88
+      f4:	f0 e0       	ldi	r31, 0x00	; 0
+      f6:	94 91       	lpm	r25, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:191
+  uint8_t port = digitalPinToPort(pin);
+      f8:	e1 e4       	ldi	r30, 0x41	; 65
+      fa:	f0 e0       	ldi	r31, 0x00	; 0
+      fc:	e4 91       	lpm	r30, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:194
+  volatile uint8_t *out;
+
+  if (port == NOT_A_PIN) return;
+      fe:	ee 23       	and	r30, r30
+     100:	e1 f0       	breq	.+56     	; 0x13a <digitalWrite.constprop.9+0x4e>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:198
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+     102:	22 23       	and	r18, r18
+     104:	49 f0       	breq	.+18     	; 0x118 <digitalWrite.constprop.9+0x2c>
+turnOffPWM():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:77
+//
+//static inline void turnOffPWM(uint8_t timer) __attribute__ ((always_inline));
+//static inline void turnOffPWM(uint8_t timer)
+static void turnOffPWM(uint8_t timer)
+{
+  switch (timer)
+     106:	25 30       	cpi	r18, 0x05	; 5
+     108:	c9 f0       	breq	.+50     	; 0x13c <digitalWrite.constprop.9+0x50>
+     10a:	27 30       	cpi	r18, 0x07	; 7
+     10c:	d1 f0       	breq	.+52     	; 0x142 <digitalWrite.constprop.9+0x56>
+     10e:	24 30       	cpi	r18, 0x04	; 4
+     110:	19 f4       	brne	.+6      	; 0x118 <digitalWrite.constprop.9+0x2c>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:82
+  {
+    // Timer1
+    #if defined(TCCR1A) && defined(COM1A1)
+      case TIMER1A:
+        TCCR1A &= ~_BV(COM1A1);
+     112:	2f b5       	in	r18, 0x2f	; 47
+     114:	2f 77       	andi	r18, 0x7F	; 127
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:87
+        break;
+    #endif
+    #if defined(TCCR1A) && defined(COM1B1)
+      case TIMER1B:
+        TCCR1A &= ~_BV(COM1B1);
+     116:	2f bd       	out	0x2f, r18	; 47
+digitalWrite():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:200
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+  out = portOutputRegister(port);
+     118:	f0 e0       	ldi	r31, 0x00	; 0
+     11a:	ee 0f       	add	r30, r30
+     11c:	ff 1f       	adc	r31, r31
+     11e:	e0 5d       	subi	r30, 0xD0	; 208
+     120:	ff 4f       	sbci	r31, 0xFF	; 255
+     122:	a5 91       	lpm	r26, Z+
+     124:	b4 91       	lpm	r27, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:202
+
+  uint8_t oldSREG = SREG;
+     126:	2f b7       	in	r18, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:203
+  cli();
+     128:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:205
+
+  if (val == LOW) {
+     12a:	81 11       	cpse	r24, r1
+     12c:	0e c0       	rjmp	.+28     	; 0x14a <digitalWrite.constprop.9+0x5e>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:206
+    *out &= ~bit;
+     12e:	8c 91       	ld	r24, X
+     130:	e9 2f       	mov	r30, r25
+     132:	e0 95       	com	r30
+     134:	e8 23       	and	r30, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:208
+  } else {
+    *out |= bit;
+     136:	ec 93       	st	X, r30
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:211
+  }
+
+  SREG = oldSREG;
+     138:	2f bf       	out	0x3f, r18	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:212
+}
+     13a:	08 95       	ret
+turnOffPWM():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:87
+        TCCR1A &= ~_BV(COM1A1);
+        break;
+    #endif
+    #if defined(TCCR1A) && defined(COM1B1)
+      case TIMER1B:
+        TCCR1A &= ~_BV(COM1B1);
+     13c:	2f b5       	in	r18, 0x2f	; 47
+     13e:	2f 7d       	andi	r18, 0xDF	; 223
+     140:	ea cf       	rjmp	.-44     	; 0x116 <digitalWrite.constprop.9+0x2a>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:99
+    #endif
+    
+    // Timer2
+    #if defined(TCCR2) && defined(COM21)
+      case TIMER2:
+        TCCR2 &= ~_BV(COM21);
+     142:	25 b5       	in	r18, 0x25	; 37
+     144:	2f 7d       	andi	r18, 0xDF	; 223
+     146:	25 bd       	out	0x25, r18	; 37
+     148:	e7 cf       	rjmp	.-50     	; 0x118 <digitalWrite.constprop.9+0x2c>
+digitalWrite():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:208
+  cli();
+
+  if (val == LOW) {
+    *out &= ~bit;
+  } else {
+    *out |= bit;
+     14a:	ec 91       	ld	r30, X
+     14c:	e9 2b       	or	r30, r25
+     14e:	f3 cf       	rjmp	.-26     	; 0x136 <digitalWrite.constprop.9+0x4a>
+
+00000150 <GET_FREQ()>:
+GET_FREQ():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:148
+}
+
+//--------------------------------------------------------------------
+//set bit for getting ICP1_cnt
+void GET_FREQ(){
+  get_freq = 1;
+     150:	81 e0       	ldi	r24, 0x01	; 1
+     152:	80 93 ed 00 	sts	0x00ED, r24	; 0x8000ed <get_freq>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:149
+}
+     156:	08 95       	ret
+
+00000158 <unrecognized(char const*)>:
+unrecognized():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:155
+
+//-------------------------------------------------------------------
+// non usable data received
+void unrecognized(const char *command) {
+  //Serial.printf("What? \r\n");                              //Debug only
+  __asm__("nop\n\t");                                         //Do nothing
+     158:	00 00       	nop
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:156
+     15a:	08 95       	ret
+
+0000015c <Print::write(unsigned char const*, unsigned int)>:
+write():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:35
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+/* default implementation: may be overridden */
+size_t Print::write(const uint8_t *buffer, size_t size)
+{
+     15c:	af 92       	push	r10
+     15e:	bf 92       	push	r11
+     160:	cf 92       	push	r12
+     162:	df 92       	push	r13
+     164:	ef 92       	push	r14
+     166:	ff 92       	push	r15
+     168:	0f 93       	push	r16
+     16a:	1f 93       	push	r17
+     16c:	cf 93       	push	r28
+     16e:	df 93       	push	r29
+     170:	6c 01       	movw	r12, r24
+     172:	7b 01       	movw	r14, r22
+     174:	8b 01       	movw	r16, r22
+     176:	04 0f       	add	r16, r20
+     178:	15 1f       	adc	r17, r21
+     17a:	eb 01       	movw	r28, r22
+     17c:	5e 01       	movw	r10, r28
+     17e:	ae 18       	sub	r10, r14
+     180:	bf 08       	sbc	r11, r15
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:37
+  size_t n = 0;
+  while (size--) {
+     182:	c0 17       	cp	r28, r16
+     184:	d1 07       	cpc	r29, r17
+     186:	59 f0       	breq	.+22     	; 0x19e <Print::write(unsigned char const*, unsigned int)+0x42>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:38
+    if (write(*buffer++)) n++;
+     188:	69 91       	ld	r22, Y+
+     18a:	d6 01       	movw	r26, r12
+     18c:	ed 91       	ld	r30, X+
+     18e:	fc 91       	ld	r31, X
+     190:	01 90       	ld	r0, Z+
+     192:	f0 81       	ld	r31, Z
+     194:	e0 2d       	mov	r30, r0
+     196:	c6 01       	movw	r24, r12
+     198:	09 95       	icall
+     19a:	89 2b       	or	r24, r25
+     19c:	79 f7       	brne	.-34     	; 0x17c <Print::write(unsigned char const*, unsigned int)+0x20>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:42
+    else break;
+  }
+  return n;
+}
+     19e:	c5 01       	movw	r24, r10
+     1a0:	df 91       	pop	r29
+     1a2:	cf 91       	pop	r28
+     1a4:	1f 91       	pop	r17
+     1a6:	0f 91       	pop	r16
+     1a8:	ff 90       	pop	r15
+     1aa:	ef 90       	pop	r14
+     1ac:	df 90       	pop	r13
+     1ae:	cf 90       	pop	r12
+     1b0:	bf 90       	pop	r11
+     1b2:	af 90       	pop	r10
+     1b4:	08 95       	ret
+
+000001b6 <HardwareSerial::availableForWrite()>:
+availableForWrite():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:181
+{
+#if (SERIAL_TX_BUFFER_SIZE>256)
+  uint8_t oldSREG = SREG;
+  cli();
+#endif
+  tx_buffer_index_t head = _tx_buffer_head;
+     1b6:	fc 01       	movw	r30, r24
+     1b8:	53 8d       	ldd	r21, Z+27	; 0x1b
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:182
+  tx_buffer_index_t tail = _tx_buffer_tail;
+     1ba:	44 8d       	ldd	r20, Z+28	; 0x1c
+     1bc:	25 2f       	mov	r18, r21
+     1be:	30 e0       	ldi	r19, 0x00	; 0
+     1c0:	84 2f       	mov	r24, r20
+     1c2:	90 e0       	ldi	r25, 0x00	; 0
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:186
+#if (SERIAL_TX_BUFFER_SIZE>256)
+  SREG = oldSREG;
+#endif
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+     1c4:	82 1b       	sub	r24, r18
+     1c6:	93 0b       	sbc	r25, r19
+     1c8:	54 17       	cp	r21, r20
+     1ca:	10 f0       	brcs	.+4      	; 0x1d0 <HardwareSerial::availableForWrite()+0x1a>
+     1cc:	cf 96       	adiw	r24, 0x3f	; 63
+     1ce:	08 95       	ret
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:187
+  return tail - head - 1;
+     1d0:	01 97       	sbiw	r24, 0x01	; 1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:188
+}
+     1d2:	08 95       	ret
+
+000001d4 <HardwareSerial::read()>:
+read():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:164
+    return _rx_buffer[_rx_buffer_tail];
+  }
+}
+
+int HardwareSerial::read(void)
+{
+     1d4:	fc 01       	movw	r30, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:166
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     1d6:	91 8d       	ldd	r25, Z+25	; 0x19
+     1d8:	82 8d       	ldd	r24, Z+26	; 0x1a
+     1da:	98 17       	cp	r25, r24
+     1dc:	61 f0       	breq	.+24     	; 0x1f6 <HardwareSerial::read()+0x22>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:169
+    return -1;
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+     1de:	a2 8d       	ldd	r26, Z+26	; 0x1a
+     1e0:	ae 0f       	add	r26, r30
+     1e2:	bf 2f       	mov	r27, r31
+     1e4:	b1 1d       	adc	r27, r1
+     1e6:	5d 96       	adiw	r26, 0x1d	; 29
+     1e8:	8c 91       	ld	r24, X
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:170
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+     1ea:	92 8d       	ldd	r25, Z+26	; 0x1a
+     1ec:	9f 5f       	subi	r25, 0xFF	; 255
+     1ee:	9f 73       	andi	r25, 0x3F	; 63
+     1f0:	92 8f       	std	Z+26, r25	; 0x1a
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:171
+    return c;
+     1f2:	90 e0       	ldi	r25, 0x00	; 0
+     1f4:	08 95       	ret
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:167
+
+int HardwareSerial::read(void)
+{
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     1f6:	8f ef       	ldi	r24, 0xFF	; 255
+     1f8:	9f ef       	ldi	r25, 0xFF	; 255
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:173
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+    return c;
+  }
+}
+     1fa:	08 95       	ret
+
+000001fc <HardwareSerial::peek()>:
+peek():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:155
+{
+  return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) % SERIAL_RX_BUFFER_SIZE;
+}
+
+int HardwareSerial::peek(void)
+{
+     1fc:	fc 01       	movw	r30, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:156
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     1fe:	91 8d       	ldd	r25, Z+25	; 0x19
+     200:	82 8d       	ldd	r24, Z+26	; 0x1a
+     202:	98 17       	cp	r25, r24
+     204:	31 f0       	breq	.+12     	; 0x212 <HardwareSerial::peek()+0x16>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:159
+    return -1;
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+     206:	82 8d       	ldd	r24, Z+26	; 0x1a
+     208:	e8 0f       	add	r30, r24
+     20a:	f1 1d       	adc	r31, r1
+     20c:	85 8d       	ldd	r24, Z+29	; 0x1d
+     20e:	90 e0       	ldi	r25, 0x00	; 0
+     210:	08 95       	ret
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:157
+}
+
+int HardwareSerial::peek(void)
+{
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     212:	8f ef       	ldi	r24, 0xFF	; 255
+     214:	9f ef       	ldi	r25, 0xFF	; 255
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:161
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+  }
+}
+     216:	08 95       	ret
+
+00000218 <HardwareSerial::available()>:
+available():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:150
+  // clear any received data
+  _rx_buffer_head = _rx_buffer_tail;
+}
+
+int HardwareSerial::available(void)
+{
+     218:	fc 01       	movw	r30, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:151
+  return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) % SERIAL_RX_BUFFER_SIZE;
+     21a:	91 8d       	ldd	r25, Z+25	; 0x19
+     21c:	22 8d       	ldd	r18, Z+26	; 0x1a
+     21e:	89 2f       	mov	r24, r25
+     220:	90 e0       	ldi	r25, 0x00	; 0
+     222:	80 5c       	subi	r24, 0xC0	; 192
+     224:	9f 4f       	sbci	r25, 0xFF	; 255
+     226:	82 1b       	sub	r24, r18
+     228:	91 09       	sbc	r25, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:152
+}
+     22a:	8f 73       	andi	r24, 0x3F	; 63
+     22c:	99 27       	eor	r25, r25
+     22e:	08 95       	ret
+
+00000230 <Serial0_available()>:
+Serial0_available():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:76
+#endif
+
+// Function that can be weakly referenced by serialEventRun to prevent
+// pulling in this file if it's not otherwise used.
+bool Serial0_available() {
+  return Serial.available();
+     230:	8e ee       	ldi	r24, 0xEE	; 238
+     232:	90 e0       	ldi	r25, 0x00	; 0
+     234:	f1 df       	rcall	.-30     	; 0x218 <HardwareSerial::available()>
+     236:	21 e0       	ldi	r18, 0x01	; 1
+     238:	89 2b       	or	r24, r25
+     23a:	09 f4       	brne	.+2      	; 0x23e <Serial0_available()+0xe>
+     23c:	20 e0       	ldi	r18, 0x00	; 0
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:77
+}
+     23e:	82 2f       	mov	r24, r18
+     240:	08 95       	ret
+
+00000242 <serialEventRun()>:
+serialEventRun():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66
+#endif
+
+void serialEventRun(void)
+{
+#if defined(HAVE_HWSERIAL0)
+  if (Serial0_available && serialEvent && Serial0_available()) serialEvent();
+     242:	80 e0       	ldi	r24, 0x00	; 0
+     244:	90 e0       	ldi	r25, 0x00	; 0
+     246:	89 2b       	or	r24, r25
+     248:	19 f0       	breq	.+6      	; 0x250 <serialEventRun()+0xe>
+     24a:	f2 df       	rcall	.-28     	; 0x230 <Serial0_available()>
+     24c:	81 11       	cpse	r24, r1
+     24e:	d8 ce       	rjmp	.-592    	; 0x0 <__vectors>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:77
+  if (Serial2_available && serialEvent2 && Serial2_available()) serialEvent2();
+#endif
+#if defined(HAVE_HWSERIAL3)
+  if (Serial3_available && serialEvent3 && Serial3_available()) serialEvent3();
+#endif
+}
+     250:	08 95       	ret
+
+00000252 <HardwareSerial::_tx_udr_empty_irq()>:
+_tx_udr_empty_irq():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:82
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_tx_udr_empty_irq(void)
+{
+     252:	fc 01       	movw	r30, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:85
+  // If interrupts are enabled, there must be more data in the output
+  // buffer. Send the next byte
+  unsigned char c = _tx_buffer[_tx_buffer_tail];
+     254:	a4 8d       	ldd	r26, Z+28	; 0x1c
+     256:	a8 0f       	add	r26, r24
+     258:	b9 2f       	mov	r27, r25
+     25a:	b1 1d       	adc	r27, r1
+     25c:	a3 5a       	subi	r26, 0xA3	; 163
+     25e:	bf 4f       	sbci	r27, 0xFF	; 255
+     260:	2c 91       	ld	r18, X
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:86
+  _tx_buffer_tail = (_tx_buffer_tail + 1) % SERIAL_TX_BUFFER_SIZE;
+     262:	84 8d       	ldd	r24, Z+28	; 0x1c
+     264:	90 e0       	ldi	r25, 0x00	; 0
+     266:	01 96       	adiw	r24, 0x01	; 1
+     268:	8f 73       	andi	r24, 0x3F	; 63
+     26a:	99 27       	eor	r25, r25
+     26c:	84 8f       	std	Z+28, r24	; 0x1c
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:88
+
+  *_udr = c;
+     26e:	a6 89       	ldd	r26, Z+22	; 0x16
+     270:	b7 89       	ldd	r27, Z+23	; 0x17
+     272:	2c 93       	st	X, r18
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:93
+
+  // clear the TXC bit -- "can be cleared by writing a one to its bit
+  // location". This makes sure flush() won't return until the bytes
+  // actually got written
+  *_ucsra |= _BV(TXC0);
+     274:	a0 89       	ldd	r26, Z+16	; 0x10
+     276:	b1 89       	ldd	r27, Z+17	; 0x11
+     278:	8c 91       	ld	r24, X
+     27a:	80 64       	ori	r24, 0x40	; 64
+     27c:	8c 93       	st	X, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:95
+
+  if (_tx_buffer_head == _tx_buffer_tail) {
+     27e:	93 8d       	ldd	r25, Z+27	; 0x1b
+     280:	84 8d       	ldd	r24, Z+28	; 0x1c
+     282:	98 13       	cpse	r25, r24
+     284:	06 c0       	rjmp	.+12     	; 0x292 <HardwareSerial::_tx_udr_empty_irq()+0x40>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:97
+    // Buffer empty, so disable interrupts
+    *_ucsrb &= ~_BV(UDRIE0);
+     286:	02 88       	ldd	r0, Z+18	; 0x12
+     288:	f3 89       	ldd	r31, Z+19	; 0x13
+     28a:	e0 2d       	mov	r30, r0
+     28c:	80 81       	ld	r24, Z
+     28e:	8f 7d       	andi	r24, 0xDF	; 223
+     290:	80 83       	st	Z, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:99
+  }
+}
+     292:	08 95       	ret
+
+00000294 <HardwareSerial::write(unsigned char)>:
+write():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:211
+  // If we get here, nothing is queued anymore (DRIE is disabled) and
+  // the hardware finished tranmission (TXC is set).
+}
+
+size_t HardwareSerial::write(uint8_t c)
+{
+     294:	ef 92       	push	r14
+     296:	ff 92       	push	r15
+     298:	0f 93       	push	r16
+     29a:	1f 93       	push	r17
+     29c:	cf 93       	push	r28
+     29e:	df 93       	push	r29
+     2a0:	ec 01       	movw	r28, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:212
+  _written = true;
+     2a2:	81 e0       	ldi	r24, 0x01	; 1
+     2a4:	88 8f       	std	Y+24, r24	; 0x18
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:217
+  // If the buffer and the data register is empty, just write the byte
+  // to the data register and be done. This shortcut helps
+  // significantly improve the effective datarate at high (>
+  // 500kbit/s) bitrates, where interrupt overhead becomes a slowdown.
+  if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
+     2a6:	9b 8d       	ldd	r25, Y+27	; 0x1b
+     2a8:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     2aa:	98 13       	cpse	r25, r24
+     2ac:	16 c0       	rjmp	.+44     	; 0x2da <HardwareSerial::write(unsigned char)+0x46>
+     2ae:	e8 89       	ldd	r30, Y+16	; 0x10
+     2b0:	f9 89       	ldd	r31, Y+17	; 0x11
+     2b2:	80 81       	ld	r24, Z
+     2b4:	85 ff       	sbrs	r24, 5
+     2b6:	11 c0       	rjmp	.+34     	; 0x2da <HardwareSerial::write(unsigned char)+0x46>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:218
+    *_udr = c;
+     2b8:	ee 89       	ldd	r30, Y+22	; 0x16
+     2ba:	ff 89       	ldd	r31, Y+23	; 0x17
+     2bc:	60 83       	st	Z, r22
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:219
+    *_ucsra |= _BV(TXC0);
+     2be:	e8 89       	ldd	r30, Y+16	; 0x10
+     2c0:	f9 89       	ldd	r31, Y+17	; 0x11
+     2c2:	80 81       	ld	r24, Z
+     2c4:	80 64       	ori	r24, 0x40	; 64
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:242
+  }
+
+  _tx_buffer[_tx_buffer_head] = c;
+  _tx_buffer_head = i;
+
+  *_ucsrb |= _BV(UDRIE0);
+     2c6:	80 83       	st	Z, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:245
+  
+  return 1;
+}
+     2c8:	81 e0       	ldi	r24, 0x01	; 1
+     2ca:	90 e0       	ldi	r25, 0x00	; 0
+     2cc:	df 91       	pop	r29
+     2ce:	cf 91       	pop	r28
+     2d0:	1f 91       	pop	r17
+     2d2:	0f 91       	pop	r16
+     2d4:	ff 90       	pop	r15
+     2d6:	ef 90       	pop	r14
+     2d8:	08 95       	ret
+     2da:	f6 2e       	mov	r15, r22
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:222
+  if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
+    *_udr = c;
+    *_ucsra |= _BV(TXC0);
+    return 1;
+  }
+  tx_buffer_index_t i = (_tx_buffer_head + 1) % SERIAL_TX_BUFFER_SIZE;
+     2dc:	0b 8d       	ldd	r16, Y+27	; 0x1b
+     2de:	10 e0       	ldi	r17, 0x00	; 0
+     2e0:	0f 5f       	subi	r16, 0xFF	; 255
+     2e2:	1f 4f       	sbci	r17, 0xFF	; 255
+     2e4:	0f 73       	andi	r16, 0x3F	; 63
+     2e6:	11 27       	eor	r17, r17
+     2e8:	e0 2e       	mov	r14, r16
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:226
+
+  // If the output buffer is full, there's nothing for it other than to 
+  // wait for the interrupt handler to empty it a bit
+  while (i == _tx_buffer_tail) {
+     2ea:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     2ec:	8e 11       	cpse	r24, r14
+     2ee:	0b c0       	rjmp	.+22     	; 0x306 <HardwareSerial::write(unsigned char)+0x72>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:227
+    if (bit_is_clear(SREG, SREG_I)) {
+     2f0:	0f b6       	in	r0, 0x3f	; 63
+     2f2:	07 fc       	sbrc	r0, 7
+     2f4:	fa cf       	rjmp	.-12     	; 0x2ea <HardwareSerial::write(unsigned char)+0x56>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:232
+      // Interrupts are disabled, so we'll have to poll the data
+      // register empty flag ourselves. If it is set, pretend an
+      // interrupt has happened and call the handler to free up
+      // space for us.
+      if(bit_is_set(*_ucsra, UDRE0))
+     2f6:	e8 89       	ldd	r30, Y+16	; 0x10
+     2f8:	f9 89       	ldd	r31, Y+17	; 0x11
+     2fa:	80 81       	ld	r24, Z
+     2fc:	85 ff       	sbrs	r24, 5
+     2fe:	f5 cf       	rjmp	.-22     	; 0x2ea <HardwareSerial::write(unsigned char)+0x56>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:233
+        _tx_udr_empty_irq();
+     300:	ce 01       	movw	r24, r28
+     302:	a7 df       	rcall	.-178    	; 0x252 <HardwareSerial::_tx_udr_empty_irq()>
+     304:	f2 cf       	rjmp	.-28     	; 0x2ea <HardwareSerial::write(unsigned char)+0x56>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:239
+    } else {
+      // nop, the interrupt handler will free up space for us
+    }
+  }
+
+  _tx_buffer[_tx_buffer_head] = c;
+     306:	eb 8d       	ldd	r30, Y+27	; 0x1b
+     308:	ec 0f       	add	r30, r28
+     30a:	fd 2f       	mov	r31, r29
+     30c:	f1 1d       	adc	r31, r1
+     30e:	e3 5a       	subi	r30, 0xA3	; 163
+     310:	ff 4f       	sbci	r31, 0xFF	; 255
+     312:	f0 82       	st	Z, r15
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:240
+  _tx_buffer_head = i;
+     314:	0b 8f       	std	Y+27, r16	; 0x1b
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:242
+
+  *_ucsrb |= _BV(UDRIE0);
+     316:	ea 89       	ldd	r30, Y+18	; 0x12
+     318:	fb 89       	ldd	r31, Y+19	; 0x13
+     31a:	80 81       	ld	r24, Z
+     31c:	80 62       	ori	r24, 0x20	; 32
+     31e:	d3 cf       	rjmp	.-90     	; 0x2c6 <HardwareSerial::write(unsigned char)+0x32>
+
+00000320 <HardwareSerial::flush()>:
+flush():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:191
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+  return tail - head - 1;
+}
+
+void HardwareSerial::flush()
+{
+     320:	cf 93       	push	r28
+     322:	df 93       	push	r29
+     324:	ec 01       	movw	r28, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:195
+  // If we have never written a byte, no need to flush. This special
+  // case is needed since there is no way to force the TXC (transmit
+  // complete) bit to 1 during initialization
+  if (!_written)
+     326:	88 8d       	ldd	r24, Y+24	; 0x18
+     328:	88 23       	and	r24, r24
+     32a:	b1 f0       	breq	.+44     	; 0x358 <HardwareSerial::flush()+0x38>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:198
+    return;
+
+  while (bit_is_set(*_ucsrb, UDRIE0) || bit_is_clear(*_ucsra, TXC0)) {
+     32c:	aa 89       	ldd	r26, Y+18	; 0x12
+     32e:	bb 89       	ldd	r27, Y+19	; 0x13
+     330:	e8 89       	ldd	r30, Y+16	; 0x10
+     332:	f9 89       	ldd	r31, Y+17	; 0x11
+     334:	8c 91       	ld	r24, X
+     336:	85 fd       	sbrc	r24, 5
+     338:	03 c0       	rjmp	.+6      	; 0x340 <HardwareSerial::flush()+0x20>
+     33a:	80 81       	ld	r24, Z
+     33c:	86 fd       	sbrc	r24, 6
+     33e:	0c c0       	rjmp	.+24     	; 0x358 <HardwareSerial::flush()+0x38>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:199
+    if (bit_is_clear(SREG, SREG_I) && bit_is_set(*_ucsrb, UDRIE0))
+     340:	0f b6       	in	r0, 0x3f	; 63
+     342:	07 fc       	sbrc	r0, 7
+     344:	f7 cf       	rjmp	.-18     	; 0x334 <HardwareSerial::flush()+0x14>
+     346:	8c 91       	ld	r24, X
+     348:	85 ff       	sbrs	r24, 5
+     34a:	f2 cf       	rjmp	.-28     	; 0x330 <HardwareSerial::flush()+0x10>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:203
+      // Interrupts are globally disabled, but the DR empty
+      // interrupt should be enabled, so poll the DR empty flag to
+      // prevent deadlock
+      if (bit_is_set(*_ucsra, UDRE0))
+     34c:	80 81       	ld	r24, Z
+     34e:	85 ff       	sbrs	r24, 5
+     350:	ed cf       	rjmp	.-38     	; 0x32c <HardwareSerial::flush()+0xc>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:204
+        _tx_udr_empty_irq();
+     352:	ce 01       	movw	r24, r28
+     354:	7e df       	rcall	.-260    	; 0x252 <HardwareSerial::_tx_udr_empty_irq()>
+     356:	ea cf       	rjmp	.-44     	; 0x32c <HardwareSerial::flush()+0xc>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:208
+  }
+  // If we get here, nothing is queued anymore (DRIE is disabled) and
+  // the hardware finished tranmission (TXC is set).
+}
+     358:	df 91       	pop	r29
+     35a:	cf 91       	pop	r28
+     35c:	08 95       	ret
+
+0000035e <pinMode>:
+pinMode():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:30
+#define ARDUINO_MAIN
+#include "wiring_private.h"
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+     35e:	cf 93       	push	r28
+     360:	df 93       	push	r29
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:31
+  uint8_t bit = digitalPinToBitMask(pin);
+     362:	90 e0       	ldi	r25, 0x00	; 0
+     364:	fc 01       	movw	r30, r24
+     366:	ef 5a       	subi	r30, 0xAF	; 175
+     368:	ff 4f       	sbci	r31, 0xFF	; 255
+     36a:	24 91       	lpm	r18, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:32
+  uint8_t port = digitalPinToPort(pin);
+     36c:	86 5c       	subi	r24, 0xC6	; 198
+     36e:	9f 4f       	sbci	r25, 0xFF	; 255
+     370:	fc 01       	movw	r30, r24
+     372:	84 91       	lpm	r24, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:35
+  volatile uint8_t *reg, *out;
+
+  if (port == NOT_A_PIN) return;
+     374:	88 23       	and	r24, r24
+     376:	c9 f0       	breq	.+50     	; 0x3aa <pinMode+0x4c>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:38
+
+  // JWS: can I let the optimizer do this?
+  reg = portModeRegister(port);
+     378:	90 e0       	ldi	r25, 0x00	; 0
+     37a:	88 0f       	add	r24, r24
+     37c:	99 1f       	adc	r25, r25
+     37e:	fc 01       	movw	r30, r24
+     380:	ea 5d       	subi	r30, 0xDA	; 218
+     382:	ff 4f       	sbci	r31, 0xFF	; 255
+     384:	a5 91       	lpm	r26, Z+
+     386:	b4 91       	lpm	r27, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:39
+  out = portOutputRegister(port);
+     388:	fc 01       	movw	r30, r24
+     38a:	e0 5d       	subi	r30, 0xD0	; 208
+     38c:	ff 4f       	sbci	r31, 0xFF	; 255
+     38e:	c5 91       	lpm	r28, Z+
+     390:	d4 91       	lpm	r29, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:41
+
+  if (mode == INPUT) { 
+     392:	61 11       	cpse	r22, r1
+     394:	0d c0       	rjmp	.+26     	; 0x3b0 <pinMode+0x52>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:42
+    uint8_t oldSREG = SREG;
+     396:	9f b7       	in	r25, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:43
+    cli();
+     398:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:44
+    *reg &= ~bit;
+     39a:	8c 91       	ld	r24, X
+     39c:	20 95       	com	r18
+     39e:	82 23       	and	r24, r18
+     3a0:	8c 93       	st	X, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:45
+    *out &= ~bit;
+     3a2:	88 81       	ld	r24, Y
+     3a4:	28 23       	and	r18, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:51
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg &= ~bit;
+    *out |= bit;
+     3a6:	28 83       	st	Y, r18
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:52
+    SREG = oldSREG;
+     3a8:	9f bf       	out	0x3f, r25	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:59
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg |= bit;
+    SREG = oldSREG;
+  }
+}
+     3aa:	df 91       	pop	r29
+     3ac:	cf 91       	pop	r28
+     3ae:	08 95       	ret
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:47
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg &= ~bit;
+    *out &= ~bit;
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+     3b0:	62 30       	cpi	r22, 0x02	; 2
+     3b2:	51 f4       	brne	.+20     	; 0x3c8 <pinMode+0x6a>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:48
+    uint8_t oldSREG = SREG;
+     3b4:	9f b7       	in	r25, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:49
+    cli();
+     3b6:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:50
+    *reg &= ~bit;
+     3b8:	3c 91       	ld	r19, X
+     3ba:	82 2f       	mov	r24, r18
+     3bc:	80 95       	com	r24
+     3be:	83 23       	and	r24, r19
+     3c0:	8c 93       	st	X, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:51
+    *out |= bit;
+     3c2:	e8 81       	ld	r30, Y
+     3c4:	2e 2b       	or	r18, r30
+     3c6:	ef cf       	rjmp	.-34     	; 0x3a6 <pinMode+0x48>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:54
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+     3c8:	8f b7       	in	r24, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:55
+    cli();
+     3ca:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:56
+    *reg |= bit;
+     3cc:	ec 91       	ld	r30, X
+     3ce:	2e 2b       	or	r18, r30
+     3d0:	2c 93       	st	X, r18
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:57
+    SREG = oldSREG;
+     3d2:	8f bf       	out	0x3f, r24	; 63
+     3d4:	ea cf       	rjmp	.-44     	; 0x3aa <pinMode+0x4c>
+
+000003d6 <micros>:
+micros():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:237
+  unsigned char f; // temporary storage for millis fraction counter
+  unsigned char q = 0; // record whether an overflow is flagged
+#endif
+  // t will be the number where the timer0 counter stopped
+  uint8_t t;
+  uint8_t oldSREG = SREG;
+     3d6:	3f b7       	in	r19, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:240
+
+  // Stop all interrupts
+  cli();
+     3d8:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:247
+#ifdef CORRECT_EXACT_MICROS
+  // combine exact millisec and 8usec counters
+  m = timer0_millis;
+  f = timer0_fract;
+#else
+  m = timer0_overflow_count;
+     3da:	80 91 db 00 	lds	r24, 0x00DB	; 0x8000db <timer0_overflow_count>
+     3de:	90 91 dc 00 	lds	r25, 0x00DC	; 0x8000dc <timer0_overflow_count+0x1>
+     3e2:	a0 91 dd 00 	lds	r26, 0x00DD	; 0x8000dd <timer0_overflow_count+0x2>
+     3e6:	b0 91 de 00 	lds	r27, 0x00DE	; 0x8000de <timer0_overflow_count+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:252
+#endif
+
+  // TCNT0 : The Timer Counter Register
+#if defined(TCNT0)
+  t = TCNT0;
+     3ea:	22 b7       	in	r18, 0x32	; 50
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:268
+    m++;
+#else
+    q = 1;
+#endif
+#else
+  if ((TIFR & _BV(TOV0)) && (t < 255))
+     3ec:	08 b6       	in	r0, 0x38	; 56
+     3ee:	00 fe       	sbrs	r0, 0
+     3f0:	05 c0       	rjmp	.+10     	; 0x3fc <micros+0x26>
+     3f2:	2f 3f       	cpi	r18, 0xFF	; 255
+     3f4:	19 f0       	breq	.+6      	; 0x3fc <micros+0x26>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:270
+#ifndef CORRECT_EXACT_MICROS
+    m++;
+     3f6:	01 96       	adiw	r24, 0x01	; 1
+     3f8:	a1 1d       	adc	r26, r1
+     3fa:	b1 1d       	adc	r27, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:276
+#else
+    q = 1;
+#endif
+#endif
+  // Restore SREG
+  SREG = oldSREG;
+     3fc:	3f bf       	out	0x3f, r19	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:292
+      ((t * MICROSECONDS_PER_TIMER0_OVERFLOW) >> 8);
+  return q ? m + MICROSECONDS_PER_TIMER0_OVERFLOW : m;
+#elif 1
+  /* All power-of-two Megahertz frequencies enter here, as well as 12.8 MHz.
+     We only end up here if right shift before multiplication is exact. */
+  return ((m << 8) + t) * (MICROSECONDS_PER_TIMER0_OVERFLOW >> 8);
+     3fe:	ba 2f       	mov	r27, r26
+     400:	a9 2f       	mov	r26, r25
+     402:	98 2f       	mov	r25, r24
+     404:	88 27       	eor	r24, r24
+     406:	bc 01       	movw	r22, r24
+     408:	cd 01       	movw	r24, r26
+     40a:	62 0f       	add	r22, r18
+     40c:	71 1d       	adc	r23, r1
+     40e:	81 1d       	adc	r24, r1
+     410:	91 1d       	adc	r25, r1
+     412:	42 e0       	ldi	r20, 0x02	; 2
+     414:	66 0f       	add	r22, r22
+     416:	77 1f       	adc	r23, r23
+     418:	88 1f       	adc	r24, r24
+     41a:	99 1f       	adc	r25, r25
+     41c:	4a 95       	dec	r20
+     41e:	d1 f7       	brne	.-12     	; 0x414 <__LOCK_REGION_LENGTH__+0x14>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:393
+  // m & t are multiplied by 4 (since it was already multiplied by 256)
+  // t is multiplied by 4
+  return ((m << 8) + t) * (64 / clockCyclesPerMicrosecond());
+#endif
+#endif // 0
+}
+     420:	08 95       	ret
+
+00000422 <delay>:
+delay():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:396
+
+void delay(unsigned long ms)
+{
+     422:	8f 92       	push	r8
+     424:	9f 92       	push	r9
+     426:	af 92       	push	r10
+     428:	bf 92       	push	r11
+     42a:	cf 92       	push	r12
+     42c:	df 92       	push	r13
+     42e:	ef 92       	push	r14
+     430:	ff 92       	push	r15
+     432:	4b 01       	movw	r8, r22
+     434:	5c 01       	movw	r10, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:397
+  unsigned long start = micros();
+     436:	cf df       	rcall	.-98     	; 0x3d6 <micros>
+     438:	6b 01       	movw	r12, r22
+     43a:	7c 01       	movw	r14, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:401
+
+  while (ms > 0UL) {
+    yield();
+    while (ms > 0UL && (micros() - start) >= 1000UL) {
+     43c:	cc df       	rcall	.-104    	; 0x3d6 <micros>
+     43e:	6c 19       	sub	r22, r12
+     440:	7d 09       	sbc	r23, r13
+     442:	8e 09       	sbc	r24, r14
+     444:	9f 09       	sbc	r25, r15
+     446:	68 3e       	cpi	r22, 0xE8	; 232
+     448:	73 40       	sbci	r23, 0x03	; 3
+     44a:	81 05       	cpc	r24, r1
+     44c:	91 05       	cpc	r25, r1
+     44e:	b0 f3       	brcs	.-20     	; 0x43c <delay+0x1a>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:402
+      ms--;
+     450:	21 e0       	ldi	r18, 0x01	; 1
+     452:	82 1a       	sub	r8, r18
+     454:	91 08       	sbc	r9, r1
+     456:	a1 08       	sbc	r10, r1
+     458:	b1 08       	sbc	r11, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:403
+      start += 1000UL;
+     45a:	88 ee       	ldi	r24, 0xE8	; 232
+     45c:	c8 0e       	add	r12, r24
+     45e:	83 e0       	ldi	r24, 0x03	; 3
+     460:	d8 1e       	adc	r13, r24
+     462:	e1 1c       	adc	r14, r1
+     464:	f1 1c       	adc	r15, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:401
+{
+  unsigned long start = micros();
+
+  while (ms > 0UL) {
+    yield();
+    while (ms > 0UL && (micros() - start) >= 1000UL) {
+     466:	81 14       	cp	r8, r1
+     468:	91 04       	cpc	r9, r1
+     46a:	a1 04       	cpc	r10, r1
+     46c:	b1 04       	cpc	r11, r1
+     46e:	31 f7       	brne	.-52     	; 0x43c <delay+0x1a>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:406
+      ms--;
+      start += 1000UL;
+    }
+  }
+}
+     470:	ff 90       	pop	r15
+     472:	ef 90       	pop	r14
+     474:	df 90       	pop	r13
+     476:	cf 90       	pop	r12
+     478:	bf 90       	pop	r11
+     47a:	af 90       	pop	r10
+     47c:	9f 90       	pop	r9
+     47e:	8f 90       	pop	r8
+     480:	08 95       	ret
+
+00000482 <Print::printf(char const*, ...) [clone .constprop.10]>:
+printf():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:208
+{
+  ((class Print *)(fdev_get_udata(fp)))->write((uint8_t)c);
+  return 0;
+}
+
+int16_t Print::printf(const char *format, ...)
+     482:	cf 93       	push	r28
+     484:	df 93       	push	r29
+     486:	cd b7       	in	r28, 0x3d	; 61
+     488:	de b7       	in	r29, 0x3e	; 62
+     48a:	2e 97       	sbiw	r28, 0x0e	; 14
+     48c:	0f b6       	in	r0, 0x3f	; 63
+     48e:	f8 94       	cli
+     490:	de bf       	out	0x3e, r29	; 62
+     492:	0f be       	out	0x3f, r0	; 63
+     494:	cd bf       	out	0x3d, r28	; 61
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:213
+{
+  FILE f;
+  va_list ap;
+
+  fdev_setup_stream(&f, printf_putchar, NULL, _FDEV_SETUP_WRITE);
+     496:	87 e6       	ldi	r24, 0x67	; 103
+     498:	90 e0       	ldi	r25, 0x00	; 0
+     49a:	9a 87       	std	Y+10, r25	; 0x0a
+     49c:	89 87       	std	Y+9, r24	; 0x09
+     49e:	1c 86       	std	Y+12, r1	; 0x0c
+     4a0:	1b 86       	std	Y+11, r1	; 0x0b
+     4a2:	82 e0       	ldi	r24, 0x02	; 2
+     4a4:	8c 83       	std	Y+4, r24	; 0x04
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:214
+  fdev_set_udata(&f, this);
+     4a6:	8e ee       	ldi	r24, 0xEE	; 238
+     4a8:	90 e0       	ldi	r25, 0x00	; 0
+     4aa:	9e 87       	std	Y+14, r25	; 0x0e
+     4ac:	8d 87       	std	Y+13, r24	; 0x0d
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:216
+  va_start(ap, format);
+  return vfprintf(&f, format, ap);
+     4ae:	ae 01       	movw	r20, r28
+     4b0:	49 5e       	subi	r20, 0xE9	; 233
+     4b2:	5f 4f       	sbci	r21, 0xFF	; 255
+     4b4:	6d 89       	ldd	r22, Y+21	; 0x15
+     4b6:	7e 89       	ldd	r23, Y+22	; 0x16
+     4b8:	ce 01       	movw	r24, r28
+     4ba:	01 96       	adiw	r24, 0x01	; 1
+     4bc:	26 d3       	rcall	.+1612   	; 0xb0a <vfprintf>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:217
+}
+     4be:	2e 96       	adiw	r28, 0x0e	; 14
+     4c0:	0f b6       	in	r0, 0x3f	; 63
+     4c2:	f8 94       	cli
+     4c4:	de bf       	out	0x3e, r29	; 62
+     4c6:	0f be       	out	0x3f, r0	; 63
+     4c8:	cd bf       	out	0x3d, r28	; 61
+     4ca:	df 91       	pop	r29
+     4cc:	cf 91       	pop	r28
+     4ce:	08 95       	ret
+
+000004d0 <SEND_SWVERSION()>:
+SEND_SWVERSION():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:142
+
+//####################################################################
+//--------------------------------------------------------------------
+//send software version
+void SEND_SWVERSION() {
+  Serial.printf("SW_Vers: %s \r\n", SW_Vers);
+     4d0:	80 e6       	ldi	r24, 0x60	; 96
+     4d2:	90 e0       	ldi	r25, 0x00	; 0
+     4d4:	9f 93       	push	r25
+     4d6:	8f 93       	push	r24
+     4d8:	83 e8       	ldi	r24, 0x83	; 131
+     4da:	90 e0       	ldi	r25, 0x00	; 0
+     4dc:	9f 93       	push	r25
+     4de:	8f 93       	push	r24
+     4e0:	8e ee       	ldi	r24, 0xEE	; 238
+     4e2:	90 e0       	ldi	r25, 0x00	; 0
+     4e4:	9f 93       	push	r25
+     4e6:	8f 93       	push	r24
+     4e8:	cc df       	rcall	.-104    	; 0x482 <Print::printf(char const*, ...) [clone .constprop.10]>
+     4ea:	0f 90       	pop	r0
+     4ec:	0f 90       	pop	r0
+     4ee:	0f 90       	pop	r0
+     4f0:	0f 90       	pop	r0
+     4f2:	0f 90       	pop	r0
+     4f4:	0f 90       	pop	r0
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:143
+}
+     4f6:	08 95       	ret
+
+000004f8 <SerialCommand::addCommand(char const*, void (*)()) [clone .constprop.5]>:
+addCommand():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:45
+/**
+ * Adds a "command" and a handler function to the list of available commands.
+ * This is used for matching a found token in the buffer, and gives the pointer
+ * to the handler function to deal with it.
+ */
+void SerialCommand::addCommand(const char *command, void (*function)()) {
+     4f8:	df 92       	push	r13
+     4fa:	ef 92       	push	r14
+     4fc:	ff 92       	push	r15
+     4fe:	0f 93       	push	r16
+     500:	1f 93       	push	r17
+     502:	cf 93       	push	r28
+     504:	df 93       	push	r29
+     506:	7c 01       	movw	r14, r24
+     508:	8b 01       	movw	r16, r22
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:53
+    Serial.print(commandCount);
+    Serial.print("): ");
+    Serial.println(command);
+  #endif
+
+  commandList = (SerialCommandCallback *) realloc(commandList, (commandCount + 1) * sizeof(SerialCommandCallback));
+     50a:	cb e8       	ldi	r28, 0x8B	; 139
+     50c:	d1 e0       	ldi	r29, 0x01	; 1
+     50e:	8a 81       	ldd	r24, Y+2	; 0x02
+     510:	90 e0       	ldi	r25, 0x00	; 0
+     512:	01 96       	adiw	r24, 0x01	; 1
+     514:	23 e1       	ldi	r18, 0x13	; 19
+     516:	d2 2e       	mov	r13, r18
+     518:	d8 9e       	mul	r13, r24
+     51a:	b0 01       	movw	r22, r0
+     51c:	d9 9e       	mul	r13, r25
+     51e:	70 0d       	add	r23, r0
+     520:	11 24       	eor	r1, r1
+     522:	88 81       	ld	r24, Y
+     524:	99 81       	ldd	r25, Y+1	; 0x01
+     526:	9d d5       	rcall	.+2874   	; 0x1062 <realloc>
+     528:	99 83       	std	Y+1, r25	; 0x01
+     52a:	88 83       	st	Y, r24
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:54
+  strncpy(commandList[commandCount].command, command, SERIALCOMMAND_MAXCOMMANDLENGTH);
+     52c:	2a 81       	ldd	r18, Y+2	; 0x02
+     52e:	40 e1       	ldi	r20, 0x10	; 16
+     530:	50 e0       	ldi	r21, 0x00	; 0
+     532:	b7 01       	movw	r22, r14
+     534:	2d 9d       	mul	r18, r13
+     536:	80 0d       	add	r24, r0
+     538:	91 1d       	adc	r25, r1
+     53a:	11 24       	eor	r1, r1
+     53c:	6e d6       	rcall	.+3292   	; 0x121a <strncpy>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:55
+  commandList[commandCount].function = function;
+     53e:	8a 81       	ldd	r24, Y+2	; 0x02
+     540:	e8 81       	ld	r30, Y
+     542:	f9 81       	ldd	r31, Y+1	; 0x01
+     544:	8d 9d       	mul	r24, r13
+     546:	e0 0d       	add	r30, r0
+     548:	f1 1d       	adc	r31, r1
+     54a:	11 24       	eor	r1, r1
+     54c:	12 8b       	std	Z+18, r17	; 0x12
+     54e:	01 8b       	std	Z+17, r16	; 0x11
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:56
+  commandCount++;
+     550:	8f 5f       	subi	r24, 0xFF	; 255
+     552:	8a 83       	std	Y+2, r24	; 0x02
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:57
+}
+     554:	df 91       	pop	r29
+     556:	cf 91       	pop	r28
+     558:	1f 91       	pop	r17
+     55a:	0f 91       	pop	r16
+     55c:	ff 90       	pop	r15
+     55e:	ef 90       	pop	r14
+     560:	df 90       	pop	r13
+     562:	08 95       	ret
+
+00000564 <__vector_12>:
+__vector_12():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:63
+#elif defined(USART0_UDRE_vect)
+ISR(USART0_UDRE_vect)
+#else
+  #error "Don't know what the Data Register Empty vector is called for Serial"
+#endif
+{
+     564:	1f 92       	push	r1
+     566:	0f 92       	push	r0
+     568:	0f b6       	in	r0, 0x3f	; 63
+     56a:	0f 92       	push	r0
+     56c:	11 24       	eor	r1, r1
+     56e:	2f 93       	push	r18
+     570:	3f 93       	push	r19
+     572:	4f 93       	push	r20
+     574:	5f 93       	push	r21
+     576:	6f 93       	push	r22
+     578:	7f 93       	push	r23
+     57a:	8f 93       	push	r24
+     57c:	9f 93       	push	r25
+     57e:	af 93       	push	r26
+     580:	bf 93       	push	r27
+     582:	ef 93       	push	r30
+     584:	ff 93       	push	r31
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:64
+  Serial._tx_udr_empty_irq();
+     586:	8e ee       	ldi	r24, 0xEE	; 238
+     588:	90 e0       	ldi	r25, 0x00	; 0
+     58a:	63 de       	rcall	.-826    	; 0x252 <HardwareSerial::_tx_udr_empty_irq()>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:65
+}
+     58c:	ff 91       	pop	r31
+     58e:	ef 91       	pop	r30
+     590:	bf 91       	pop	r27
+     592:	af 91       	pop	r26
+     594:	9f 91       	pop	r25
+     596:	8f 91       	pop	r24
+     598:	7f 91       	pop	r23
+     59a:	6f 91       	pop	r22
+     59c:	5f 91       	pop	r21
+     59e:	4f 91       	pop	r20
+     5a0:	3f 91       	pop	r19
+     5a2:	2f 91       	pop	r18
+     5a4:	0f 90       	pop	r0
+     5a6:	0f be       	out	0x3f, r0	; 63
+     5a8:	0f 90       	pop	r0
+     5aa:	1f 90       	pop	r1
+     5ac:	18 95       	reti
+
+000005ae <__vector_11>:
+__vector_11():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:50
+#elif defined(USART_RXC_vect)
+  ISR(USART_RXC_vect)
+#else
+  #error "Don't know what the Data Received vector is called for Serial"
+#endif
+  {
+     5ae:	1f 92       	push	r1
+     5b0:	0f 92       	push	r0
+     5b2:	0f b6       	in	r0, 0x3f	; 63
+     5b4:	0f 92       	push	r0
+     5b6:	11 24       	eor	r1, r1
+     5b8:	2f 93       	push	r18
+     5ba:	8f 93       	push	r24
+     5bc:	9f 93       	push	r25
+     5be:	ef 93       	push	r30
+     5c0:	ff 93       	push	r31
+_rx_complete_irq():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:103
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_rx_complete_irq(void)
+{
+  if (bit_is_clear(*_ucsra, UPE0)) {
+     5c2:	e0 91 fe 00 	lds	r30, 0x00FE	; 0x8000fe <Serial+0x10>
+     5c6:	f0 91 ff 00 	lds	r31, 0x00FF	; 0x8000ff <Serial+0x11>
+     5ca:	80 81       	ld	r24, Z
+     5cc:	e0 91 04 01 	lds	r30, 0x0104	; 0x800104 <Serial+0x16>
+     5d0:	f0 91 05 01 	lds	r31, 0x0105	; 0x800105 <Serial+0x17>
+     5d4:	82 fd       	sbrc	r24, 2
+     5d6:	1b c0       	rjmp	.+54     	; 0x60e <__vector_11+0x60>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:106
+    // No Parity error, read byte and store it in the buffer if there is
+    // room
+    unsigned char c = *_udr;
+     5d8:	90 81       	ld	r25, Z
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:107
+    rx_buffer_index_t i = (unsigned int)(_rx_buffer_head + 1) % SERIAL_RX_BUFFER_SIZE;
+     5da:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <Serial+0x19>
+     5de:	8f 5f       	subi	r24, 0xFF	; 255
+     5e0:	8f 73       	andi	r24, 0x3F	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:113
+
+    // if we should be storing the received character into the location
+    // just before the tail (meaning that the head would advance to the
+    // current location of the tail), we're about to overflow the buffer
+    // and so we don't write the character or advance the head.
+    if (i != _rx_buffer_tail) {
+     5e2:	20 91 08 01 	lds	r18, 0x0108	; 0x800108 <Serial+0x1a>
+     5e6:	82 17       	cp	r24, r18
+     5e8:	41 f0       	breq	.+16     	; 0x5fa <__vector_11+0x4c>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:114
+      _rx_buffer[_rx_buffer_head] = c;
+     5ea:	e0 91 07 01 	lds	r30, 0x0107	; 0x800107 <Serial+0x19>
+     5ee:	f0 e0       	ldi	r31, 0x00	; 0
+     5f0:	e2 51       	subi	r30, 0x12	; 18
+     5f2:	ff 4f       	sbci	r31, 0xFF	; 255
+     5f4:	95 8f       	std	Z+29, r25	; 0x1d
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:115
+      _rx_buffer_head = i;
+     5f6:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <Serial+0x19>
+__vector_11():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:52
+    Serial._rx_complete_irq();
+  }
+     5fa:	ff 91       	pop	r31
+     5fc:	ef 91       	pop	r30
+     5fe:	9f 91       	pop	r25
+     600:	8f 91       	pop	r24
+     602:	2f 91       	pop	r18
+     604:	0f 90       	pop	r0
+     606:	0f be       	out	0x3f, r0	; 63
+     608:	0f 90       	pop	r0
+     60a:	1f 90       	pop	r1
+     60c:	18 95       	reti
+_rx_complete_irq():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:119
+    }
+  } else {
+    // Parity error, read byte but discard it
+    *_udr;
+     60e:	80 81       	ld	r24, Z
+     610:	f4 cf       	rjmp	.-24     	; 0x5fa <__vector_11+0x4c>
+
+00000612 <__vector_9>:
+__vector_9():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:159
+#if defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+ISR(TIM0_OVF_vect)
+#else
+ISR(TIMER0_OVF_vect)
+#endif
+{
+     612:	1f 92       	push	r1
+     614:	0f 92       	push	r0
+     616:	0f b6       	in	r0, 0x3f	; 63
+     618:	0f 92       	push	r0
+     61a:	11 24       	eor	r1, r1
+     61c:	2f 93       	push	r18
+     61e:	3f 93       	push	r19
+     620:	8f 93       	push	r24
+     622:	9f 93       	push	r25
+     624:	af 93       	push	r26
+     626:	bf 93       	push	r27
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:167
+  static unsigned char timer0_exact = 0;
+#endif
+
+  // copy these to local variables so they can be stored in registers
+  // (volatile variables must be read from memory on every access, so this saves time)
+  unsigned long m = timer0_millis;
+     628:	80 91 df 00 	lds	r24, 0x00DF	; 0x8000df <timer0_millis>
+     62c:	90 91 e0 00 	lds	r25, 0x00E0	; 0x8000e0 <timer0_millis+0x1>
+     630:	a0 91 e1 00 	lds	r26, 0x00E1	; 0x8000e1 <timer0_millis+0x2>
+     634:	b0 91 e2 00 	lds	r27, 0x00E2	; 0x8000e2 <timer0_millis+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:168
+  unsigned char f = timer0_fract;
+     638:	30 91 da 00 	lds	r19, 0x00DA	; 0x8000da <__data_end>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:170
+
+  f += FRACT_INC FRACT_INC_PLUS;
+     63c:	23 e0       	ldi	r18, 0x03	; 3
+     63e:	23 0f       	add	r18, r19
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:200
+    ++f;
+  }
+#endif
+#endif // CORRECT_EXACT_MILLIS
+
+  if (f >= FRACT_MAX) {
+     640:	2d 37       	cpi	r18, 0x7D	; 125
+     642:	68 f1       	brcs	.+90     	; 0x69e <__vector_9+0x8c>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:201
+    f -= FRACT_MAX;
+     644:	26 e8       	ldi	r18, 0x86	; 134
+     646:	23 0f       	add	r18, r19
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:202
+    m += MILLIS_INC + 1;
+     648:	02 96       	adiw	r24, 0x02	; 2
+     64a:	a1 1d       	adc	r26, r1
+     64c:	b1 1d       	adc	r27, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:208
+  }
+  else {
+    m += MILLIS_INC;
+  }
+
+  timer0_fract = f;
+     64e:	20 93 da 00 	sts	0x00DA, r18	; 0x8000da <__data_end>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:209
+  timer0_millis = m;
+     652:	80 93 df 00 	sts	0x00DF, r24	; 0x8000df <timer0_millis>
+     656:	90 93 e0 00 	sts	0x00E0, r25	; 0x8000e0 <timer0_millis+0x1>
+     65a:	a0 93 e1 00 	sts	0x00E1, r26	; 0x8000e1 <timer0_millis+0x2>
+     65e:	b0 93 e2 00 	sts	0x00E2, r27	; 0x8000e2 <timer0_millis+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:211
+#ifndef CORRECT_EXACT_MICROS
+  timer0_overflow_count++;
+     662:	80 91 db 00 	lds	r24, 0x00DB	; 0x8000db <timer0_overflow_count>
+     666:	90 91 dc 00 	lds	r25, 0x00DC	; 0x8000dc <timer0_overflow_count+0x1>
+     66a:	a0 91 dd 00 	lds	r26, 0x00DD	; 0x8000dd <timer0_overflow_count+0x2>
+     66e:	b0 91 de 00 	lds	r27, 0x00DE	; 0x8000de <timer0_overflow_count+0x3>
+     672:	01 96       	adiw	r24, 0x01	; 1
+     674:	a1 1d       	adc	r26, r1
+     676:	b1 1d       	adc	r27, r1
+     678:	80 93 db 00 	sts	0x00DB, r24	; 0x8000db <timer0_overflow_count>
+     67c:	90 93 dc 00 	sts	0x00DC, r25	; 0x8000dc <timer0_overflow_count+0x1>
+     680:	a0 93 dd 00 	sts	0x00DD, r26	; 0x8000dd <timer0_overflow_count+0x2>
+     684:	b0 93 de 00 	sts	0x00DE, r27	; 0x8000de <timer0_overflow_count+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:213
+#endif
+}
+     688:	bf 91       	pop	r27
+     68a:	af 91       	pop	r26
+     68c:	9f 91       	pop	r25
+     68e:	8f 91       	pop	r24
+     690:	3f 91       	pop	r19
+     692:	2f 91       	pop	r18
+     694:	0f 90       	pop	r0
+     696:	0f be       	out	0x3f, r0	; 63
+     698:	0f 90       	pop	r0
+     69a:	1f 90       	pop	r1
+     69c:	18 95       	reti
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:205
+  if (f >= FRACT_MAX) {
+    f -= FRACT_MAX;
+    m += MILLIS_INC + 1;
+  }
+  else {
+    m += MILLIS_INC;
+     69e:	01 96       	adiw	r24, 0x01	; 1
+     6a0:	a1 1d       	adc	r26, r1
+     6a2:	b1 1d       	adc	r27, r1
+     6a4:	d4 cf       	rjmp	.-88     	; 0x64e <__vector_9+0x3c>
+
+000006a6 <__vector_5>:
+__vector_5():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:127
+  }
+}
+
+//-------------------------------------------------------
+//TIM1 CAPT 
+ISR(TIMER1_CAPT_vect){
+     6a6:	1f 92       	push	r1
+     6a8:	0f 92       	push	r0
+     6aa:	0f b6       	in	r0, 0x3f	; 63
+     6ac:	0f 92       	push	r0
+     6ae:	11 24       	eor	r1, r1
+     6b0:	2f 93       	push	r18
+     6b2:	3f 93       	push	r19
+     6b4:	8f 93       	push	r24
+     6b6:	9f 93       	push	r25
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:128
+  TCNT1 = TCNT1 - ICR1;                                       //new timer init, TimerCounter - inputCapture 
+     6b8:	8c b5       	in	r24, 0x2c	; 44
+     6ba:	9d b5       	in	r25, 0x2d	; 45
+     6bc:	26 b5       	in	r18, 0x26	; 38
+     6be:	37 b5       	in	r19, 0x27	; 39
+     6c0:	82 1b       	sub	r24, r18
+     6c2:	93 0b       	sbc	r25, r19
+     6c4:	9d bd       	out	0x2d, r25	; 45
+     6c6:	8c bd       	out	0x2c, r24	; 44
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:129
+  if(ICP1_cnt == 1){                                          //first interrupt, do not care
+     6c8:	80 91 e4 00 	lds	r24, 0x00E4	; 0x8000e4 <ICP1_cnt>
+     6cc:	81 30       	cpi	r24, 0x01	; 1
+     6ce:	31 f4       	brne	.+12     	; 0x6dc <__vector_5+0x36>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:130
+    tm.val_16[0] = ICR1;
+     6d0:	86 b5       	in	r24, 0x26	; 38
+     6d2:	97 b5       	in	r25, 0x27	; 39
+     6d4:	90 93 e6 00 	sts	0x00E6, r25	; 0x8000e6 <tm+0x1>
+     6d8:	80 93 e5 00 	sts	0x00E5, r24	; 0x8000e5 <tm>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:133
+  }
+  
+  if(ICP1_cnt == 0){                                          //increase only once
+     6dc:	80 91 e4 00 	lds	r24, 0x00E4	; 0x8000e4 <ICP1_cnt>
+     6e0:	81 11       	cpse	r24, r1
+     6e2:	05 c0       	rjmp	.+10     	; 0x6ee <__vector_5+0x48>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:134
+    ICP1_cnt ++;
+     6e4:	80 91 e4 00 	lds	r24, 0x00E4	; 0x8000e4 <ICP1_cnt>
+     6e8:	8f 5f       	subi	r24, 0xFF	; 255
+     6ea:	80 93 e4 00 	sts	0x00E4, r24	; 0x8000e4 <ICP1_cnt>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:136
+  }
+}
+     6ee:	9f 91       	pop	r25
+     6f0:	8f 91       	pop	r24
+     6f2:	3f 91       	pop	r19
+     6f4:	2f 91       	pop	r18
+     6f6:	0f 90       	pop	r0
+     6f8:	0f be       	out	0x3f, r0	; 63
+     6fa:	0f 90       	pop	r0
+     6fc:	1f 90       	pop	r1
+     6fe:	18 95       	reti
+
+00000700 <__vector_8>:
+__vector_8():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:119
+
+
+//####################################################################
+//--------------------------------------------------------------------
+//TIM1 OVF 
+ISR(TIMER1_OVF_vect){
+     700:	1f 92       	push	r1
+     702:	0f 92       	push	r0
+     704:	0f b6       	in	r0, 0x3f	; 63
+     706:	0f 92       	push	r0
+     708:	11 24       	eor	r1, r1
+     70a:	2f 93       	push	r18
+     70c:	8f 93       	push	r24
+     70e:	9f 93       	push	r25
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:120
+  if(tm.val_16[1] < 0xFFFF){
+     710:	80 91 e7 00 	lds	r24, 0x00E7	; 0x8000e7 <tm+0x2>
+     714:	90 91 e8 00 	lds	r25, 0x00E8	; 0x8000e8 <tm+0x3>
+     718:	01 96       	adiw	r24, 0x01	; 1
+     71a:	49 f0       	breq	.+18     	; 0x72e <__vector_8+0x2e>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:121
+    tm.val_16[1] ++;                                          // count overflows
+     71c:	80 91 e7 00 	lds	r24, 0x00E7	; 0x8000e7 <tm+0x2>
+     720:	90 91 e8 00 	lds	r25, 0x00E8	; 0x8000e8 <tm+0x3>
+     724:	01 96       	adiw	r24, 0x01	; 1
+     726:	90 93 e8 00 	sts	0x00E8, r25	; 0x8000e8 <tm+0x3>
+     72a:	80 93 e7 00 	sts	0x00E7, r24	; 0x8000e7 <tm+0x2>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:123
+  }
+}
+     72e:	9f 91       	pop	r25
+     730:	8f 91       	pop	r24
+     732:	2f 91       	pop	r18
+     734:	0f 90       	pop	r0
+     736:	0f be       	out	0x3f, r0	; 63
+     738:	0f 90       	pop	r0
+     73a:	1f 90       	pop	r1
+     73c:	18 95       	reti
+
+0000073e <global constructors keyed to 65535_0_Mega8_01.ino.cpp.o.1862>:
+_GLOBAL__I_65535_0_Mega8_01.ino.cpp.o.1862():
+     73e:	cf 93       	push	r28
+     740:	df 93       	push	r29
+     742:	ee ee       	ldi	r30, 0xEE	; 238
+     744:	f0 e0       	ldi	r31, 0x00	; 0
+     746:	13 82       	std	Z+3, r1	; 0x03
+     748:	12 82       	std	Z+2, r1	; 0x02
+     74a:	88 ee       	ldi	r24, 0xE8	; 232
+     74c:	93 e0       	ldi	r25, 0x03	; 3
+     74e:	a0 e0       	ldi	r26, 0x00	; 0
+     750:	b0 e0       	ldi	r27, 0x00	; 0
+     752:	84 83       	std	Z+4, r24	; 0x04
+     754:	95 83       	std	Z+5, r25	; 0x05
+     756:	a6 83       	std	Z+6, r26	; 0x06
+     758:	b7 83       	std	Z+7, r27	; 0x07
+     75a:	85 e7       	ldi	r24, 0x75	; 117
+     75c:	90 e0       	ldi	r25, 0x00	; 0
+     75e:	91 83       	std	Z+1, r25	; 0x01
+     760:	80 83       	st	Z, r24
+     762:	80 e4       	ldi	r24, 0x40	; 64
+     764:	90 e0       	ldi	r25, 0x00	; 0
+     766:	95 87       	std	Z+13, r25	; 0x0d
+     768:	84 87       	std	Z+12, r24	; 0x0c
+     76a:	29 e2       	ldi	r18, 0x29	; 41
+     76c:	30 e0       	ldi	r19, 0x00	; 0
+     76e:	37 87       	std	Z+15, r19	; 0x0f
+     770:	26 87       	std	Z+14, r18	; 0x0e
+     772:	2b e2       	ldi	r18, 0x2B	; 43
+     774:	30 e0       	ldi	r19, 0x00	; 0
+     776:	31 8b       	std	Z+17, r19	; 0x11
+     778:	20 8b       	std	Z+16, r18	; 0x10
+     77a:	2a e2       	ldi	r18, 0x2A	; 42
+     77c:	30 e0       	ldi	r19, 0x00	; 0
+     77e:	33 8b       	std	Z+19, r19	; 0x13
+     780:	22 8b       	std	Z+18, r18	; 0x12
+     782:	95 8b       	std	Z+21, r25	; 0x15
+     784:	84 8b       	std	Z+20, r24	; 0x14
+     786:	8c e2       	ldi	r24, 0x2C	; 44
+     788:	90 e0       	ldi	r25, 0x00	; 0
+     78a:	97 8b       	std	Z+23, r25	; 0x17
+     78c:	86 8b       	std	Z+22, r24	; 0x16
+     78e:	11 8e       	std	Z+25, r1	; 0x19
+     790:	12 8e       	std	Z+26, r1	; 0x1a
+     792:	13 8e       	std	Z+27, r1	; 0x1b
+     794:	14 8e       	std	Z+28, r1	; 0x1c
+     796:	cb e8       	ldi	r28, 0x8B	; 139
+     798:	d1 e0       	ldi	r29, 0x01	; 1
+     79a:	19 82       	std	Y+1, r1	; 0x01
+     79c:	18 82       	st	Y, r1
+     79e:	1a 82       	std	Y+2, r1	; 0x02
+     7a0:	1c 82       	std	Y+4, r1	; 0x04
+     7a2:	1b 82       	std	Y+3, r1	; 0x03
+     7a4:	8a e0       	ldi	r24, 0x0A	; 10
+     7a6:	8f 83       	std	Y+7, r24	; 0x07
+     7a8:	10 92 d6 01 	sts	0x01D6, r1	; 0x8001d6 <sdata+0x4b>
+     7ac:	10 92 d5 01 	sts	0x01D5, r1	; 0x8001d5 <sdata+0x4a>
+     7b0:	62 e9       	ldi	r22, 0x92	; 146
+     7b2:	70 e0       	ldi	r23, 0x00	; 0
+     7b4:	80 e9       	ldi	r24, 0x90	; 144
+     7b6:	91 e0       	ldi	r25, 0x01	; 1
+     7b8:	1b d5       	rcall	.+2614   	; 0x11f0 <strcpy>
+     7ba:	18 86       	std	Y+8, r1	; 0x08
+     7bc:	10 92 d4 01 	sts	0x01D4, r1	; 0x8001d4 <sdata+0x49>
+     7c0:	df 91       	pop	r29
+     7c2:	cf 91       	pop	r28
+     7c4:	08 95       	ret
+
+000007c6 <main>:
+init():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:945
+
+void init()
+{
+  // this needs to be called before setup() or some functions won't
+  // work there
+  sei();
+     7c6:	78 94       	sei
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:966
+#if defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__)
+  // CPU specific: different values for the ATmega64/128
+  TCCR0 |= _BV(WGM01) | _BV(WGM00) | _BV(CS02);
+#elif defined(TCCR0) && defined(CS01) && defined(CS00)
+  // This combination is for the ATmega8535, ATmega8, ATmega16, ATmega32, ATmega8515, ATmega162
+  TCCR0 |= _BV(CS01) | _BV(CS00);
+     7c8:	83 b7       	in	r24, 0x33	; 51
+     7ca:	83 60       	ori	r24, 0x03	; 3
+     7cc:	83 bf       	out	0x33, r24	; 51
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:982
+  #error Timer 0 prescale factor 64 not set correctly
+#endif
+
+// Enable timer 0 overflow interrupt
+#if defined(TIMSK) && defined(TOIE0)
+  TIMSK |= _BV(TOIE0);
+     7ce:	89 b7       	in	r24, 0x39	; 57
+     7d0:	81 60       	ori	r24, 0x01	; 1
+     7d2:	89 bf       	out	0x39, r24	; 57
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:995
+// this is better for motors as it ensures an even waveform
+// note, however, that fast pwm mode can achieve a frequency of up
+// 8 MHz (with a 16 MHz clock) at 50% duty cycle
+
+#if defined(TCCR1B) && defined(CS11) && defined(CS10)
+  TCCR1B = _BV(CS11); // Set timer 1 prescale factor to 64
+     7d4:	12 e0       	ldi	r17, 0x02	; 2
+     7d6:	1e bd       	out	0x2e, r17	; 46
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:997
+#if F_CPU >= 8000000L
+  TCCR1B |= _BV(CS10);
+     7d8:	8e b5       	in	r24, 0x2e	; 46
+     7da:	81 60       	ori	r24, 0x01	; 1
+     7dc:	8e bd       	out	0x2e, r24	; 46
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1006
+#if F_CPU >= 8000000L
+  TCCR1 |= _BV(CS10);
+#endif
+#endif
+#if defined(TCCR1A) && defined(WGM10)
+  TCCR1A |= _BV(WGM10); // Put timer 1 in 8-bit phase correct pwm mode
+     7de:	8f b5       	in	r24, 0x2f	; 47
+     7e0:	81 60       	ori	r24, 0x01	; 1
+     7e2:	8f bd       	out	0x2f, r24	; 47
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1011
+#endif
+
+// Set timer 2 prescale factor to 64
+#if defined(TCCR2) && defined(CS22)
+  TCCR2 |= _BV(CS22);
+     7e4:	85 b5       	in	r24, 0x25	; 37
+     7e6:	84 60       	ori	r24, 0x04	; 4
+     7e8:	85 bd       	out	0x25, r24	; 37
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1020
+  TCCR2A |= _BV(CS22);
+#endif
+
+// Configure timer 2 for phase correct pwm (8-bit)
+#if defined(TCCR2) && defined(WGM20)
+  TCCR2 |= _BV(WGM20);
+     7ea:	85 b5       	in	r24, 0x25	; 37
+     7ec:	80 64       	ori	r24, 0x40	; 64
+     7ee:	85 bd       	out	0x25, r24	; 37
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1050
+#endif
+
+#if defined(ADCSRA)
+  // set a2d prescaler so we are inside the desired 50-200 KHz range.
+  #if F_CPU >= 16000000 // 16 MHz / 128 = 125 KHz
+    ADCSRA = _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0) | _BV(ADEN);
+     7f0:	87 e8       	ldi	r24, 0x87	; 135
+     7f2:	86 b9       	out	0x06, r24	; 6
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1068
+
+  // The bootloader connects pins 0 and 1 to the USART; disconnect them
+  // here so they can be used as normal digital i/o; they will be
+  // reconnected in Serial.begin()
+#if defined(UCSRB)
+  UCSRB = 0;
+     7f4:	1a b8       	out	0x0a, r1	; 10
+setup():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:48
+SerialCommand sdata;
+
+//####################################################################
+//--------------------------------------------------------------------
+void setup() {
+  delay(1000);
+     7f6:	68 ee       	ldi	r22, 0xE8	; 232
+     7f8:	73 e0       	ldi	r23, 0x03	; 3
+     7fa:	80 e0       	ldi	r24, 0x00	; 0
+     7fc:	90 e0       	ldi	r25, 0x00	; 0
+     7fe:	11 de       	rcall	.-990    	; 0x422 <delay>
+begin():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:107
+
+void HardwareSerial::begin(unsigned long baud, byte config)
+{
+  // Try u2x mode first
+  uint16_t baud_setting = (F_CPU / 4 / baud - 1) / 2;
+  *_ucsra = 1 << U2X0;
+     800:	ce ee       	ldi	r28, 0xEE	; 238
+     802:	d0 e0       	ldi	r29, 0x00	; 0
+     804:	e0 91 fe 00 	lds	r30, 0x00FE	; 0x8000fe <Serial+0x10>
+     808:	f0 91 ff 00 	lds	r31, 0x00FF	; 0x8000ff <Serial+0x11>
+     80c:	10 83       	st	Z, r17
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:121
+    *_ucsra = 0;
+    baud_setting = (F_CPU / 8 / baud - 1) / 2;
+  }
+
+  // assign the baud_setting, a.k.a. ubrr (USART Baud Rate Register)
+  *_ubrrh = baud_setting >> 8;
+     80e:	e0 91 fa 00 	lds	r30, 0x00FA	; 0x8000fa <Serial+0xc>
+     812:	f0 91 fb 00 	lds	r31, 0x00FB	; 0x8000fb <Serial+0xd>
+     816:	10 82       	st	Z, r1
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:122
+  *_ubrrl = baud_setting;
+     818:	e0 91 fc 00 	lds	r30, 0x00FC	; 0x8000fc <Serial+0xe>
+     81c:	f0 91 fd 00 	lds	r31, 0x00FD	; 0x8000fd <Serial+0xf>
+     820:	80 e1       	ldi	r24, 0x10	; 16
+     822:	80 83       	st	Z, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:124
+
+  _written = false;
+     824:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <Serial+0x18>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:132
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8515__) || defined(__AVR_ATmega162__) \
+|| defined(__AVR_ATmega8535__) || defined(__AVR_ATmega16__)|| defined(__AVR_ATmega32__)   \
+|| defined(__AVR_ATmega162__)
+  config |= 0x80; // select UCSRC register (shared with UBRRH)
+#endif
+  *_ucsrc = config;
+     828:	e0 91 02 01 	lds	r30, 0x0102	; 0x800102 <Serial+0x14>
+     82c:	f0 91 03 01 	lds	r31, 0x0103	; 0x800103 <Serial+0x15>
+     830:	86 e8       	ldi	r24, 0x86	; 134
+     832:	80 83       	st	Z, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:134
+  
+  *_ucsrb |= _BV(RXEN0) | _BV(TXEN0) | _BV(RXCIE0);
+     834:	e0 91 00 01 	lds	r30, 0x0100	; 0x800100 <Serial+0x12>
+     838:	f0 91 01 01 	lds	r31, 0x0101	; 0x800101 <Serial+0x13>
+     83c:	80 81       	ld	r24, Z
+     83e:	88 69       	ori	r24, 0x98	; 152
+     840:	80 83       	st	Z, r24
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:135
+  *_ucsrb &= ~_BV(UDRIE0);
+     842:	e0 91 00 01 	lds	r30, 0x0100	; 0x800100 <Serial+0x12>
+     846:	f0 91 01 01 	lds	r31, 0x0101	; 0x800101 <Serial+0x13>
+     84a:	80 81       	ld	r24, Z
+     84c:	8f 7d       	andi	r24, 0xDF	; 223
+     84e:	80 83       	st	Z, r24
+setup():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:52
+  Serial.begin(115200);
+  //---------------------------------------------------------------------
+  // setup callbacks for serial commands
+  sdata.addCommand("#SW", SEND_SWVERSION);          			    //send software version
+     850:	68 e6       	ldi	r22, 0x68	; 104
+     852:	72 e0       	ldi	r23, 0x02	; 2
+     854:	84 e9       	ldi	r24, 0x94	; 148
+     856:	90 e0       	ldi	r25, 0x00	; 0
+     858:	4f de       	rcall	.-866    	; 0x4f8 <SerialCommand::addCommand(char const*, void (*)()) [clone .constprop.5]>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:53
+  sdata.addCommand("GETF", GET_FREQ);                         //set bit for getting and then sending ICP1_cnt
+     85a:	68 ea       	ldi	r22, 0xA8	; 168
+     85c:	70 e0       	ldi	r23, 0x00	; 0
+     85e:	88 e9       	ldi	r24, 0x98	; 152
+     860:	90 e0       	ldi	r25, 0x00	; 0
+     862:	4a de       	rcall	.-876    	; 0x4f8 <SerialCommand::addCommand(char const*, void (*)()) [clone .constprop.5]>
+setDefaultHandler():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:64
+/**
+ * This sets up a handler to be called in the event that the receveived command string
+ * isn't in the list of commands.
+ */
+void SerialCommand::setDefaultHandler(void (*function)(const char *)) {
+  defaultHandler = function;
+     864:	8c ea       	ldi	r24, 0xAC	; 172
+     866:	90 e0       	ldi	r25, 0x00	; 0
+     868:	90 93 8f 01 	sts	0x018F, r25	; 0x80018f <sdata+0x4>
+     86c:	80 93 8e 01 	sts	0x018E, r24	; 0x80018e <sdata+0x3>
+setup():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:55
+  sdata.setDefaultHandler(unrecognized);            			    //handling of not matching commands, send what?
+  Serial.printf("Software Version: %s \r\n", SW_Vers);
+     870:	80 e6       	ldi	r24, 0x60	; 96
+     872:	90 e0       	ldi	r25, 0x00	; 0
+     874:	9f 93       	push	r25
+     876:	8f 93       	push	r24
+     878:	8d e9       	ldi	r24, 0x9D	; 157
+     87a:	90 e0       	ldi	r25, 0x00	; 0
+     87c:	9f 93       	push	r25
+     87e:	8f 93       	push	r24
+     880:	df 93       	push	r29
+     882:	cf 93       	push	r28
+     884:	fe dd       	rcall	.-1028   	; 0x482 <Print::printf(char const*, ...) [clone .constprop.10]>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:58
+ //-------------------------------------------------------
+  // Pins
+  pinMode(AVR_ICP1, INPUT);
+     886:	60 e0       	ldi	r22, 0x00	; 0
+     888:	88 e0       	ldi	r24, 0x08	; 8
+     88a:	69 dd       	rcall	.-1326   	; 0x35e <pinMode>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:59
+  pinMode(AVR_ENA_Sen12V, OUTPUT);
+     88c:	61 e0       	ldi	r22, 0x01	; 1
+     88e:	87 e0       	ldi	r24, 0x07	; 7
+     890:	66 dd       	rcall	.-1332   	; 0x35e <pinMode>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:60
+  pinMode(PC_3, INPUT_PULLUP);
+     892:	62 e0       	ldi	r22, 0x02	; 2
+     894:	81 e1       	ldi	r24, 0x11	; 17
+     896:	63 dd       	rcall	.-1338   	; 0x35e <pinMode>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:61
+  pinMode(PC_4, INPUT_PULLUP);
+     898:	62 e0       	ldi	r22, 0x02	; 2
+     89a:	82 e1       	ldi	r24, 0x12	; 18
+     89c:	60 dd       	rcall	.-1344   	; 0x35e <pinMode>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:62
+  pinMode(PC_5, INPUT_PULLUP);
+     89e:	62 e0       	ldi	r22, 0x02	; 2
+     8a0:	83 e1       	ldi	r24, 0x13	; 19
+     8a2:	5d dd       	rcall	.-1350   	; 0x35e <pinMode>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:65
+  //-------------------------------------------------------
+  // Timer1
+  noInterrupts();                                             //Timer 1 off
+     8a4:	f8 94       	cli
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:66
+  TCCR1A = 0;
+     8a6:	1f bc       	out	0x2f, r1	; 47
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:67
+  TCCR1B = 0;
+     8a8:	1e bc       	out	0x2e, r1	; 46
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:68
+  interrupts();
+     8aa:	78 94       	sei
+     8ac:	0f 90       	pop	r0
+     8ae:	0f 90       	pop	r0
+     8b0:	0f 90       	pop	r0
+     8b2:	0f 90       	pop	r0
+     8b4:	0f 90       	pop	r0
+     8b6:	0f 90       	pop	r0
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:110
+ 
+    if(get_freq_timeout == false){
+      Serial.printf("ICP1val: %lu \r\n", tm.val_32);
+    }
+    else{
+      Serial.printf("ICP1val: Timeout \r\n");
+     8b8:	85 ec       	ldi	r24, 0xC5	; 197
+     8ba:	48 2e       	mov	r4, r24
+     8bc:	80 e0       	ldi	r24, 0x00	; 0
+     8be:	58 2e       	mov	r5, r24
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:107
+    TCCR1A = 0;
+    TCCR1B = 0;
+    interrupts();
+ 
+    if(get_freq_timeout == false){
+      Serial.printf("ICP1val: %lu \r\n", tm.val_32);
+     8c0:	95 eb       	ldi	r25, 0xB5	; 181
+     8c2:	69 2e       	mov	r6, r25
+     8c4:	90 e0       	ldi	r25, 0x00	; 0
+     8c6:	79 2e       	mov	r7, r25
+serialEventRun():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66
+#endif
+
+void serialEventRun(void)
+{
+#if defined(HAVE_HWSERIAL0)
+  if (Serial0_available && serialEvent && Serial0_available()) serialEvent();
+     8c8:	20 e0       	ldi	r18, 0x00	; 0
+     8ca:	82 2e       	mov	r8, r18
+     8cc:	20 e0       	ldi	r18, 0x00	; 0
+     8ce:	92 2e       	mov	r9, r18
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:94
+    TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/1
+    TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //input capture interrupt, overflow interrupt
+    interrupts();
+    
+    while((millis() - ms_start_measure) < freq_timeout){
+      get_freq_timeout = true;
+     8d0:	33 24       	eor	r3, r3
+     8d2:	33 94       	inc	r3
+readSerial():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:74
+ * This checks the Serial stream for characters, and assembles them into a buffer.
+ * When the terminator character (default '\n') is seen, it starts parsing the
+ * buffer for a prefix command, and calls handlers setup by addCommand() member
+ */
+void SerialCommand::readSerial() {
+  while (Serial.available() > 0) {
+     8d4:	8e ee       	ldi	r24, 0xEE	; 238
+     8d6:	90 e0       	ldi	r25, 0x00	; 0
+     8d8:	9f dc       	rcall	.-1730   	; 0x218 <HardwareSerial::available()>
+     8da:	18 16       	cp	r1, r24
+     8dc:	19 06       	cpc	r1, r25
+     8de:	0c f0       	brlt	.+2      	; 0x8e2 <main+0x11c>
+     8e0:	59 c0       	rjmp	.+178    	; 0x994 <main+0x1ce>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:75
+    char inChar = Serial.read();   // Read single available character, there may be more waiting
+     8e2:	8e ee       	ldi	r24, 0xEE	; 238
+     8e4:	90 e0       	ldi	r25, 0x00	; 0
+     8e6:	76 dc       	rcall	.-1812   	; 0x1d4 <HardwareSerial::read()>
+     8e8:	c8 2f       	mov	r28, r24
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:80
+    #ifdef SERIALCOMMAND_DEBUG
+      Serial.print(inChar);   // Echo back to serial stream
+    #endif
+
+    if (inChar == term) {     // Check for the terminator (default '\r') meaning end of command
+     8ea:	80 91 92 01 	lds	r24, 0x0192	; 0x800192 <sdata+0x7>
+     8ee:	c8 13       	cpse	r28, r24
+     8f0:	36 c0       	rjmp	.+108    	; 0x95e <main+0x198>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:86
+      #ifdef SERIALCOMMAND_DEBUG
+        Serial.print("Received: ");
+        Serial.println(buffer);
+      #endif
+
+      char *command = strtok_r(buffer, delim, &last);   // Search for command at start of buffer
+     8f2:	45 ed       	ldi	r20, 0xD5	; 213
+     8f4:	51 e0       	ldi	r21, 0x01	; 1
+     8f6:	60 e9       	ldi	r22, 0x90	; 144
+     8f8:	71 e0       	ldi	r23, 0x01	; 1
+     8fa:	83 e9       	ldi	r24, 0x93	; 147
+     8fc:	91 e0       	ldi	r25, 0x01	; 1
+     8fe:	de d0       	rcall	.+444    	; 0xabc <strtok_r>
+     900:	8c 01       	movw	r16, r24
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:87
+      if (command != NULL) {
+     902:	89 2b       	or	r24, r25
+     904:	d1 f0       	breq	.+52     	; 0x93a <main+0x174>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:89
+        boolean matched = false;
+        for (int i = 0; i < commandCount; i++) {
+     906:	c0 90 8d 01 	lds	r12, 0x018D	; 0x80018d <sdata+0x2>
+     90a:	d1 2c       	mov	r13, r1
+     90c:	c0 91 8b 01 	lds	r28, 0x018B	; 0x80018b <sdata>
+     910:	d0 91 8c 01 	lds	r29, 0x018C	; 0x80018c <sdata+0x1>
+main():
+     914:	f1 2c       	mov	r15, r1
+     916:	e1 2c       	mov	r14, r1
+readSerial():
+     918:	ec 14       	cp	r14, r12
+     91a:	fd 04       	cpc	r15, r13
+     91c:	bc f4       	brge	.+46     	; 0x94c <main+0x186>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:99
+            Serial.print(commandList[i].command);
+            Serial.println("]");
+          #endif
+
+          // Compare the found command against the list of known commands for a match
+          if (strncmp(command, commandList[i].command, SERIALCOMMAND_MAXCOMMANDLENGTH) == 0) {
+     91e:	5e 01       	movw	r10, r28
+     920:	40 e1       	ldi	r20, 0x10	; 16
+     922:	50 e0       	ldi	r21, 0x00	; 0
+     924:	be 01       	movw	r22, r28
+     926:	c8 01       	movw	r24, r16
+     928:	6a d4       	rcall	.+2260   	; 0x11fe <strncmp>
+     92a:	63 96       	adiw	r28, 0x13	; 19
+     92c:	89 2b       	or	r24, r25
+     92e:	51 f4       	brne	.+20     	; 0x944 <main+0x17e>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:106
+              Serial.print("Matched Command: ");
+              Serial.println(command);
+            #endif
+
+            // Execute the stored handler function for the command
+            (*commandList[i].function)();
+     930:	d5 01       	movw	r26, r10
+     932:	51 96       	adiw	r26, 0x11	; 17
+     934:	ed 91       	ld	r30, X+
+     936:	fc 91       	ld	r31, X
+     938:	09 95       	icall
+clearBuffer():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:134
+
+/*
+ * Clear the input buffer.
+ */
+void SerialCommand::clearBuffer() {
+  buffer[0] = '\0';
+     93a:	10 92 93 01 	sts	0x0193, r1	; 0x800193 <sdata+0x8>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:135
+  bufPos = 0;
+     93e:	10 92 d4 01 	sts	0x01D4, r1	; 0x8001d4 <sdata+0x49>
+     942:	c8 cf       	rjmp	.-112    	; 0x8d4 <main+0x10e>
+readSerial():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:89
+      #endif
+
+      char *command = strtok_r(buffer, delim, &last);   // Search for command at start of buffer
+      if (command != NULL) {
+        boolean matched = false;
+        for (int i = 0; i < commandCount; i++) {
+     944:	bf ef       	ldi	r27, 0xFF	; 255
+     946:	eb 1a       	sub	r14, r27
+     948:	fb 0a       	sbc	r15, r27
+     94a:	e6 cf       	rjmp	.-52     	; 0x918 <main+0x152>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:111
+            (*commandList[i].function)();
+            matched = true;
+            break;
+          }
+        }
+        if (!matched && (defaultHandler != NULL)) {
+     94c:	e0 91 8e 01 	lds	r30, 0x018E	; 0x80018e <sdata+0x3>
+     950:	f0 91 8f 01 	lds	r31, 0x018F	; 0x80018f <sdata+0x4>
+     954:	30 97       	sbiw	r30, 0x00	; 0
+     956:	89 f3       	breq	.-30     	; 0x93a <main+0x174>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:112
+          (*defaultHandler)(command);
+     958:	c8 01       	movw	r24, r16
+     95a:	09 95       	icall
+     95c:	ee cf       	rjmp	.-36     	; 0x93a <main+0x174>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:117
+        }
+      }
+      clearBuffer();
+    }
+    else if (isprint(inChar)) {     // Only printable characters into the buffer
+     95e:	8c 2f       	mov	r24, r28
+     960:	0c 2e       	mov	r0, r28
+     962:	00 0c       	add	r0, r0
+     964:	99 0b       	sbc	r25, r25
+     966:	35 d4       	rcall	.+2154   	; 0x11d2 <isprint>
+     968:	89 2b       	or	r24, r25
+     96a:	09 f4       	brne	.+2      	; 0x96e <main+0x1a8>
+     96c:	b3 cf       	rjmp	.-154    	; 0x8d4 <main+0x10e>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:118
+      if (bufPos < SERIALCOMMAND_BUFFER) {
+     96e:	e0 91 d4 01 	lds	r30, 0x01D4	; 0x8001d4 <sdata+0x49>
+     972:	e0 34       	cpi	r30, 0x40	; 64
+     974:	08 f0       	brcs	.+2      	; 0x978 <main+0x1b2>
+     976:	ae cf       	rjmp	.-164    	; 0x8d4 <main+0x10e>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:119
+        buffer[bufPos++] = inChar;  // Put character into buffer
+     978:	81 e0       	ldi	r24, 0x01	; 1
+     97a:	8e 0f       	add	r24, r30
+     97c:	80 93 d4 01 	sts	0x01D4, r24	; 0x8001d4 <sdata+0x49>
+     980:	f0 e0       	ldi	r31, 0x00	; 0
+     982:	e5 57       	subi	r30, 0x75	; 117
+     984:	fe 4f       	sbci	r31, 0xFE	; 254
+     986:	c0 87       	std	Z+8, r28	; 0x08
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01\src\RP_Arduino-SerialCommand/SerialCommand.cpp:120
+        buffer[bufPos] = '\0';      // Null terminate
+     988:	e8 2f       	mov	r30, r24
+     98a:	f0 e0       	ldi	r31, 0x00	; 0
+     98c:	e5 57       	subi	r30, 0x75	; 117
+     98e:	fe 4f       	sbci	r31, 0xFE	; 254
+     990:	10 86       	std	Z+8, r1	; 0x08
+     992:	a0 cf       	rjmp	.-192    	; 0x8d4 <main+0x10e>
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:79
+  //call frequently to handle serial data communication
+  sdata.readSerial(); 
+
+  static uint32_t ms_start_measure;
+  
+  if(get_freq == 1){
+     994:	80 91 ed 00 	lds	r24, 0x00ED	; 0x8000ed <get_freq>
+     998:	81 30       	cpi	r24, 0x01	; 1
+     99a:	09 f0       	breq	.+2      	; 0x99e <main+0x1d8>
+     99c:	79 c0       	rjmp	.+242    	; 0xa90 <main+0x2ca>
+millis():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:218
+}
+
+unsigned long millis()
+{
+  unsigned long m;
+  uint8_t oldSREG = SREG;
+     99e:	2f b7       	in	r18, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:222
+
+  // disable interrupts while we read timer0_millis or we might get an
+  // inconsistent value (e.g. in the middle of a write to timer0_millis)
+  cli();
+     9a0:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:223
+  m = timer0_millis;
+     9a2:	80 91 df 00 	lds	r24, 0x00DF	; 0x8000df <timer0_millis>
+     9a6:	90 91 e0 00 	lds	r25, 0x00E0	; 0x8000e0 <timer0_millis+0x1>
+     9aa:	a0 91 e1 00 	lds	r26, 0x00E1	; 0x8000e1 <timer0_millis+0x2>
+     9ae:	b0 91 e2 00 	lds	r27, 0x00E2	; 0x8000e2 <timer0_millis+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:224
+  SREG = oldSREG;
+     9b2:	2f bf       	out	0x3f, r18	; 63
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:80
+    ms_start_measure = millis();                              //timeout
+     9b4:	80 93 e9 00 	sts	0x00E9, r24	; 0x8000e9 <loop::ms_start_measure>
+     9b8:	90 93 ea 00 	sts	0x00EA, r25	; 0x8000ea <loop::ms_start_measure+0x1>
+     9bc:	a0 93 eb 00 	sts	0x00EB, r26	; 0x8000eb <loop::ms_start_measure+0x2>
+     9c0:	b0 93 ec 00 	sts	0x00EC, r27	; 0x8000ec <loop::ms_start_measure+0x3>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:81
+    get_freq = 0;                                             //only once
+     9c4:	10 92 ed 00 	sts	0x00ED, r1	; 0x8000ed <get_freq>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:82
+    tm.val_32 = 0;                                            //val to zero
+     9c8:	10 92 e5 00 	sts	0x00E5, r1	; 0x8000e5 <tm>
+     9cc:	10 92 e6 00 	sts	0x00E6, r1	; 0x8000e6 <tm+0x1>
+     9d0:	10 92 e7 00 	sts	0x00E7, r1	; 0x8000e7 <tm+0x2>
+     9d4:	10 92 e8 00 	sts	0x00E8, r1	; 0x8000e8 <tm+0x3>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:83
+    ICP1_cnt = 0;                                       
+     9d8:	10 92 e4 00 	sts	0x00E4, r1	; 0x8000e4 <ICP1_cnt>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:84
+    digitalWrite(AVR_ENA_Sen12V, HIGH);                       //switch sensor on
+     9dc:	81 e0       	ldi	r24, 0x01	; 1
+     9de:	86 db       	rcall	.-2292   	; 0xec <digitalWrite.constprop.9>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:85
+    delay(100);                                               //wait 100mS...
+     9e0:	64 e6       	ldi	r22, 0x64	; 100
+     9e2:	70 e0       	ldi	r23, 0x00	; 0
+     9e4:	80 e0       	ldi	r24, 0x00	; 0
+     9e6:	90 e0       	ldi	r25, 0x00	; 0
+     9e8:	1c dd       	rcall	.-1480   	; 0x422 <delay>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:86
+    noInterrupts();                                           //Timer 1 on, input capture Pin PB0 = ICP1 = 8
+     9ea:	f8 94       	cli
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:87
+    TCCR1A = 0;
+     9ec:	1f bc       	out	0x2f, r1	; 47
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:88
+    TCCR1B = 0;
+     9ee:	1e bc       	out	0x2e, r1	; 46
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:89
+    TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/1
+     9f0:	8e b5       	in	r24, 0x2e	; 46
+     9f2:	81 6c       	ori	r24, 0xC1	; 193
+     9f4:	8e bd       	out	0x2e, r24	; 46
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:90
+    TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //input capture interrupt, overflow interrupt
+     9f6:	89 b7       	in	r24, 0x39	; 57
+     9f8:	84 62       	ori	r24, 0x24	; 36
+     9fa:	89 bf       	out	0x39, r24	; 57
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:91
+    interrupts();
+     9fc:	78 94       	sei
+millis():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:218
+}
+
+unsigned long millis()
+{
+  unsigned long m;
+  uint8_t oldSREG = SREG;
+     9fe:	2f b7       	in	r18, 0x3f	; 63
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:222
+
+  // disable interrupts while we read timer0_millis or we might get an
+  // inconsistent value (e.g. in the middle of a write to timer0_millis)
+  cli();
+     a00:	f8 94       	cli
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:223
+  m = timer0_millis;
+     a02:	80 91 df 00 	lds	r24, 0x00DF	; 0x8000df <timer0_millis>
+     a06:	90 91 e0 00 	lds	r25, 0x00E0	; 0x8000e0 <timer0_millis+0x1>
+     a0a:	a0 91 e1 00 	lds	r26, 0x00E1	; 0x8000e1 <timer0_millis+0x2>
+     a0e:	b0 91 e2 00 	lds	r27, 0x00E2	; 0x8000e2 <timer0_millis+0x3>
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:224
+  SREG = oldSREG;
+     a12:	2f bf       	out	0x3f, r18	; 63
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:93
+    
+    while((millis() - ms_start_measure) < freq_timeout){
+     a14:	40 91 e9 00 	lds	r20, 0x00E9	; 0x8000e9 <loop::ms_start_measure>
+     a18:	50 91 ea 00 	lds	r21, 0x00EA	; 0x8000ea <loop::ms_start_measure+0x1>
+     a1c:	60 91 eb 00 	lds	r22, 0x00EB	; 0x8000eb <loop::ms_start_measure+0x2>
+     a20:	70 91 ec 00 	lds	r23, 0x00EC	; 0x8000ec <loop::ms_start_measure+0x3>
+     a24:	84 1b       	sub	r24, r20
+     a26:	95 0b       	sbc	r25, r21
+     a28:	a6 0b       	sbc	r26, r22
+     a2a:	b7 0b       	sbc	r27, r23
+     a2c:	88 3b       	cpi	r24, 0xB8	; 184
+     a2e:	9b 40       	sbci	r25, 0x0B	; 11
+     a30:	a1 05       	cpc	r26, r1
+     a32:	b1 05       	cpc	r27, r1
+     a34:	40 f4       	brcc	.+16     	; 0xa46 <main+0x280>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:94
+      get_freq_timeout = true;
+     a36:	30 92 e3 00 	sts	0x00E3, r3	; 0x8000e3 <get_freq_timeout>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:95
+      if(ICP1_cnt == 1){
+     a3a:	80 91 e4 00 	lds	r24, 0x00E4	; 0x8000e4 <ICP1_cnt>
+     a3e:	81 30       	cpi	r24, 0x01	; 1
+     a40:	f1 f6       	brne	.-68     	; 0x9fe <main+0x238>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:96
+        get_freq_timeout = false;
+     a42:	10 92 e3 00 	sts	0x00E3, r1	; 0x8000e3 <get_freq_timeout>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:100
+        break;
+      }
+    }
+    digitalWrite(AVR_ENA_Sen12V, LOW);                        //switch sensor off
+     a46:	80 e0       	ldi	r24, 0x00	; 0
+     a48:	51 db       	rcall	.-2398   	; 0xec <digitalWrite.constprop.9>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:101
+    noInterrupts();                                           //Timer 1 off
+     a4a:	f8 94       	cli
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:102
+    TCCR1A = 0;
+     a4c:	1f bc       	out	0x2f, r1	; 47
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:103
+    TCCR1B = 0;
+     a4e:	1e bc       	out	0x2e, r1	; 46
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:104
+    interrupts();
+     a50:	78 94       	sei
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:106
+ 
+    if(get_freq_timeout == false){
+     a52:	80 91 e3 00 	lds	r24, 0x00E3	; 0x8000e3 <get_freq_timeout>
+     a56:	81 11       	cpse	r24, r1
+     a58:	25 c0       	rjmp	.+74     	; 0xaa4 <main+0x2de>
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:107
+      Serial.printf("ICP1val: %lu \r\n", tm.val_32);
+     a5a:	80 91 e5 00 	lds	r24, 0x00E5	; 0x8000e5 <tm>
+     a5e:	90 91 e6 00 	lds	r25, 0x00E6	; 0x8000e6 <tm+0x1>
+     a62:	a0 91 e7 00 	lds	r26, 0x00E7	; 0x8000e7 <tm+0x2>
+     a66:	b0 91 e8 00 	lds	r27, 0x00E8	; 0x8000e8 <tm+0x3>
+     a6a:	bf 93       	push	r27
+     a6c:	af 93       	push	r26
+     a6e:	9f 93       	push	r25
+     a70:	8f 93       	push	r24
+     a72:	7f 92       	push	r7
+     a74:	6f 92       	push	r6
+     a76:	8e ee       	ldi	r24, 0xEE	; 238
+     a78:	90 e0       	ldi	r25, 0x00	; 0
+     a7a:	9f 93       	push	r25
+     a7c:	8f 93       	push	r24
+     a7e:	01 dd       	rcall	.-1534   	; 0x482 <Print::printf(char const*, ...) [clone .constprop.10]>
+     a80:	8d b7       	in	r24, 0x3d	; 61
+     a82:	9e b7       	in	r25, 0x3e	; 62
+     a84:	08 96       	adiw	r24, 0x08	; 8
+     a86:	0f b6       	in	r0, 0x3f	; 63
+     a88:	f8 94       	cli
+     a8a:	9e bf       	out	0x3e, r25	; 62
+     a8c:	0f be       	out	0x3f, r0	; 63
+     a8e:	8d bf       	out	0x3d, r24	; 61
+serialEventRun():
+H:\arduino-1.8.19\portable\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66
+     a90:	81 14       	cp	r8, r1
+     a92:	91 04       	cpc	r9, r1
+     a94:	09 f4       	brne	.+2      	; 0xa98 <main+0x2d2>
+     a96:	1e cf       	rjmp	.-452    	; 0x8d4 <main+0x10e>
+     a98:	cb db       	rcall	.-2154   	; 0x230 <Serial0_available()>
+     a9a:	88 23       	and	r24, r24
+     a9c:	09 f4       	brne	.+2      	; 0xaa0 <main+0x2da>
+     a9e:	1a cf       	rjmp	.-460    	; 0x8d4 <main+0x10e>
+     aa0:	af da       	rcall	.-2722   	; 0x0 <__vectors>
+     aa2:	18 cf       	rjmp	.-464    	; 0x8d4 <main+0x10e>
+loop():
+C:\Users\ralfp\OneDrive\Dokumente\GitHub\RP_Zisternensensor\ESP_01_MQTT\Software\Mega8-01/Mega8-01.ino:110
+    }
+    else{
+      Serial.printf("ICP1val: Timeout \r\n");
+     aa4:	5f 92       	push	r5
+     aa6:	4f 92       	push	r4
+     aa8:	8e ee       	ldi	r24, 0xEE	; 238
+     aaa:	90 e0       	ldi	r25, 0x00	; 0
+     aac:	9f 93       	push	r25
+     aae:	8f 93       	push	r24
+     ab0:	e8 dc       	rcall	.-1584   	; 0x482 <Print::printf(char const*, ...) [clone .constprop.10]>
+     ab2:	0f 90       	pop	r0
+     ab4:	0f 90       	pop	r0
+     ab6:	0f 90       	pop	r0
+     ab8:	0f 90       	pop	r0
+     aba:	ea cf       	rjmp	.-44     	; 0xa90 <main+0x2ca>
+
+00000abc <strtok_r>:
+strtok_r():
+     abc:	fa 01       	movw	r30, r20
+     abe:	a1 91       	ld	r26, Z+
+     ac0:	b0 81       	ld	r27, Z
+     ac2:	00 97       	sbiw	r24, 0x00	; 0
+     ac4:	19 f4       	brne	.+6      	; 0xacc <strtok_r+0x10>
+     ac6:	10 97       	sbiw	r26, 0x00	; 0
+     ac8:	e1 f0       	breq	.+56     	; 0xb02 <strtok_r+0x46>
+     aca:	cd 01       	movw	r24, r26
+     acc:	dc 01       	movw	r26, r24
+     ace:	cd 01       	movw	r24, r26
+     ad0:	0d 90       	ld	r0, X+
+     ad2:	00 20       	and	r0, r0
+     ad4:	11 f4       	brne	.+4      	; 0xada <strtok_r+0x1e>
+     ad6:	c0 01       	movw	r24, r0
+     ad8:	13 c0       	rjmp	.+38     	; 0xb00 <strtok_r+0x44>
+     ada:	fb 01       	movw	r30, r22
+     adc:	21 91       	ld	r18, Z+
+     ade:	22 23       	and	r18, r18
+     ae0:	19 f0       	breq	.+6      	; 0xae8 <strtok_r+0x2c>
+     ae2:	20 15       	cp	r18, r0
+     ae4:	d9 f7       	brne	.-10     	; 0xadc <strtok_r+0x20>
+     ae6:	f3 cf       	rjmp	.-26     	; 0xace <strtok_r+0x12>
+     ae8:	fb 01       	movw	r30, r22
+     aea:	21 91       	ld	r18, Z+
+     aec:	20 15       	cp	r18, r0
+     aee:	19 f4       	brne	.+6      	; 0xaf6 <strtok_r+0x3a>
+     af0:	1e 92       	st	-X, r1
+     af2:	11 96       	adiw	r26, 0x01	; 1
+     af4:	06 c0       	rjmp	.+12     	; 0xb02 <strtok_r+0x46>
+     af6:	22 23       	and	r18, r18
+     af8:	c1 f7       	brne	.-16     	; 0xaea <strtok_r+0x2e>
+     afa:	0d 90       	ld	r0, X+
+     afc:	00 20       	and	r0, r0
+     afe:	a1 f7       	brne	.-24     	; 0xae8 <strtok_r+0x2c>
+     b00:	d0 01       	movw	r26, r0
+     b02:	fa 01       	movw	r30, r20
+     b04:	a1 93       	st	Z+, r26
+     b06:	b0 83       	st	Z, r27
+     b08:	08 95       	ret
+
+00000b0a <vfprintf>:
+vfprintf():
+     b0a:	ab e0       	ldi	r26, 0x0B	; 11
+     b0c:	b0 e0       	ldi	r27, 0x00	; 0
+     b0e:	ea e8       	ldi	r30, 0x8A	; 138
+     b10:	f5 e0       	ldi	r31, 0x05	; 5
+     b12:	6a c2       	rjmp	.+1236   	; 0xfe8 <__prologue_saves__>
+     b14:	7c 01       	movw	r14, r24
+     b16:	3b 01       	movw	r6, r22
+     b18:	8a 01       	movw	r16, r20
+     b1a:	fc 01       	movw	r30, r24
+     b1c:	17 82       	std	Z+7, r1	; 0x07
+     b1e:	16 82       	std	Z+6, r1	; 0x06
+     b20:	83 81       	ldd	r24, Z+3	; 0x03
+     b22:	81 ff       	sbrs	r24, 1
+     b24:	ba c1       	rjmp	.+884    	; 0xe9a <vfprintf+0x390>
+     b26:	ce 01       	movw	r24, r28
+     b28:	01 96       	adiw	r24, 0x01	; 1
+     b2a:	5c 01       	movw	r10, r24
+     b2c:	f7 01       	movw	r30, r14
+     b2e:	93 81       	ldd	r25, Z+3	; 0x03
+     b30:	f3 01       	movw	r30, r6
+     b32:	93 fd       	sbrc	r25, 3
+     b34:	85 91       	lpm	r24, Z+
+     b36:	93 ff       	sbrs	r25, 3
+     b38:	81 91       	ld	r24, Z+
+     b3a:	3f 01       	movw	r6, r30
+     b3c:	88 23       	and	r24, r24
+     b3e:	09 f4       	brne	.+2      	; 0xb42 <vfprintf+0x38>
+     b40:	49 c1       	rjmp	.+658    	; 0xdd4 <vfprintf+0x2ca>
+     b42:	85 32       	cpi	r24, 0x25	; 37
+     b44:	39 f4       	brne	.+14     	; 0xb54 <vfprintf+0x4a>
+     b46:	93 fd       	sbrc	r25, 3
+     b48:	85 91       	lpm	r24, Z+
+     b4a:	93 ff       	sbrs	r25, 3
+     b4c:	81 91       	ld	r24, Z+
+     b4e:	3f 01       	movw	r6, r30
+     b50:	85 32       	cpi	r24, 0x25	; 37
+     b52:	21 f4       	brne	.+8      	; 0xb5c <vfprintf+0x52>
+     b54:	b7 01       	movw	r22, r14
+     b56:	90 e0       	ldi	r25, 0x00	; 0
+     b58:	b9 d1       	rcall	.+882    	; 0xecc <fputc>
+     b5a:	e8 cf       	rjmp	.-48     	; 0xb2c <vfprintf+0x22>
+     b5c:	91 2c       	mov	r9, r1
+     b5e:	21 2c       	mov	r2, r1
+     b60:	31 2c       	mov	r3, r1
+     b62:	ff e1       	ldi	r31, 0x1F	; 31
+     b64:	f3 15       	cp	r31, r3
+     b66:	38 f0       	brcs	.+14     	; 0xb76 <vfprintf+0x6c>
+     b68:	8b 32       	cpi	r24, 0x2B	; 43
+     b6a:	11 f1       	breq	.+68     	; 0xbb0 <vfprintf+0xa6>
+     b6c:	90 f4       	brcc	.+36     	; 0xb92 <vfprintf+0x88>
+     b6e:	80 32       	cpi	r24, 0x20	; 32
+     b70:	09 f1       	breq	.+66     	; 0xbb4 <vfprintf+0xaa>
+     b72:	83 32       	cpi	r24, 0x23	; 35
+     b74:	29 f1       	breq	.+74     	; 0xbc0 <vfprintf+0xb6>
+     b76:	37 fc       	sbrc	r3, 7
+     b78:	3c c0       	rjmp	.+120    	; 0xbf2 <vfprintf+0xe8>
+     b7a:	20 ed       	ldi	r18, 0xD0	; 208
+     b7c:	28 0f       	add	r18, r24
+     b7e:	2a 30       	cpi	r18, 0x0A	; 10
+     b80:	50 f5       	brcc	.+84     	; 0xbd6 <vfprintf+0xcc>
+     b82:	36 fe       	sbrs	r3, 6
+     b84:	20 c0       	rjmp	.+64     	; 0xbc6 <vfprintf+0xbc>
+     b86:	8a e0       	ldi	r24, 0x0A	; 10
+     b88:	98 9e       	mul	r9, r24
+     b8a:	20 0d       	add	r18, r0
+     b8c:	11 24       	eor	r1, r1
+     b8e:	92 2e       	mov	r9, r18
+     b90:	06 c0       	rjmp	.+12     	; 0xb9e <vfprintf+0x94>
+     b92:	8d 32       	cpi	r24, 0x2D	; 45
+     b94:	91 f0       	breq	.+36     	; 0xbba <vfprintf+0xb0>
+     b96:	80 33       	cpi	r24, 0x30	; 48
+     b98:	71 f7       	brne	.-36     	; 0xb76 <vfprintf+0x6c>
+     b9a:	68 94       	set
+     b9c:	30 f8       	bld	r3, 0
+     b9e:	f3 01       	movw	r30, r6
+     ba0:	93 fd       	sbrc	r25, 3
+     ba2:	85 91       	lpm	r24, Z+
+     ba4:	93 ff       	sbrs	r25, 3
+     ba6:	81 91       	ld	r24, Z+
+     ba8:	3f 01       	movw	r6, r30
+     baa:	81 11       	cpse	r24, r1
+     bac:	da cf       	rjmp	.-76     	; 0xb62 <vfprintf+0x58>
+     bae:	21 c0       	rjmp	.+66     	; 0xbf2 <vfprintf+0xe8>
+     bb0:	68 94       	set
+     bb2:	31 f8       	bld	r3, 1
+     bb4:	68 94       	set
+     bb6:	32 f8       	bld	r3, 2
+     bb8:	f2 cf       	rjmp	.-28     	; 0xb9e <vfprintf+0x94>
+     bba:	68 94       	set
+     bbc:	33 f8       	bld	r3, 3
+     bbe:	ef cf       	rjmp	.-34     	; 0xb9e <vfprintf+0x94>
+     bc0:	68 94       	set
+     bc2:	34 f8       	bld	r3, 4
+     bc4:	ec cf       	rjmp	.-40     	; 0xb9e <vfprintf+0x94>
+     bc6:	ea e0       	ldi	r30, 0x0A	; 10
+     bc8:	2e 9e       	mul	r2, r30
+     bca:	20 0d       	add	r18, r0
+     bcc:	11 24       	eor	r1, r1
+     bce:	22 2e       	mov	r2, r18
+     bd0:	68 94       	set
+     bd2:	35 f8       	bld	r3, 5
+     bd4:	e4 cf       	rjmp	.-56     	; 0xb9e <vfprintf+0x94>
+     bd6:	8e 32       	cpi	r24, 0x2E	; 46
+     bd8:	29 f4       	brne	.+10     	; 0xbe4 <vfprintf+0xda>
+     bda:	36 fc       	sbrc	r3, 6
+     bdc:	fb c0       	rjmp	.+502    	; 0xdd4 <vfprintf+0x2ca>
+     bde:	68 94       	set
+     be0:	36 f8       	bld	r3, 6
+     be2:	dd cf       	rjmp	.-70     	; 0xb9e <vfprintf+0x94>
+     be4:	8c 36       	cpi	r24, 0x6C	; 108
+     be6:	19 f4       	brne	.+6      	; 0xbee <vfprintf+0xe4>
+     be8:	68 94       	set
+     bea:	37 f8       	bld	r3, 7
+     bec:	d8 cf       	rjmp	.-80     	; 0xb9e <vfprintf+0x94>
+     bee:	88 36       	cpi	r24, 0x68	; 104
+     bf0:	b1 f2       	breq	.-84     	; 0xb9e <vfprintf+0x94>
+     bf2:	98 2f       	mov	r25, r24
+     bf4:	9f 7d       	andi	r25, 0xDF	; 223
+     bf6:	95 54       	subi	r25, 0x45	; 69
+     bf8:	93 30       	cpi	r25, 0x03	; 3
+     bfa:	d8 f0       	brcs	.+54     	; 0xc32 <vfprintf+0x128>
+     bfc:	83 36       	cpi	r24, 0x63	; 99
+     bfe:	91 f1       	breq	.+100    	; 0xc64 <vfprintf+0x15a>
+     c00:	83 37       	cpi	r24, 0x73	; 115
+     c02:	b1 f1       	breq	.+108    	; 0xc70 <vfprintf+0x166>
+     c04:	83 35       	cpi	r24, 0x53	; 83
+     c06:	09 f0       	breq	.+2      	; 0xc0a <vfprintf+0x100>
+     c08:	5e c0       	rjmp	.+188    	; 0xcc6 <vfprintf+0x1bc>
+     c0a:	28 01       	movw	r4, r16
+     c0c:	f2 e0       	ldi	r31, 0x02	; 2
+     c0e:	4f 0e       	add	r4, r31
+     c10:	51 1c       	adc	r5, r1
+     c12:	f8 01       	movw	r30, r16
+     c14:	c0 80       	ld	r12, Z
+     c16:	d1 80       	ldd	r13, Z+1	; 0x01
+     c18:	69 2d       	mov	r22, r9
+     c1a:	70 e0       	ldi	r23, 0x00	; 0
+     c1c:	36 fc       	sbrc	r3, 6
+     c1e:	02 c0       	rjmp	.+4      	; 0xc24 <vfprintf+0x11a>
+     c20:	6f ef       	ldi	r22, 0xFF	; 255
+     c22:	7f ef       	ldi	r23, 0xFF	; 255
+     c24:	c6 01       	movw	r24, r12
+     c26:	3c d1       	rcall	.+632    	; 0xea0 <strnlen_P>
+     c28:	4c 01       	movw	r8, r24
+     c2a:	68 94       	set
+     c2c:	37 f8       	bld	r3, 7
+     c2e:	82 01       	movw	r16, r4
+     c30:	0a c0       	rjmp	.+20     	; 0xc46 <vfprintf+0x13c>
+     c32:	0c 5f       	subi	r16, 0xFC	; 252
+     c34:	1f 4f       	sbci	r17, 0xFF	; 255
+     c36:	ff e3       	ldi	r31, 0x3F	; 63
+     c38:	f9 83       	std	Y+1, r31	; 0x01
+     c3a:	88 24       	eor	r8, r8
+     c3c:	83 94       	inc	r8
+     c3e:	91 2c       	mov	r9, r1
+     c40:	65 01       	movw	r12, r10
+     c42:	e8 94       	clt
+     c44:	37 f8       	bld	r3, 7
+     c46:	33 fe       	sbrs	r3, 3
+     c48:	2a c0       	rjmp	.+84     	; 0xc9e <vfprintf+0x194>
+     c4a:	52 2c       	mov	r5, r2
+     c4c:	81 14       	cp	r8, r1
+     c4e:	91 04       	cpc	r9, r1
+     c50:	59 f5       	brne	.+86     	; 0xca8 <vfprintf+0x19e>
+     c52:	55 20       	and	r5, r5
+     c54:	09 f4       	brne	.+2      	; 0xc58 <vfprintf+0x14e>
+     c56:	6a cf       	rjmp	.-300    	; 0xb2c <vfprintf+0x22>
+     c58:	b7 01       	movw	r22, r14
+     c5a:	80 e2       	ldi	r24, 0x20	; 32
+     c5c:	90 e0       	ldi	r25, 0x00	; 0
+     c5e:	36 d1       	rcall	.+620    	; 0xecc <fputc>
+     c60:	5a 94       	dec	r5
+     c62:	f7 cf       	rjmp	.-18     	; 0xc52 <vfprintf+0x148>
+     c64:	f8 01       	movw	r30, r16
+     c66:	80 81       	ld	r24, Z
+     c68:	89 83       	std	Y+1, r24	; 0x01
+     c6a:	0e 5f       	subi	r16, 0xFE	; 254
+     c6c:	1f 4f       	sbci	r17, 0xFF	; 255
+     c6e:	e5 cf       	rjmp	.-54     	; 0xc3a <vfprintf+0x130>
+     c70:	28 01       	movw	r4, r16
+     c72:	f2 e0       	ldi	r31, 0x02	; 2
+     c74:	4f 0e       	add	r4, r31
+     c76:	51 1c       	adc	r5, r1
+     c78:	f8 01       	movw	r30, r16
+     c7a:	c0 80       	ld	r12, Z
+     c7c:	d1 80       	ldd	r13, Z+1	; 0x01
+     c7e:	69 2d       	mov	r22, r9
+     c80:	70 e0       	ldi	r23, 0x00	; 0
+     c82:	36 fc       	sbrc	r3, 6
+     c84:	02 c0       	rjmp	.+4      	; 0xc8a <vfprintf+0x180>
+     c86:	6f ef       	ldi	r22, 0xFF	; 255
+     c88:	7f ef       	ldi	r23, 0xFF	; 255
+     c8a:	c6 01       	movw	r24, r12
+     c8c:	14 d1       	rcall	.+552    	; 0xeb6 <strnlen>
+     c8e:	4c 01       	movw	r8, r24
+     c90:	82 01       	movw	r16, r4
+     c92:	d7 cf       	rjmp	.-82     	; 0xc42 <vfprintf+0x138>
+     c94:	b7 01       	movw	r22, r14
+     c96:	80 e2       	ldi	r24, 0x20	; 32
+     c98:	90 e0       	ldi	r25, 0x00	; 0
+     c9a:	18 d1       	rcall	.+560    	; 0xecc <fputc>
+     c9c:	2a 94       	dec	r2
+     c9e:	28 14       	cp	r2, r8
+     ca0:	19 04       	cpc	r1, r9
+     ca2:	09 f0       	breq	.+2      	; 0xca6 <vfprintf+0x19c>
+     ca4:	b8 f7       	brcc	.-18     	; 0xc94 <vfprintf+0x18a>
+     ca6:	d1 cf       	rjmp	.-94     	; 0xc4a <vfprintf+0x140>
+     ca8:	f6 01       	movw	r30, r12
+     caa:	37 fc       	sbrc	r3, 7
+     cac:	85 91       	lpm	r24, Z+
+     cae:	37 fe       	sbrs	r3, 7
+     cb0:	81 91       	ld	r24, Z+
+     cb2:	6f 01       	movw	r12, r30
+     cb4:	b7 01       	movw	r22, r14
+     cb6:	90 e0       	ldi	r25, 0x00	; 0
+     cb8:	09 d1       	rcall	.+530    	; 0xecc <fputc>
+     cba:	51 10       	cpse	r5, r1
+     cbc:	5a 94       	dec	r5
+     cbe:	f1 e0       	ldi	r31, 0x01	; 1
+     cc0:	8f 1a       	sub	r8, r31
+     cc2:	91 08       	sbc	r9, r1
+     cc4:	c3 cf       	rjmp	.-122    	; 0xc4c <vfprintf+0x142>
+     cc6:	84 36       	cpi	r24, 0x64	; 100
+     cc8:	19 f0       	breq	.+6      	; 0xcd0 <vfprintf+0x1c6>
+     cca:	89 36       	cpi	r24, 0x69	; 105
+     ccc:	09 f0       	breq	.+2      	; 0xcd0 <vfprintf+0x1c6>
+     cce:	73 c0       	rjmp	.+230    	; 0xdb6 <vfprintf+0x2ac>
+     cd0:	f8 01       	movw	r30, r16
+     cd2:	37 fe       	sbrs	r3, 7
+     cd4:	67 c0       	rjmp	.+206    	; 0xda4 <vfprintf+0x29a>
+     cd6:	60 81       	ld	r22, Z
+     cd8:	71 81       	ldd	r23, Z+1	; 0x01
+     cda:	82 81       	ldd	r24, Z+2	; 0x02
+     cdc:	93 81       	ldd	r25, Z+3	; 0x03
+     cde:	0c 5f       	subi	r16, 0xFC	; 252
+     ce0:	1f 4f       	sbci	r17, 0xFF	; 255
+     ce2:	f3 2d       	mov	r31, r3
+     ce4:	ff 76       	andi	r31, 0x6F	; 111
+     ce6:	3f 2e       	mov	r3, r31
+     ce8:	97 ff       	sbrs	r25, 7
+     cea:	09 c0       	rjmp	.+18     	; 0xcfe <vfprintf+0x1f4>
+     cec:	90 95       	com	r25
+     cee:	80 95       	com	r24
+     cf0:	70 95       	com	r23
+     cf2:	61 95       	neg	r22
+     cf4:	7f 4f       	sbci	r23, 0xFF	; 255
+     cf6:	8f 4f       	sbci	r24, 0xFF	; 255
+     cf8:	9f 4f       	sbci	r25, 0xFF	; 255
+     cfa:	68 94       	set
+     cfc:	37 f8       	bld	r3, 7
+     cfe:	2a e0       	ldi	r18, 0x0A	; 10
+     d00:	30 e0       	ldi	r19, 0x00	; 0
+     d02:	a5 01       	movw	r20, r10
+     d04:	13 d1       	rcall	.+550    	; 0xf2c <__ultoa_invert>
+     d06:	c8 2e       	mov	r12, r24
+     d08:	ca 18       	sub	r12, r10
+     d0a:	8c 2c       	mov	r8, r12
+     d0c:	43 2c       	mov	r4, r3
+     d0e:	36 fe       	sbrs	r3, 6
+     d10:	0c c0       	rjmp	.+24     	; 0xd2a <vfprintf+0x220>
+     d12:	e8 94       	clt
+     d14:	40 f8       	bld	r4, 0
+     d16:	c9 14       	cp	r12, r9
+     d18:	40 f4       	brcc	.+16     	; 0xd2a <vfprintf+0x220>
+     d1a:	34 fe       	sbrs	r3, 4
+     d1c:	05 c0       	rjmp	.+10     	; 0xd28 <vfprintf+0x21e>
+     d1e:	32 fc       	sbrc	r3, 2
+     d20:	03 c0       	rjmp	.+6      	; 0xd28 <vfprintf+0x21e>
+     d22:	f3 2d       	mov	r31, r3
+     d24:	fe 7e       	andi	r31, 0xEE	; 238
+     d26:	4f 2e       	mov	r4, r31
+     d28:	89 2c       	mov	r8, r9
+     d2a:	44 fe       	sbrs	r4, 4
+     d2c:	90 c0       	rjmp	.+288    	; 0xe4e <vfprintf+0x344>
+     d2e:	fe 01       	movw	r30, r28
+     d30:	ec 0d       	add	r30, r12
+     d32:	f1 1d       	adc	r31, r1
+     d34:	80 81       	ld	r24, Z
+     d36:	80 33       	cpi	r24, 0x30	; 48
+     d38:	09 f0       	breq	.+2      	; 0xd3c <vfprintf+0x232>
+     d3a:	82 c0       	rjmp	.+260    	; 0xe40 <vfprintf+0x336>
+     d3c:	24 2d       	mov	r18, r4
+     d3e:	29 7e       	andi	r18, 0xE9	; 233
+     d40:	42 2e       	mov	r4, r18
+     d42:	84 2d       	mov	r24, r4
+     d44:	88 70       	andi	r24, 0x08	; 8
+     d46:	58 2e       	mov	r5, r24
+     d48:	43 fc       	sbrc	r4, 3
+     d4a:	8f c0       	rjmp	.+286    	; 0xe6a <vfprintf+0x360>
+     d4c:	40 fe       	sbrs	r4, 0
+     d4e:	89 c0       	rjmp	.+274    	; 0xe62 <vfprintf+0x358>
+     d50:	9c 2c       	mov	r9, r12
+     d52:	82 14       	cp	r8, r2
+     d54:	18 f4       	brcc	.+6      	; 0xd5c <vfprintf+0x252>
+     d56:	2c 0c       	add	r2, r12
+     d58:	92 2c       	mov	r9, r2
+     d5a:	98 18       	sub	r9, r8
+     d5c:	44 fe       	sbrs	r4, 4
+     d5e:	8b c0       	rjmp	.+278    	; 0xe76 <vfprintf+0x36c>
+     d60:	b7 01       	movw	r22, r14
+     d62:	80 e3       	ldi	r24, 0x30	; 48
+     d64:	90 e0       	ldi	r25, 0x00	; 0
+     d66:	b2 d0       	rcall	.+356    	; 0xecc <fputc>
+     d68:	42 fe       	sbrs	r4, 2
+     d6a:	08 c0       	rjmp	.+16     	; 0xd7c <vfprintf+0x272>
+     d6c:	88 e7       	ldi	r24, 0x78	; 120
+     d6e:	90 e0       	ldi	r25, 0x00	; 0
+     d70:	41 fe       	sbrs	r4, 1
+     d72:	02 c0       	rjmp	.+4      	; 0xd78 <vfprintf+0x26e>
+     d74:	88 e5       	ldi	r24, 0x58	; 88
+     d76:	90 e0       	ldi	r25, 0x00	; 0
+     d78:	b7 01       	movw	r22, r14
+     d7a:	a8 d0       	rcall	.+336    	; 0xecc <fputc>
+     d7c:	c9 14       	cp	r12, r9
+     d7e:	08 f4       	brcc	.+2      	; 0xd82 <vfprintf+0x278>
+     d80:	86 c0       	rjmp	.+268    	; 0xe8e <vfprintf+0x384>
+     d82:	ca 94       	dec	r12
+     d84:	d1 2c       	mov	r13, r1
+     d86:	9f ef       	ldi	r25, 0xFF	; 255
+     d88:	c9 1a       	sub	r12, r25
+     d8a:	d9 0a       	sbc	r13, r25
+     d8c:	ca 0c       	add	r12, r10
+     d8e:	db 1c       	adc	r13, r11
+     d90:	f6 01       	movw	r30, r12
+     d92:	82 91       	ld	r24, -Z
+     d94:	6f 01       	movw	r12, r30
+     d96:	b7 01       	movw	r22, r14
+     d98:	90 e0       	ldi	r25, 0x00	; 0
+     d9a:	98 d0       	rcall	.+304    	; 0xecc <fputc>
+     d9c:	ac 14       	cp	r10, r12
+     d9e:	bd 04       	cpc	r11, r13
+     da0:	b9 f7       	brne	.-18     	; 0xd90 <vfprintf+0x286>
+     da2:	57 cf       	rjmp	.-338    	; 0xc52 <vfprintf+0x148>
+     da4:	60 81       	ld	r22, Z
+     da6:	71 81       	ldd	r23, Z+1	; 0x01
+     da8:	07 2e       	mov	r0, r23
+     daa:	00 0c       	add	r0, r0
+     dac:	88 0b       	sbc	r24, r24
+     dae:	99 0b       	sbc	r25, r25
+     db0:	0e 5f       	subi	r16, 0xFE	; 254
+     db2:	1f 4f       	sbci	r17, 0xFF	; 255
+     db4:	96 cf       	rjmp	.-212    	; 0xce2 <vfprintf+0x1d8>
+     db6:	d3 2c       	mov	r13, r3
+     db8:	e8 94       	clt
+     dba:	d4 f8       	bld	r13, 4
+     dbc:	2a e0       	ldi	r18, 0x0A	; 10
+     dbe:	30 e0       	ldi	r19, 0x00	; 0
+     dc0:	85 37       	cpi	r24, 0x75	; 117
+     dc2:	31 f1       	breq	.+76     	; 0xe10 <vfprintf+0x306>
+     dc4:	23 2d       	mov	r18, r3
+     dc6:	29 7f       	andi	r18, 0xF9	; 249
+     dc8:	d2 2e       	mov	r13, r18
+     dca:	8f 36       	cpi	r24, 0x6F	; 111
+     dcc:	f9 f0       	breq	.+62     	; 0xe0c <vfprintf+0x302>
+     dce:	40 f4       	brcc	.+16     	; 0xde0 <vfprintf+0x2d6>
+     dd0:	88 35       	cpi	r24, 0x58	; 88
+     dd2:	a1 f0       	breq	.+40     	; 0xdfc <vfprintf+0x2f2>
+     dd4:	f7 01       	movw	r30, r14
+     dd6:	86 81       	ldd	r24, Z+6	; 0x06
+     dd8:	97 81       	ldd	r25, Z+7	; 0x07
+     dda:	2b 96       	adiw	r28, 0x0b	; 11
+     ddc:	e2 e1       	ldi	r30, 0x12	; 18
+     dde:	20 c1       	rjmp	.+576    	; 0x1020 <__epilogue_restores__>
+     de0:	80 37       	cpi	r24, 0x70	; 112
+     de2:	49 f0       	breq	.+18     	; 0xdf6 <vfprintf+0x2ec>
+     de4:	88 37       	cpi	r24, 0x78	; 120
+     de6:	b1 f7       	brne	.-20     	; 0xdd4 <vfprintf+0x2ca>
+     de8:	d4 fe       	sbrs	r13, 4
+     dea:	02 c0       	rjmp	.+4      	; 0xdf0 <vfprintf+0x2e6>
+     dec:	68 94       	set
+     dee:	d2 f8       	bld	r13, 2
+     df0:	20 e1       	ldi	r18, 0x10	; 16
+     df2:	30 e0       	ldi	r19, 0x00	; 0
+     df4:	0d c0       	rjmp	.+26     	; 0xe10 <vfprintf+0x306>
+     df6:	68 94       	set
+     df8:	d4 f8       	bld	r13, 4
+     dfa:	f6 cf       	rjmp	.-20     	; 0xde8 <vfprintf+0x2de>
+     dfc:	34 fe       	sbrs	r3, 4
+     dfe:	03 c0       	rjmp	.+6      	; 0xe06 <vfprintf+0x2fc>
+     e00:	82 2f       	mov	r24, r18
+     e02:	86 60       	ori	r24, 0x06	; 6
+     e04:	d8 2e       	mov	r13, r24
+     e06:	20 e1       	ldi	r18, 0x10	; 16
+     e08:	32 e0       	ldi	r19, 0x02	; 2
+     e0a:	02 c0       	rjmp	.+4      	; 0xe10 <vfprintf+0x306>
+     e0c:	28 e0       	ldi	r18, 0x08	; 8
+     e0e:	30 e0       	ldi	r19, 0x00	; 0
+     e10:	f8 01       	movw	r30, r16
+     e12:	d7 fe       	sbrs	r13, 7
+     e14:	0e c0       	rjmp	.+28     	; 0xe32 <vfprintf+0x328>
+     e16:	60 81       	ld	r22, Z
+     e18:	71 81       	ldd	r23, Z+1	; 0x01
+     e1a:	82 81       	ldd	r24, Z+2	; 0x02
+     e1c:	93 81       	ldd	r25, Z+3	; 0x03
+     e1e:	0c 5f       	subi	r16, 0xFC	; 252
+     e20:	1f 4f       	sbci	r17, 0xFF	; 255
+     e22:	a5 01       	movw	r20, r10
+     e24:	83 d0       	rcall	.+262    	; 0xf2c <__ultoa_invert>
+     e26:	c8 2e       	mov	r12, r24
+     e28:	ca 18       	sub	r12, r10
+     e2a:	3d 2c       	mov	r3, r13
+     e2c:	e8 94       	clt
+     e2e:	37 f8       	bld	r3, 7
+     e30:	6c cf       	rjmp	.-296    	; 0xd0a <vfprintf+0x200>
+     e32:	60 81       	ld	r22, Z
+     e34:	71 81       	ldd	r23, Z+1	; 0x01
+     e36:	90 e0       	ldi	r25, 0x00	; 0
+     e38:	80 e0       	ldi	r24, 0x00	; 0
+     e3a:	0e 5f       	subi	r16, 0xFE	; 254
+     e3c:	1f 4f       	sbci	r17, 0xFF	; 255
+     e3e:	f1 cf       	rjmp	.-30     	; 0xe22 <vfprintf+0x318>
+     e40:	42 fc       	sbrc	r4, 2
+     e42:	02 c0       	rjmp	.+4      	; 0xe48 <vfprintf+0x33e>
+     e44:	83 94       	inc	r8
+     e46:	7d cf       	rjmp	.-262    	; 0xd42 <vfprintf+0x238>
+     e48:	83 94       	inc	r8
+     e4a:	83 94       	inc	r8
+     e4c:	7a cf       	rjmp	.-268    	; 0xd42 <vfprintf+0x238>
+     e4e:	84 2d       	mov	r24, r4
+     e50:	86 78       	andi	r24, 0x86	; 134
+     e52:	09 f4       	brne	.+2      	; 0xe56 <vfprintf+0x34c>
+     e54:	76 cf       	rjmp	.-276    	; 0xd42 <vfprintf+0x238>
+     e56:	f6 cf       	rjmp	.-20     	; 0xe44 <vfprintf+0x33a>
+     e58:	b7 01       	movw	r22, r14
+     e5a:	80 e2       	ldi	r24, 0x20	; 32
+     e5c:	90 e0       	ldi	r25, 0x00	; 0
+     e5e:	36 d0       	rcall	.+108    	; 0xecc <fputc>
+     e60:	83 94       	inc	r8
+     e62:	82 14       	cp	r8, r2
+     e64:	c8 f3       	brcs	.-14     	; 0xe58 <vfprintf+0x34e>
+     e66:	51 2c       	mov	r5, r1
+     e68:	79 cf       	rjmp	.-270    	; 0xd5c <vfprintf+0x252>
+     e6a:	52 2c       	mov	r5, r2
+     e6c:	58 18       	sub	r5, r8
+     e6e:	82 14       	cp	r8, r2
+     e70:	08 f4       	brcc	.+2      	; 0xe74 <vfprintf+0x36a>
+     e72:	74 cf       	rjmp	.-280    	; 0xd5c <vfprintf+0x252>
+     e74:	f8 cf       	rjmp	.-16     	; 0xe66 <vfprintf+0x35c>
+     e76:	84 2d       	mov	r24, r4
+     e78:	86 78       	andi	r24, 0x86	; 134
+     e7a:	09 f4       	brne	.+2      	; 0xe7e <vfprintf+0x374>
+     e7c:	7f cf       	rjmp	.-258    	; 0xd7c <vfprintf+0x272>
+     e7e:	8b e2       	ldi	r24, 0x2B	; 43
+     e80:	41 fe       	sbrs	r4, 1
+     e82:	80 e2       	ldi	r24, 0x20	; 32
+     e84:	47 fc       	sbrc	r4, 7
+     e86:	8d e2       	ldi	r24, 0x2D	; 45
+     e88:	b7 01       	movw	r22, r14
+     e8a:	90 e0       	ldi	r25, 0x00	; 0
+     e8c:	76 cf       	rjmp	.-276    	; 0xd7a <vfprintf+0x270>
+     e8e:	b7 01       	movw	r22, r14
+     e90:	80 e3       	ldi	r24, 0x30	; 48
+     e92:	90 e0       	ldi	r25, 0x00	; 0
+     e94:	1b d0       	rcall	.+54     	; 0xecc <fputc>
+     e96:	9a 94       	dec	r9
+     e98:	71 cf       	rjmp	.-286    	; 0xd7c <vfprintf+0x272>
+     e9a:	8f ef       	ldi	r24, 0xFF	; 255
+     e9c:	9f ef       	ldi	r25, 0xFF	; 255
+     e9e:	9d cf       	rjmp	.-198    	; 0xdda <vfprintf+0x2d0>
+
+00000ea0 <strnlen_P>:
+strnlen_P():
+     ea0:	fc 01       	movw	r30, r24
+     ea2:	05 90       	lpm	r0, Z+
+     ea4:	61 50       	subi	r22, 0x01	; 1
+     ea6:	70 40       	sbci	r23, 0x00	; 0
+     ea8:	01 10       	cpse	r0, r1
+     eaa:	d8 f7       	brcc	.-10     	; 0xea2 <strnlen_P+0x2>
+     eac:	80 95       	com	r24
+     eae:	90 95       	com	r25
+     eb0:	8e 0f       	add	r24, r30
+     eb2:	9f 1f       	adc	r25, r31
+     eb4:	08 95       	ret
+
+00000eb6 <strnlen>:
+strnlen():
+     eb6:	fc 01       	movw	r30, r24
+     eb8:	61 50       	subi	r22, 0x01	; 1
+     eba:	70 40       	sbci	r23, 0x00	; 0
+     ebc:	01 90       	ld	r0, Z+
+     ebe:	01 10       	cpse	r0, r1
+     ec0:	d8 f7       	brcc	.-10     	; 0xeb8 <strnlen+0x2>
+     ec2:	80 95       	com	r24
+     ec4:	90 95       	com	r25
+     ec6:	8e 0f       	add	r24, r30
+     ec8:	9f 1f       	adc	r25, r31
+     eca:	08 95       	ret
+
+00000ecc <fputc>:
+fputc():
+     ecc:	0f 93       	push	r16
+     ece:	1f 93       	push	r17
+     ed0:	cf 93       	push	r28
+     ed2:	df 93       	push	r29
+     ed4:	18 2f       	mov	r17, r24
+     ed6:	09 2f       	mov	r16, r25
+     ed8:	eb 01       	movw	r28, r22
+     eda:	8b 81       	ldd	r24, Y+3	; 0x03
+     edc:	81 fd       	sbrc	r24, 1
+     ede:	09 c0       	rjmp	.+18     	; 0xef2 <fputc+0x26>
+     ee0:	1f ef       	ldi	r17, 0xFF	; 255
+     ee2:	0f ef       	ldi	r16, 0xFF	; 255
+     ee4:	81 2f       	mov	r24, r17
+     ee6:	90 2f       	mov	r25, r16
+     ee8:	df 91       	pop	r29
+     eea:	cf 91       	pop	r28
+     eec:	1f 91       	pop	r17
+     eee:	0f 91       	pop	r16
+     ef0:	08 95       	ret
+     ef2:	82 ff       	sbrs	r24, 2
+     ef4:	14 c0       	rjmp	.+40     	; 0xf1e <fputc+0x52>
+     ef6:	2e 81       	ldd	r18, Y+6	; 0x06
+     ef8:	3f 81       	ldd	r19, Y+7	; 0x07
+     efa:	8c 81       	ldd	r24, Y+4	; 0x04
+     efc:	9d 81       	ldd	r25, Y+5	; 0x05
+     efe:	28 17       	cp	r18, r24
+     f00:	39 07       	cpc	r19, r25
+     f02:	3c f4       	brge	.+14     	; 0xf12 <fputc+0x46>
+     f04:	e8 81       	ld	r30, Y
+     f06:	f9 81       	ldd	r31, Y+1	; 0x01
+     f08:	cf 01       	movw	r24, r30
+     f0a:	01 96       	adiw	r24, 0x01	; 1
+     f0c:	99 83       	std	Y+1, r25	; 0x01
+     f0e:	88 83       	st	Y, r24
+     f10:	10 83       	st	Z, r17
+     f12:	8e 81       	ldd	r24, Y+6	; 0x06
+     f14:	9f 81       	ldd	r25, Y+7	; 0x07
+     f16:	01 96       	adiw	r24, 0x01	; 1
+     f18:	9f 83       	std	Y+7, r25	; 0x07
+     f1a:	8e 83       	std	Y+6, r24	; 0x06
+     f1c:	e3 cf       	rjmp	.-58     	; 0xee4 <fputc+0x18>
+     f1e:	e8 85       	ldd	r30, Y+8	; 0x08
+     f20:	f9 85       	ldd	r31, Y+9	; 0x09
+     f22:	81 2f       	mov	r24, r17
+     f24:	09 95       	icall
+     f26:	89 2b       	or	r24, r25
+     f28:	a1 f3       	breq	.-24     	; 0xf12 <fputc+0x46>
+     f2a:	da cf       	rjmp	.-76     	; 0xee0 <fputc+0x14>
+
+00000f2c <__ultoa_invert>:
+__ultoa_invert():
+     f2c:	fa 01       	movw	r30, r20
+     f2e:	aa 27       	eor	r26, r26
+     f30:	28 30       	cpi	r18, 0x08	; 8
+     f32:	51 f1       	breq	.+84     	; 0xf88 <__ultoa_invert+0x5c>
+     f34:	20 31       	cpi	r18, 0x10	; 16
+     f36:	81 f1       	breq	.+96     	; 0xf98 <__ultoa_invert+0x6c>
+     f38:	e8 94       	clt
+     f3a:	6f 93       	push	r22
+     f3c:	6e 7f       	andi	r22, 0xFE	; 254
+     f3e:	6e 5f       	subi	r22, 0xFE	; 254
+     f40:	7f 4f       	sbci	r23, 0xFF	; 255
+     f42:	8f 4f       	sbci	r24, 0xFF	; 255
+     f44:	9f 4f       	sbci	r25, 0xFF	; 255
+     f46:	af 4f       	sbci	r26, 0xFF	; 255
+     f48:	b1 e0       	ldi	r27, 0x01	; 1
+     f4a:	3e d0       	rcall	.+124    	; 0xfc8 <__ultoa_invert+0x9c>
+     f4c:	b4 e0       	ldi	r27, 0x04	; 4
+     f4e:	3c d0       	rcall	.+120    	; 0xfc8 <__ultoa_invert+0x9c>
+     f50:	67 0f       	add	r22, r23
+     f52:	78 1f       	adc	r23, r24
+     f54:	89 1f       	adc	r24, r25
+     f56:	9a 1f       	adc	r25, r26
+     f58:	a1 1d       	adc	r26, r1
+     f5a:	68 0f       	add	r22, r24
+     f5c:	79 1f       	adc	r23, r25
+     f5e:	8a 1f       	adc	r24, r26
+     f60:	91 1d       	adc	r25, r1
+     f62:	a1 1d       	adc	r26, r1
+     f64:	6a 0f       	add	r22, r26
+     f66:	71 1d       	adc	r23, r1
+     f68:	81 1d       	adc	r24, r1
+     f6a:	91 1d       	adc	r25, r1
+     f6c:	a1 1d       	adc	r26, r1
+     f6e:	20 d0       	rcall	.+64     	; 0xfb0 <__ultoa_invert+0x84>
+     f70:	09 f4       	brne	.+2      	; 0xf74 <__ultoa_invert+0x48>
+     f72:	68 94       	set
+     f74:	3f 91       	pop	r19
+     f76:	2a e0       	ldi	r18, 0x0A	; 10
+     f78:	26 9f       	mul	r18, r22
+     f7a:	11 24       	eor	r1, r1
+     f7c:	30 19       	sub	r19, r0
+     f7e:	30 5d       	subi	r19, 0xD0	; 208
+     f80:	31 93       	st	Z+, r19
+     f82:	de f6       	brtc	.-74     	; 0xf3a <__ultoa_invert+0xe>
+     f84:	cf 01       	movw	r24, r30
+     f86:	08 95       	ret
+     f88:	46 2f       	mov	r20, r22
+     f8a:	47 70       	andi	r20, 0x07	; 7
+     f8c:	40 5d       	subi	r20, 0xD0	; 208
+     f8e:	41 93       	st	Z+, r20
+     f90:	b3 e0       	ldi	r27, 0x03	; 3
+     f92:	0f d0       	rcall	.+30     	; 0xfb2 <__ultoa_invert+0x86>
+     f94:	c9 f7       	brne	.-14     	; 0xf88 <__ultoa_invert+0x5c>
+     f96:	f6 cf       	rjmp	.-20     	; 0xf84 <__ultoa_invert+0x58>
+     f98:	46 2f       	mov	r20, r22
+     f9a:	4f 70       	andi	r20, 0x0F	; 15
+     f9c:	40 5d       	subi	r20, 0xD0	; 208
+     f9e:	4a 33       	cpi	r20, 0x3A	; 58
+     fa0:	18 f0       	brcs	.+6      	; 0xfa8 <__ultoa_invert+0x7c>
+     fa2:	49 5d       	subi	r20, 0xD9	; 217
+     fa4:	31 fd       	sbrc	r19, 1
+     fa6:	40 52       	subi	r20, 0x20	; 32
+     fa8:	41 93       	st	Z+, r20
+     faa:	02 d0       	rcall	.+4      	; 0xfb0 <__ultoa_invert+0x84>
+     fac:	a9 f7       	brne	.-22     	; 0xf98 <__ultoa_invert+0x6c>
+     fae:	ea cf       	rjmp	.-44     	; 0xf84 <__ultoa_invert+0x58>
+     fb0:	b4 e0       	ldi	r27, 0x04	; 4
+     fb2:	a6 95       	lsr	r26
+     fb4:	97 95       	ror	r25
+     fb6:	87 95       	ror	r24
+     fb8:	77 95       	ror	r23
+     fba:	67 95       	ror	r22
+     fbc:	ba 95       	dec	r27
+     fbe:	c9 f7       	brne	.-14     	; 0xfb2 <__ultoa_invert+0x86>
+     fc0:	00 97       	sbiw	r24, 0x00	; 0
+     fc2:	61 05       	cpc	r22, r1
+     fc4:	71 05       	cpc	r23, r1
+     fc6:	08 95       	ret
+     fc8:	9b 01       	movw	r18, r22
+     fca:	ac 01       	movw	r20, r24
+     fcc:	0a 2e       	mov	r0, r26
+     fce:	06 94       	lsr	r0
+     fd0:	57 95       	ror	r21
+     fd2:	47 95       	ror	r20
+     fd4:	37 95       	ror	r19
+     fd6:	27 95       	ror	r18
+     fd8:	ba 95       	dec	r27
+     fda:	c9 f7       	brne	.-14     	; 0xfce <__ultoa_invert+0xa2>
+     fdc:	62 0f       	add	r22, r18
+     fde:	73 1f       	adc	r23, r19
+     fe0:	84 1f       	adc	r24, r20
+     fe2:	95 1f       	adc	r25, r21
+     fe4:	a0 1d       	adc	r26, r0
+     fe6:	08 95       	ret
+
+00000fe8 <__prologue_saves__>:
+__prologue_saves__():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2169
+     fe8:	2f 92       	push	r2
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2170
+     fea:	3f 92       	push	r3
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2171
+     fec:	4f 92       	push	r4
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2172
+     fee:	5f 92       	push	r5
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2173
+     ff0:	6f 92       	push	r6
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2174
+     ff2:	7f 92       	push	r7
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2175
+     ff4:	8f 92       	push	r8
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2176
+     ff6:	9f 92       	push	r9
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2177
+     ff8:	af 92       	push	r10
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2178
+     ffa:	bf 92       	push	r11
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2179
+     ffc:	cf 92       	push	r12
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2180
+     ffe:	df 92       	push	r13
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2181
+    1000:	ef 92       	push	r14
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2182
+    1002:	ff 92       	push	r15
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2183
+    1004:	0f 93       	push	r16
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2184
+    1006:	1f 93       	push	r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2185
+    1008:	cf 93       	push	r28
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2186
+    100a:	df 93       	push	r29
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2200
+    100c:	cd b7       	in	r28, 0x3d	; 61
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2201
+    100e:	de b7       	in	r29, 0x3e	; 62
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2202
+    1010:	ca 1b       	sub	r28, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2203
+    1012:	db 0b       	sbc	r29, r27
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2204
+    1014:	0f b6       	in	r0, 0x3f	; 63
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2205
+    1016:	f8 94       	cli
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2206
+    1018:	de bf       	out	0x3e, r29	; 62
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2207
+    101a:	0f be       	out	0x3f, r0	; 63
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2208
+    101c:	cd bf       	out	0x3d, r28	; 61
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2211
+    101e:	09 94       	ijmp
+
+00001020 <__epilogue_restores__>:
+__epilogue_restores__():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2222
+    1020:	2a 88       	ldd	r2, Y+18	; 0x12
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2223
+    1022:	39 88       	ldd	r3, Y+17	; 0x11
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2224
+    1024:	48 88       	ldd	r4, Y+16	; 0x10
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2225
+    1026:	5f 84       	ldd	r5, Y+15	; 0x0f
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2226
+    1028:	6e 84       	ldd	r6, Y+14	; 0x0e
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2227
+    102a:	7d 84       	ldd	r7, Y+13	; 0x0d
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2228
+    102c:	8c 84       	ldd	r8, Y+12	; 0x0c
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2229
+    102e:	9b 84       	ldd	r9, Y+11	; 0x0b
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2230
+    1030:	aa 84       	ldd	r10, Y+10	; 0x0a
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2231
+    1032:	b9 84       	ldd	r11, Y+9	; 0x09
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2232
+    1034:	c8 84       	ldd	r12, Y+8	; 0x08
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2233
+    1036:	df 80       	ldd	r13, Y+7	; 0x07
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2234
+    1038:	ee 80       	ldd	r14, Y+6	; 0x06
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2235
+    103a:	fd 80       	ldd	r15, Y+5	; 0x05
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2236
+    103c:	0c 81       	ldd	r16, Y+4	; 0x04
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2237
+    103e:	1b 81       	ldd	r17, Y+3	; 0x03
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2238
+    1040:	aa 81       	ldd	r26, Y+2	; 0x02
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2252
+    1042:	b9 81       	ldd	r27, Y+1	; 0x01
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2253
+    1044:	ce 0f       	add	r28, r30
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2254
+    1046:	d1 1d       	adc	r29, r1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2255
+    1048:	0f b6       	in	r0, 0x3f	; 63
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2256
+    104a:	f8 94       	cli
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2257
+    104c:	de bf       	out	0x3e, r29	; 62
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2258
+    104e:	0f be       	out	0x3f, r0	; 63
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2259
+    1050:	cd bf       	out	0x3d, r28	; 61
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2260
+    1052:	ed 01       	movw	r28, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2263
+    1054:	08 95       	ret
+
+00001056 <__tablejump2__>:
+__tablejump2__():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
+    1056:	ee 0f       	add	r30, r30
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2297
+    1058:	ff 1f       	adc	r31, r31
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2328
+    105a:	05 90       	lpm	r0, Z+
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2329
+    105c:	f4 91       	lpm	r31, Z
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2330
+    105e:	e0 2d       	mov	r30, r0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2331
+    1060:	09 94       	ijmp
+
+00001062 <realloc>:
+realloc():
+    1062:	b0 e0       	ldi	r27, 0x00	; 0
+    1064:	a0 e0       	ldi	r26, 0x00	; 0
+    1066:	e6 e3       	ldi	r30, 0x36	; 54
+    1068:	f8 e0       	ldi	r31, 0x08	; 8
+    106a:	c0 cf       	rjmp	.-128    	; 0xfec <__prologue_saves__+0x4>
+    106c:	8c 01       	movw	r16, r24
+    106e:	00 97       	sbiw	r24, 0x00	; 0
+    1070:	41 f4       	brne	.+16     	; 0x1082 <realloc+0x20>
+    1072:	cb 01       	movw	r24, r22
+    1074:	e1 d0       	rcall	.+450    	; 0x1238 <malloc>
+    1076:	8c 01       	movw	r16, r24
+    1078:	c8 01       	movw	r24, r16
+    107a:	cd b7       	in	r28, 0x3d	; 61
+    107c:	de b7       	in	r29, 0x3e	; 62
+    107e:	e0 e1       	ldi	r30, 0x10	; 16
+    1080:	d1 cf       	rjmp	.-94     	; 0x1024 <__epilogue_restores__+0x4>
+    1082:	fc 01       	movw	r30, r24
+    1084:	e6 0f       	add	r30, r22
+    1086:	f7 1f       	adc	r31, r23
+    1088:	9c 01       	movw	r18, r24
+    108a:	22 50       	subi	r18, 0x02	; 2
+    108c:	31 09       	sbc	r19, r1
+    108e:	e2 17       	cp	r30, r18
+    1090:	f3 07       	cpc	r31, r19
+    1092:	08 f4       	brcc	.+2      	; 0x1096 <realloc+0x34>
+    1094:	99 c0       	rjmp	.+306    	; 0x11c8 <realloc+0x166>
+    1096:	d9 01       	movw	r26, r18
+    1098:	cd 91       	ld	r28, X+
+    109a:	dc 91       	ld	r29, X
+    109c:	11 97       	sbiw	r26, 0x01	; 1
+    109e:	c6 17       	cp	r28, r22
+    10a0:	d7 07       	cpc	r29, r23
+    10a2:	90 f0       	brcs	.+36     	; 0x10c8 <realloc+0x66>
+    10a4:	c5 30       	cpi	r28, 0x05	; 5
+    10a6:	d1 05       	cpc	r29, r1
+    10a8:	38 f3       	brcs	.-50     	; 0x1078 <realloc+0x16>
+    10aa:	ce 01       	movw	r24, r28
+    10ac:	04 97       	sbiw	r24, 0x04	; 4
+    10ae:	86 17       	cp	r24, r22
+    10b0:	97 07       	cpc	r25, r23
+    10b2:	10 f3       	brcs	.-60     	; 0x1078 <realloc+0x16>
+    10b4:	c6 1b       	sub	r28, r22
+    10b6:	d7 0b       	sbc	r29, r23
+    10b8:	22 97       	sbiw	r28, 0x02	; 2
+    10ba:	c1 93       	st	Z+, r28
+    10bc:	d1 93       	st	Z+, r29
+    10be:	6d 93       	st	X+, r22
+    10c0:	7c 93       	st	X, r23
+    10c2:	cf 01       	movw	r24, r30
+    10c4:	55 d1       	rcall	.+682    	; 0x1370 <free>
+    10c6:	d8 cf       	rjmp	.-80     	; 0x1078 <realloc+0x16>
+    10c8:	5b 01       	movw	r10, r22
+    10ca:	ac 1a       	sub	r10, r28
+    10cc:	bd 0a       	sbc	r11, r29
+    10ce:	4c 01       	movw	r8, r24
+    10d0:	8c 0e       	add	r8, r28
+    10d2:	9d 1e       	adc	r9, r29
+    10d4:	a0 91 d9 01 	lds	r26, 0x01D9	; 0x8001d9 <__flp>
+    10d8:	b0 91 da 01 	lds	r27, 0x01DA	; 0x8001da <__flp+0x1>
+    10dc:	51 2c       	mov	r5, r1
+    10de:	41 2c       	mov	r4, r1
+    10e0:	f1 2c       	mov	r15, r1
+    10e2:	e1 2c       	mov	r14, r1
+    10e4:	10 97       	sbiw	r26, 0x00	; 0
+    10e6:	31 f5       	brne	.+76     	; 0x1134 <realloc+0xd2>
+    10e8:	80 91 d7 01 	lds	r24, 0x01D7	; 0x8001d7 <__brkval>
+    10ec:	90 91 d8 01 	lds	r25, 0x01D8	; 0x8001d8 <__brkval+0x1>
+    10f0:	88 15       	cp	r24, r8
+    10f2:	99 05       	cpc	r25, r9
+    10f4:	09 f0       	breq	.+2      	; 0x10f8 <realloc+0x96>
+    10f6:	5c c0       	rjmp	.+184    	; 0x11b0 <realloc+0x14e>
+    10f8:	46 16       	cp	r4, r22
+    10fa:	57 06       	cpc	r5, r23
+    10fc:	08 f0       	brcs	.+2      	; 0x1100 <realloc+0x9e>
+    10fe:	58 c0       	rjmp	.+176    	; 0x11b0 <realloc+0x14e>
+    1100:	80 91 6b 00 	lds	r24, 0x006B	; 0x80006b <__malloc_heap_end>
+    1104:	90 91 6c 00 	lds	r25, 0x006C	; 0x80006c <__malloc_heap_end+0x1>
+    1108:	00 97       	sbiw	r24, 0x00	; 0
+    110a:	41 f4       	brne	.+16     	; 0x111c <realloc+0xba>
+    110c:	8d b7       	in	r24, 0x3d	; 61
+    110e:	9e b7       	in	r25, 0x3e	; 62
+    1110:	40 91 6f 00 	lds	r20, 0x006F	; 0x80006f <__malloc_margin>
+    1114:	50 91 70 00 	lds	r21, 0x0070	; 0x800070 <__malloc_margin+0x1>
+    1118:	84 1b       	sub	r24, r20
+    111a:	95 0b       	sbc	r25, r21
+    111c:	e8 17       	cp	r30, r24
+    111e:	f9 07       	cpc	r31, r25
+    1120:	08 f0       	brcs	.+2      	; 0x1124 <realloc+0xc2>
+    1122:	52 c0       	rjmp	.+164    	; 0x11c8 <realloc+0x166>
+    1124:	f0 93 d8 01 	sts	0x01D8, r31	; 0x8001d8 <__brkval+0x1>
+    1128:	e0 93 d7 01 	sts	0x01D7, r30	; 0x8001d7 <__brkval>
+    112c:	f9 01       	movw	r30, r18
+    112e:	71 83       	std	Z+1, r23	; 0x01
+    1130:	60 83       	st	Z, r22
+    1132:	a2 cf       	rjmp	.-188    	; 0x1078 <realloc+0x16>
+    1134:	8d 91       	ld	r24, X+
+    1136:	9c 91       	ld	r25, X
+    1138:	11 97       	sbiw	r26, 0x01	; 1
+    113a:	12 96       	adiw	r26, 0x02	; 2
+    113c:	6c 90       	ld	r6, X
+    113e:	12 97       	sbiw	r26, 0x02	; 2
+    1140:	13 96       	adiw	r26, 0x03	; 3
+    1142:	7c 90       	ld	r7, X
+    1144:	13 97       	sbiw	r26, 0x03	; 3
+    1146:	a8 15       	cp	r26, r8
+    1148:	b9 05       	cpc	r27, r9
+    114a:	59 f5       	brne	.+86     	; 0x11a2 <realloc+0x140>
+    114c:	6c 01       	movw	r12, r24
+    114e:	42 e0       	ldi	r20, 0x02	; 2
+    1150:	c4 0e       	add	r12, r20
+    1152:	d1 1c       	adc	r13, r1
+    1154:	ca 14       	cp	r12, r10
+    1156:	db 04       	cpc	r13, r11
+    1158:	20 f1       	brcs	.+72     	; 0x11a2 <realloc+0x140>
+    115a:	ac 01       	movw	r20, r24
+    115c:	4a 19       	sub	r20, r10
+    115e:	5b 09       	sbc	r21, r11
+    1160:	da 01       	movw	r26, r20
+    1162:	12 96       	adiw	r26, 0x02	; 2
+    1164:	15 97       	sbiw	r26, 0x05	; 5
+    1166:	80 f0       	brcs	.+32     	; 0x1188 <realloc+0x126>
+    1168:	62 82       	std	Z+2, r6	; 0x02
+    116a:	73 82       	std	Z+3, r7	; 0x03
+    116c:	51 83       	std	Z+1, r21	; 0x01
+    116e:	40 83       	st	Z, r20
+    1170:	d9 01       	movw	r26, r18
+    1172:	6d 93       	st	X+, r22
+    1174:	7c 93       	st	X, r23
+    1176:	e1 14       	cp	r14, r1
+    1178:	f1 04       	cpc	r15, r1
+    117a:	71 f0       	breq	.+28     	; 0x1198 <realloc+0x136>
+    117c:	d7 01       	movw	r26, r14
+    117e:	13 96       	adiw	r26, 0x03	; 3
+    1180:	fc 93       	st	X, r31
+    1182:	ee 93       	st	-X, r30
+    1184:	12 97       	sbiw	r26, 0x02	; 2
+    1186:	78 cf       	rjmp	.-272    	; 0x1078 <realloc+0x16>
+    1188:	22 96       	adiw	r28, 0x02	; 2
+    118a:	8c 0f       	add	r24, r28
+    118c:	9d 1f       	adc	r25, r29
+    118e:	f9 01       	movw	r30, r18
+    1190:	91 83       	std	Z+1, r25	; 0x01
+    1192:	80 83       	st	Z, r24
+    1194:	f3 01       	movw	r30, r6
+    1196:	ef cf       	rjmp	.-34     	; 0x1176 <realloc+0x114>
+    1198:	f0 93 da 01 	sts	0x01DA, r31	; 0x8001da <__flp+0x1>
+    119c:	e0 93 d9 01 	sts	0x01D9, r30	; 0x8001d9 <__flp>
+    11a0:	6b cf       	rjmp	.-298    	; 0x1078 <realloc+0x16>
+    11a2:	48 16       	cp	r4, r24
+    11a4:	59 06       	cpc	r5, r25
+    11a6:	08 f4       	brcc	.+2      	; 0x11aa <realloc+0x148>
+    11a8:	2c 01       	movw	r4, r24
+    11aa:	7d 01       	movw	r14, r26
+    11ac:	d3 01       	movw	r26, r6
+    11ae:	9a cf       	rjmp	.-204    	; 0x10e4 <realloc+0x82>
+    11b0:	cb 01       	movw	r24, r22
+    11b2:	42 d0       	rcall	.+132    	; 0x1238 <malloc>
+    11b4:	7c 01       	movw	r14, r24
+    11b6:	00 97       	sbiw	r24, 0x00	; 0
+    11b8:	39 f0       	breq	.+14     	; 0x11c8 <realloc+0x166>
+    11ba:	ae 01       	movw	r20, r28
+    11bc:	b8 01       	movw	r22, r16
+    11be:	0f d0       	rcall	.+30     	; 0x11de <memcpy>
+    11c0:	c8 01       	movw	r24, r16
+    11c2:	d6 d0       	rcall	.+428    	; 0x1370 <free>
+    11c4:	87 01       	movw	r16, r14
+    11c6:	58 cf       	rjmp	.-336    	; 0x1078 <realloc+0x16>
+    11c8:	10 e0       	ldi	r17, 0x00	; 0
+    11ca:	00 e0       	ldi	r16, 0x00	; 0
+    11cc:	55 cf       	rjmp	.-342    	; 0x1078 <realloc+0x16>
+
+000011ce <isgraph>:
+isgraph():
+    11ce:	80 32       	cpi	r24, 0x20	; 32
+    11d0:	09 f0       	breq	.+2      	; 0x11d4 <isprint+0x2>
+
+000011d2 <isprint>:
+isprint():
+    11d2:	91 11       	cpse	r25, r1
+    11d4:	56 c1       	rjmp	.+684    	; 0x1482 <__ctype_isfalse>
+    11d6:	80 52       	subi	r24, 0x20	; 32
+    11d8:	8f 55       	subi	r24, 0x5F	; 95
+    11da:	e0 f7       	brcc	.-8      	; 0x11d4 <isprint+0x2>
+    11dc:	08 95       	ret
+
+000011de <memcpy>:
+memcpy():
+    11de:	fb 01       	movw	r30, r22
+    11e0:	dc 01       	movw	r26, r24
+    11e2:	02 c0       	rjmp	.+4      	; 0x11e8 <memcpy+0xa>
+    11e4:	01 90       	ld	r0, Z+
+    11e6:	0d 92       	st	X+, r0
+    11e8:	41 50       	subi	r20, 0x01	; 1
+    11ea:	50 40       	sbci	r21, 0x00	; 0
+    11ec:	d8 f7       	brcc	.-10     	; 0x11e4 <memcpy+0x6>
+    11ee:	08 95       	ret
+
+000011f0 <strcpy>:
+strcpy():
+    11f0:	fb 01       	movw	r30, r22
+    11f2:	dc 01       	movw	r26, r24
+    11f4:	01 90       	ld	r0, Z+
+    11f6:	0d 92       	st	X+, r0
+    11f8:	00 20       	and	r0, r0
+    11fa:	e1 f7       	brne	.-8      	; 0x11f4 <strcpy+0x4>
+    11fc:	08 95       	ret
+
+000011fe <strncmp>:
+strncmp():
+    11fe:	fb 01       	movw	r30, r22
+    1200:	dc 01       	movw	r26, r24
+    1202:	41 50       	subi	r20, 0x01	; 1
+    1204:	50 40       	sbci	r21, 0x00	; 0
+    1206:	30 f0       	brcs	.+12     	; 0x1214 <strncmp+0x16>
+    1208:	8d 91       	ld	r24, X+
+    120a:	01 90       	ld	r0, Z+
+    120c:	80 19       	sub	r24, r0
+    120e:	19 f4       	brne	.+6      	; 0x1216 <strncmp+0x18>
+    1210:	00 20       	and	r0, r0
+    1212:	b9 f7       	brne	.-18     	; 0x1202 <strncmp+0x4>
+    1214:	88 1b       	sub	r24, r24
+    1216:	99 0b       	sbc	r25, r25
+    1218:	08 95       	ret
+
+0000121a <strncpy>:
+strncpy():
+    121a:	fb 01       	movw	r30, r22
+    121c:	dc 01       	movw	r26, r24
+    121e:	41 50       	subi	r20, 0x01	; 1
+    1220:	50 40       	sbci	r21, 0x00	; 0
+    1222:	48 f0       	brcs	.+18     	; 0x1236 <strncpy+0x1c>
+    1224:	01 90       	ld	r0, Z+
+    1226:	0d 92       	st	X+, r0
+    1228:	00 20       	and	r0, r0
+    122a:	c9 f7       	brne	.-14     	; 0x121e <strncpy+0x4>
+    122c:	01 c0       	rjmp	.+2      	; 0x1230 <strncpy+0x16>
+    122e:	1d 92       	st	X+, r1
+    1230:	41 50       	subi	r20, 0x01	; 1
+    1232:	50 40       	sbci	r21, 0x00	; 0
+    1234:	e0 f7       	brcc	.-8      	; 0x122e <strncpy+0x14>
+    1236:	08 95       	ret
+
+00001238 <malloc>:
+malloc():
+    1238:	0f 93       	push	r16
+    123a:	1f 93       	push	r17
+    123c:	cf 93       	push	r28
+    123e:	df 93       	push	r29
+    1240:	82 30       	cpi	r24, 0x02	; 2
+    1242:	91 05       	cpc	r25, r1
+    1244:	10 f4       	brcc	.+4      	; 0x124a <malloc+0x12>
+    1246:	82 e0       	ldi	r24, 0x02	; 2
+    1248:	90 e0       	ldi	r25, 0x00	; 0
+    124a:	e0 91 d9 01 	lds	r30, 0x01D9	; 0x8001d9 <__flp>
+    124e:	f0 91 da 01 	lds	r31, 0x01DA	; 0x8001da <__flp+0x1>
+    1252:	30 e0       	ldi	r19, 0x00	; 0
+    1254:	20 e0       	ldi	r18, 0x00	; 0
+    1256:	b0 e0       	ldi	r27, 0x00	; 0
+    1258:	a0 e0       	ldi	r26, 0x00	; 0
+    125a:	30 97       	sbiw	r30, 0x00	; 0
+    125c:	99 f4       	brne	.+38     	; 0x1284 <malloc+0x4c>
+    125e:	21 15       	cp	r18, r1
+    1260:	31 05       	cpc	r19, r1
+    1262:	09 f4       	brne	.+2      	; 0x1266 <malloc+0x2e>
+    1264:	4a c0       	rjmp	.+148    	; 0x12fa <malloc+0xc2>
+    1266:	28 1b       	sub	r18, r24
+    1268:	39 0b       	sbc	r19, r25
+    126a:	24 30       	cpi	r18, 0x04	; 4
+    126c:	31 05       	cpc	r19, r1
+    126e:	d8 f5       	brcc	.+118    	; 0x12e6 <malloc+0xae>
+    1270:	8a 81       	ldd	r24, Y+2	; 0x02
+    1272:	9b 81       	ldd	r25, Y+3	; 0x03
+    1274:	61 15       	cp	r22, r1
+    1276:	71 05       	cpc	r23, r1
+    1278:	89 f1       	breq	.+98     	; 0x12dc <malloc+0xa4>
+    127a:	fb 01       	movw	r30, r22
+    127c:	93 83       	std	Z+3, r25	; 0x03
+    127e:	82 83       	std	Z+2, r24	; 0x02
+    1280:	fe 01       	movw	r30, r28
+    1282:	11 c0       	rjmp	.+34     	; 0x12a6 <malloc+0x6e>
+    1284:	40 81       	ld	r20, Z
+    1286:	51 81       	ldd	r21, Z+1	; 0x01
+    1288:	02 81       	ldd	r16, Z+2	; 0x02
+    128a:	13 81       	ldd	r17, Z+3	; 0x03
+    128c:	48 17       	cp	r20, r24
+    128e:	59 07       	cpc	r21, r25
+    1290:	e0 f0       	brcs	.+56     	; 0x12ca <malloc+0x92>
+    1292:	48 17       	cp	r20, r24
+    1294:	59 07       	cpc	r21, r25
+    1296:	99 f4       	brne	.+38     	; 0x12be <malloc+0x86>
+    1298:	10 97       	sbiw	r26, 0x00	; 0
+    129a:	61 f0       	breq	.+24     	; 0x12b4 <malloc+0x7c>
+    129c:	12 96       	adiw	r26, 0x02	; 2
+    129e:	0c 93       	st	X, r16
+    12a0:	12 97       	sbiw	r26, 0x02	; 2
+    12a2:	13 96       	adiw	r26, 0x03	; 3
+    12a4:	1c 93       	st	X, r17
+    12a6:	32 96       	adiw	r30, 0x02	; 2
+    12a8:	cf 01       	movw	r24, r30
+    12aa:	df 91       	pop	r29
+    12ac:	cf 91       	pop	r28
+    12ae:	1f 91       	pop	r17
+    12b0:	0f 91       	pop	r16
+    12b2:	08 95       	ret
+    12b4:	00 93 d9 01 	sts	0x01D9, r16	; 0x8001d9 <__flp>
+    12b8:	10 93 da 01 	sts	0x01DA, r17	; 0x8001da <__flp+0x1>
+    12bc:	f4 cf       	rjmp	.-24     	; 0x12a6 <malloc+0x6e>
+    12be:	21 15       	cp	r18, r1
+    12c0:	31 05       	cpc	r19, r1
+    12c2:	51 f0       	breq	.+20     	; 0x12d8 <malloc+0xa0>
+    12c4:	42 17       	cp	r20, r18
+    12c6:	53 07       	cpc	r21, r19
+    12c8:	38 f0       	brcs	.+14     	; 0x12d8 <malloc+0xa0>
+    12ca:	a9 01       	movw	r20, r18
+    12cc:	db 01       	movw	r26, r22
+    12ce:	9a 01       	movw	r18, r20
+    12d0:	bd 01       	movw	r22, r26
+    12d2:	df 01       	movw	r26, r30
+    12d4:	f8 01       	movw	r30, r16
+    12d6:	c1 cf       	rjmp	.-126    	; 0x125a <malloc+0x22>
+    12d8:	ef 01       	movw	r28, r30
+    12da:	f9 cf       	rjmp	.-14     	; 0x12ce <malloc+0x96>
+    12dc:	90 93 da 01 	sts	0x01DA, r25	; 0x8001da <__flp+0x1>
+    12e0:	80 93 d9 01 	sts	0x01D9, r24	; 0x8001d9 <__flp>
+    12e4:	cd cf       	rjmp	.-102    	; 0x1280 <malloc+0x48>
+    12e6:	fe 01       	movw	r30, r28
+    12e8:	e2 0f       	add	r30, r18
+    12ea:	f3 1f       	adc	r31, r19
+    12ec:	81 93       	st	Z+, r24
+    12ee:	91 93       	st	Z+, r25
+    12f0:	22 50       	subi	r18, 0x02	; 2
+    12f2:	31 09       	sbc	r19, r1
+    12f4:	39 83       	std	Y+1, r19	; 0x01
+    12f6:	28 83       	st	Y, r18
+    12f8:	d7 cf       	rjmp	.-82     	; 0x12a8 <malloc+0x70>
+    12fa:	20 91 d7 01 	lds	r18, 0x01D7	; 0x8001d7 <__brkval>
+    12fe:	30 91 d8 01 	lds	r19, 0x01D8	; 0x8001d8 <__brkval+0x1>
+    1302:	23 2b       	or	r18, r19
+    1304:	41 f4       	brne	.+16     	; 0x1316 <malloc+0xde>
+    1306:	20 91 6d 00 	lds	r18, 0x006D	; 0x80006d <__malloc_heap_start>
+    130a:	30 91 6e 00 	lds	r19, 0x006E	; 0x80006e <__malloc_heap_start+0x1>
+    130e:	30 93 d8 01 	sts	0x01D8, r19	; 0x8001d8 <__brkval+0x1>
+    1312:	20 93 d7 01 	sts	0x01D7, r18	; 0x8001d7 <__brkval>
+    1316:	20 91 6b 00 	lds	r18, 0x006B	; 0x80006b <__malloc_heap_end>
+    131a:	30 91 6c 00 	lds	r19, 0x006C	; 0x80006c <__malloc_heap_end+0x1>
+    131e:	21 15       	cp	r18, r1
+    1320:	31 05       	cpc	r19, r1
+    1322:	41 f4       	brne	.+16     	; 0x1334 <malloc+0xfc>
+    1324:	2d b7       	in	r18, 0x3d	; 61
+    1326:	3e b7       	in	r19, 0x3e	; 62
+    1328:	40 91 6f 00 	lds	r20, 0x006F	; 0x80006f <__malloc_margin>
+    132c:	50 91 70 00 	lds	r21, 0x0070	; 0x800070 <__malloc_margin+0x1>
+    1330:	24 1b       	sub	r18, r20
+    1332:	35 0b       	sbc	r19, r21
+    1334:	e0 91 d7 01 	lds	r30, 0x01D7	; 0x8001d7 <__brkval>
+    1338:	f0 91 d8 01 	lds	r31, 0x01D8	; 0x8001d8 <__brkval+0x1>
+    133c:	e2 17       	cp	r30, r18
+    133e:	f3 07       	cpc	r31, r19
+    1340:	a0 f4       	brcc	.+40     	; 0x136a <malloc+0x132>
+    1342:	2e 1b       	sub	r18, r30
+    1344:	3f 0b       	sbc	r19, r31
+    1346:	28 17       	cp	r18, r24
+    1348:	39 07       	cpc	r19, r25
+    134a:	78 f0       	brcs	.+30     	; 0x136a <malloc+0x132>
+    134c:	ac 01       	movw	r20, r24
+    134e:	4e 5f       	subi	r20, 0xFE	; 254
+    1350:	5f 4f       	sbci	r21, 0xFF	; 255
+    1352:	24 17       	cp	r18, r20
+    1354:	35 07       	cpc	r19, r21
+    1356:	48 f0       	brcs	.+18     	; 0x136a <malloc+0x132>
+    1358:	4e 0f       	add	r20, r30
+    135a:	5f 1f       	adc	r21, r31
+    135c:	50 93 d8 01 	sts	0x01D8, r21	; 0x8001d8 <__brkval+0x1>
+    1360:	40 93 d7 01 	sts	0x01D7, r20	; 0x8001d7 <__brkval>
+    1364:	81 93       	st	Z+, r24
+    1366:	91 93       	st	Z+, r25
+    1368:	9f cf       	rjmp	.-194    	; 0x12a8 <malloc+0x70>
+    136a:	f0 e0       	ldi	r31, 0x00	; 0
+    136c:	e0 e0       	ldi	r30, 0x00	; 0
+    136e:	9c cf       	rjmp	.-200    	; 0x12a8 <malloc+0x70>
+
+00001370 <free>:
+free():
+    1370:	cf 93       	push	r28
+    1372:	df 93       	push	r29
+    1374:	00 97       	sbiw	r24, 0x00	; 0
+    1376:	e9 f0       	breq	.+58     	; 0x13b2 <free+0x42>
+    1378:	fc 01       	movw	r30, r24
+    137a:	32 97       	sbiw	r30, 0x02	; 2
+    137c:	13 82       	std	Z+3, r1	; 0x03
+    137e:	12 82       	std	Z+2, r1	; 0x02
+    1380:	a0 91 d9 01 	lds	r26, 0x01D9	; 0x8001d9 <__flp>
+    1384:	b0 91 da 01 	lds	r27, 0x01DA	; 0x8001da <__flp+0x1>
+    1388:	ed 01       	movw	r28, r26
+    138a:	30 e0       	ldi	r19, 0x00	; 0
+    138c:	20 e0       	ldi	r18, 0x00	; 0
+    138e:	10 97       	sbiw	r26, 0x00	; 0
+    1390:	a1 f4       	brne	.+40     	; 0x13ba <free+0x4a>
+    1392:	20 81       	ld	r18, Z
+    1394:	31 81       	ldd	r19, Z+1	; 0x01
+    1396:	82 0f       	add	r24, r18
+    1398:	93 1f       	adc	r25, r19
+    139a:	20 91 d7 01 	lds	r18, 0x01D7	; 0x8001d7 <__brkval>
+    139e:	30 91 d8 01 	lds	r19, 0x01D8	; 0x8001d8 <__brkval+0x1>
+    13a2:	28 17       	cp	r18, r24
+    13a4:	39 07       	cpc	r19, r25
+    13a6:	09 f0       	breq	.+2      	; 0x13aa <free+0x3a>
+    13a8:	61 c0       	rjmp	.+194    	; 0x146c <free+0xfc>
+    13aa:	f0 93 d8 01 	sts	0x01D8, r31	; 0x8001d8 <__brkval+0x1>
+    13ae:	e0 93 d7 01 	sts	0x01D7, r30	; 0x8001d7 <__brkval>
+    13b2:	df 91       	pop	r29
+    13b4:	cf 91       	pop	r28
+    13b6:	08 95       	ret
+    13b8:	ea 01       	movw	r28, r20
+    13ba:	ce 17       	cp	r28, r30
+    13bc:	df 07       	cpc	r29, r31
+    13be:	e8 f5       	brcc	.+122    	; 0x143a <free+0xca>
+    13c0:	4a 81       	ldd	r20, Y+2	; 0x02
+    13c2:	5b 81       	ldd	r21, Y+3	; 0x03
+    13c4:	9e 01       	movw	r18, r28
+    13c6:	41 15       	cp	r20, r1
+    13c8:	51 05       	cpc	r21, r1
+    13ca:	b1 f7       	brne	.-20     	; 0x13b8 <free+0x48>
+    13cc:	e9 01       	movw	r28, r18
+    13ce:	fb 83       	std	Y+3, r31	; 0x03
+    13d0:	ea 83       	std	Y+2, r30	; 0x02
+    13d2:	49 91       	ld	r20, Y+
+    13d4:	59 91       	ld	r21, Y+
+    13d6:	c4 0f       	add	r28, r20
+    13d8:	d5 1f       	adc	r29, r21
+    13da:	ec 17       	cp	r30, r28
+    13dc:	fd 07       	cpc	r31, r29
+    13de:	61 f4       	brne	.+24     	; 0x13f8 <free+0x88>
+    13e0:	80 81       	ld	r24, Z
+    13e2:	91 81       	ldd	r25, Z+1	; 0x01
+    13e4:	02 96       	adiw	r24, 0x02	; 2
+    13e6:	84 0f       	add	r24, r20
+    13e8:	95 1f       	adc	r25, r21
+    13ea:	e9 01       	movw	r28, r18
+    13ec:	99 83       	std	Y+1, r25	; 0x01
+    13ee:	88 83       	st	Y, r24
+    13f0:	82 81       	ldd	r24, Z+2	; 0x02
+    13f2:	93 81       	ldd	r25, Z+3	; 0x03
+    13f4:	9b 83       	std	Y+3, r25	; 0x03
+    13f6:	8a 83       	std	Y+2, r24	; 0x02
+    13f8:	f0 e0       	ldi	r31, 0x00	; 0
+    13fa:	e0 e0       	ldi	r30, 0x00	; 0
+    13fc:	12 96       	adiw	r26, 0x02	; 2
+    13fe:	8d 91       	ld	r24, X+
+    1400:	9c 91       	ld	r25, X
+    1402:	13 97       	sbiw	r26, 0x03	; 3
+    1404:	00 97       	sbiw	r24, 0x00	; 0
+    1406:	b9 f5       	brne	.+110    	; 0x1476 <free+0x106>
+    1408:	2d 91       	ld	r18, X+
+    140a:	3c 91       	ld	r19, X
+    140c:	11 97       	sbiw	r26, 0x01	; 1
+    140e:	cd 01       	movw	r24, r26
+    1410:	02 96       	adiw	r24, 0x02	; 2
+    1412:	82 0f       	add	r24, r18
+    1414:	93 1f       	adc	r25, r19
+    1416:	20 91 d7 01 	lds	r18, 0x01D7	; 0x8001d7 <__brkval>
+    141a:	30 91 d8 01 	lds	r19, 0x01D8	; 0x8001d8 <__brkval+0x1>
+    141e:	28 17       	cp	r18, r24
+    1420:	39 07       	cpc	r19, r25
+    1422:	39 f6       	brne	.-114    	; 0x13b2 <free+0x42>
+    1424:	30 97       	sbiw	r30, 0x00	; 0
+    1426:	51 f5       	brne	.+84     	; 0x147c <free+0x10c>
+    1428:	10 92 da 01 	sts	0x01DA, r1	; 0x8001da <__flp+0x1>
+    142c:	10 92 d9 01 	sts	0x01D9, r1	; 0x8001d9 <__flp>
+    1430:	b0 93 d8 01 	sts	0x01D8, r27	; 0x8001d8 <__brkval+0x1>
+    1434:	a0 93 d7 01 	sts	0x01D7, r26	; 0x8001d7 <__brkval>
+    1438:	bc cf       	rjmp	.-136    	; 0x13b2 <free+0x42>
+    143a:	d3 83       	std	Z+3, r29	; 0x03
+    143c:	c2 83       	std	Z+2, r28	; 0x02
+    143e:	40 81       	ld	r20, Z
+    1440:	51 81       	ldd	r21, Z+1	; 0x01
+    1442:	84 0f       	add	r24, r20
+    1444:	95 1f       	adc	r25, r21
+    1446:	c8 17       	cp	r28, r24
+    1448:	d9 07       	cpc	r29, r25
+    144a:	61 f4       	brne	.+24     	; 0x1464 <free+0xf4>
+    144c:	4e 5f       	subi	r20, 0xFE	; 254
+    144e:	5f 4f       	sbci	r21, 0xFF	; 255
+    1450:	88 81       	ld	r24, Y
+    1452:	99 81       	ldd	r25, Y+1	; 0x01
+    1454:	48 0f       	add	r20, r24
+    1456:	59 1f       	adc	r21, r25
+    1458:	51 83       	std	Z+1, r21	; 0x01
+    145a:	40 83       	st	Z, r20
+    145c:	8a 81       	ldd	r24, Y+2	; 0x02
+    145e:	9b 81       	ldd	r25, Y+3	; 0x03
+    1460:	93 83       	std	Z+3, r25	; 0x03
+    1462:	82 83       	std	Z+2, r24	; 0x02
+    1464:	21 15       	cp	r18, r1
+    1466:	31 05       	cpc	r19, r1
+    1468:	09 f0       	breq	.+2      	; 0x146c <free+0xfc>
+    146a:	b0 cf       	rjmp	.-160    	; 0x13cc <free+0x5c>
+    146c:	f0 93 da 01 	sts	0x01DA, r31	; 0x8001da <__flp+0x1>
+    1470:	e0 93 d9 01 	sts	0x01D9, r30	; 0x8001d9 <__flp>
+    1474:	9e cf       	rjmp	.-196    	; 0x13b2 <free+0x42>
+    1476:	fd 01       	movw	r30, r26
+    1478:	dc 01       	movw	r26, r24
+    147a:	c0 cf       	rjmp	.-128    	; 0x13fc <free+0x8c>
+    147c:	13 82       	std	Z+3, r1	; 0x03
+    147e:	12 82       	std	Z+2, r1	; 0x02
+    1480:	d7 cf       	rjmp	.-82     	; 0x1430 <free+0xc0>
+
+00001482 <__ctype_isfalse>:
+__ctype_isfalse():
+    1482:	99 27       	eor	r25, r25
+    1484:	88 27       	eor	r24, r24
+
+00001486 <__ctype_istrue>:
+__ctype_istrue():
+    1486:	08 95       	ret
+
+00001488 <_exit>:
+exit():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+    1488:	f8 94       	cli
+
+0000148a <__stop_program>:
+__stop_program():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+    148a:	ff cf       	rjmp	.-2      	; 0x148a <__stop_program>
