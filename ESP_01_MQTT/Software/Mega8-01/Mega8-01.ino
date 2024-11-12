@@ -1,23 +1,22 @@
 /*
- * Auswertung Freqeunzeingang
- * Arduino 1.8.19
- *
- * AtMega8
- * PB0  AVR_ICP1          input from level-sensor
- * PD7  AVR_ENA_Sen12V    output, switch level-sensor on/off
- * 
- * ToDo
- * Serial erst einschalten, wenn ESP einen Eingang schaltet, sonst kommt Mist an...????
- * 
- */
+Auswertung Freqeunzeingang
+Arduino 1.8.19
+
+AtMega8
+PB0  AVR_ICP1          input from level-sensor
+PD7  AVR_ENA_Sen12V    output, switch level-sensor on/off
+
+- corresponding software: "ESP8266", always use same Vx.x !!
+ToDo
+
+*/
 
 #include "src/RP_Arduino-SerialCommand/SerialCommand.h"	  		//Serial Command
-
 #include <avr/interrupt.h> 
 
 //-------------------------------------------------------
 //global variables / constants
-char SW_Vers[] = "Mega8_V0.3";
+char SW_Vers[] = "Mega8-V1.0";
 
 const uint8_t AVR_ICP1        = 8;                            //PB0;
 const uint8_t AVR_ENA_Sen12V  = 7;                            //PD7;
@@ -39,12 +38,6 @@ volatile tm ICP;
 uint32_t freq_timeout = 3000;                                 //3s timeout
 uint8_t get_freq = 0;                                         //get ICP-val state machine
 uint8_t rst_timeout = 0;                                      //for check if timeout has happend
-
-
-//+++++++++++++++++++++++++++++++++++++++++++
-
-
-
 
 //---------------------------------------------------------------------
 // create serial command object
@@ -75,7 +68,6 @@ void setup() {
     __asm__("nop\n\t");                                       //Do nothing
   }
 
-
  //-------------------------------------------------------
  // Timer
   noInterrupts();                                           //Timer 1 on, input capture Pin PB0 = ICP1 = 8
@@ -85,8 +77,7 @@ void setup() {
   //TIMSK1  |= (1 << ICIE1) | (1 << TOIE1);                   //Mega 328 input capture interrupt, overflow interrupt
   TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //Mega 8 input capture interrupt, overflow interrupt
   interrupts();
-
-
+  
 }
 
 //####################################################################
@@ -94,7 +85,6 @@ void setup() {
 void loop() {
   //call frequently to handle serial data communication
   sdata.readSerial(); 
-
 
   if(get_freq == 1){
     digitalWrite(AVR_ENA_Sen12V, HIGH);                       //switch sensor on
@@ -106,7 +96,6 @@ void loop() {
     digitalWrite(AVR_ENA_Sen12V, LOW);                       //switch sensor off
   }
   
-
 static uint32_t ms_start_measure;
 if(get_freq == 2){
     ms_start_measure = millis();                              //timeout
@@ -120,57 +109,13 @@ if(get_freq == 2){
  
     if(rst_timeout == 0){
       Serial.printf("ICP1val: %u %u\r\n", ICP.ovf_val, ICP.capture_val);
-      ///Serial.printf("ICP_high: %u \r\n", ICP.ovf_val);
     }
     else{
       Serial.printf("ICP1err: Timeout\r\n");
     }
   }
 
-
-
-
-/*
-  static uint32_t ms_start_measure;
-  
-  if(get_freq == 1){
-    ms_start_measure = millis();                              //timeout
-    get_freq = 0;                                             //only once
-    tm.val_32 = 0;                                            //val to zero
-    ICP1_cnt = 0;                                       
-    digitalWrite(AVR_ENA_Sen12V, HIGH);                       //switch sensor on
-    delay(100);                                               //wait 100mS...
-    noInterrupts();                                           //Timer 1 on, input capture Pin PB0 = ICP1 = 8
-    TCCR1A = 0;
-    TCCR1B = 0;
-    TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/1
-    TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //input capture interrupt, overflow interrupt
-    interrupts();
-    
-    while((millis() - ms_start_measure) < freq_timeout){
-      get_freq_timeout = true;
-      if(ICP1_cnt == 1){
-        get_freq_timeout = false;
-        break;
-      }
-    }
-    digitalWrite(AVR_ENA_Sen12V, LOW);                        //switch sensor off
-    noInterrupts();                                           //Timer 1 off
-    TCCR1A = 0;
-    TCCR1B = 0;
-    interrupts();
- 
-    if(get_freq_timeout == false){
-      Serial.printf("ICP1val: %lu \r\n", tm.val_32);
-    }
-    else{
-      Serial.printf("ICP1err: Timeout \r\n");
-    }
-  }
-*/
-  
 }
-
 
 //####################################################################
 //--------------------------------------------------------------------
@@ -190,9 +135,8 @@ ISR(TIMER1_CAPT_vect){
   ICP.capture_val = ICP.curr_capt_val;
   ICP.curr_ovf_val = 0;
   rst_timeout = 0;
-  
-}
 
+}
 
 //####################################################################
 //--------------------------------------------------------------------

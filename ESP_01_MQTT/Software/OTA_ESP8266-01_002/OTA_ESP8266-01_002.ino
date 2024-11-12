@@ -1,6 +1,3 @@
-
-
-
 /*
 Software für ESP-01 Füllstand Zisterne zu MQTT
 Arduino 1.8.19
@@ -11,14 +8,7 @@ https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMO
 - listens to command "zisterne/cmd/get_freq", if payload "true" is received, send serial response to sensor (mega8) and wait for answer
 - Serial answer from mega8 will be "ICP1val: xx123xx" (value or timeout message)
 - publish "ICP1val:" on MQTT, topic "zisterne/freq"
-
-todo 
-zisterne umbenennen, hier veröffentlicht schon node red!!!
-
-Die Umwandlung der beiden Eingangsstrings in integer funktioniert nicht, verursacht absturz wenn ein wert Null ist!!
-sowohl atoi als auch strtoul
-
-
+- corresponding software: "Mega8", always use same Vx.x !!
 */
 
 #include <ESP8266WiFi.h>
@@ -33,12 +23,11 @@ sowohl atoi als auch strtoul
 
 //-------------------------------------------------------
 //global variables / constants
-char SWVERSION[] = "OTA_ESP8266-V0.4";                  		  //current software version 
+char SWVERSION[] = "OTA_ESP8266-V1.0";                  		  //current software version 
 const char* ssid = "KellerHorst";
 const char* password = "BIRP7913";
 
 const uint8_t Rdy_Pin        = 0;                             //GPIO0; set low to enable Mega8 connection
-
 
 //---------------------------------------------------------------------
 // create serial command object
@@ -62,19 +51,6 @@ const char* topic_cmd_get_freq  = "zisterne/cmd/get_freq";  	//subscribe to get 
 const char* topic_cmd_get_senSW = "zisterne/cmd/senSW";       //subscribe to get softwareversion of mega8
 
 String cmd_true = "true";											                //if command is received, do something
-
-/*
-anpassen
-uint8_t mqtt_pub_val_counter  = 0;
-uint8_t max_pub_vals = 7;
-
-bool is_connected_to_mosqitto = false;                    //true if connection to raspi mosquitto exists
-uint32_t mqtt_reconnect_timeout = 30000;                  //if no mqtt connection, retry after this time 30s
-uint32_t mqtt_rcv_timeout = 3000;                         //alles aus, wenn diese Zeit überschritten wird              
-uint32_t mqtt_rcv_lastms = 0;
-*/
-
-
 
 //---------------------------------------------------------------------
 // webserver
@@ -154,12 +130,8 @@ void loop(void) {
     last_ms = millis();
     MQTTpub_topic(topic_swOwn, SWVERSION);
   }
-  
-  
-  
-  
-}
 
+}
 
 //### Serial #########################################################
 //--------------------------------------------------------------------
@@ -171,23 +143,24 @@ void SEND_SWVERSION() {
 //--------------------------------------------------------------------
 //handle incomeing ICP1val, publish MQTT
 void READ_Serial_ICP1val(){
+  int hVal = 0;
+  int lVal = 0;
+  uint32_t Val = 0;
   char *arg;
-  uint32_t val;
-  uint32_t h_val = 0;
-  uint32_t l_val = 0;
-  arg = sdata.next();                                         // Get the next argument from the SerialCommand object buffer
-  if (arg != NULL) {                                          // As long as it existed, take it
-    //h_val = atoi(arg);
-    h_val = strtoul (arg, NULL, 0);
-    Serial.printf("177 %si \r\n", h_val);
+
+  arg = sdata.next();
+  if (arg != NULL) {
+    hVal = atoi(arg);                                         // Converts a char string to an integer
   }
-  if (arg != NULL) {                                          // As long as it existed, take it
-    //l_val = atoi(arg);
-    l_val = strtoul (arg, NULL, 0);
-    val = (h_val << 16) + l_val;
-    String stringVal = String(val);
-    MQTTpub_topic(topic_freq, stringVal);                           // MQTT publish data
+
+  arg = sdata.next();
+  if (arg != NULL) {
+    lVal = atol(arg);
   }
+
+  Val = (hVal << 16 ) + lVal;
+  String stringVal = String(Val);
+  MQTTpub_topic(topic_freq, stringVal);                       // MQTT publish data
 }
 
 //--------------------------------------------------------------------
@@ -211,13 +184,11 @@ void READ_Serial_SW(){
   } 
 }
 
-
 //-------------------------------------------------------------------
 // non usable data received
 void unrecognized(const char *command) {
   //Serial.println("What?");                                  //debug only
 }
-
 
 //### MQTT ###########################################################
 //--------------------------------------------------------------------
