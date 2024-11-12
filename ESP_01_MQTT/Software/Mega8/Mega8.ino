@@ -1,6 +1,7 @@
 /*
 Auswertung Freqeunzeingang
 Arduino 1.8.19
+https://github.com/rapola/RP_Zisternensensor/blob/main/ESP_01_MQTT/Software
 
 AtMega8
 PB0  AVR_ICP1          input from level-sensor
@@ -25,7 +26,6 @@ const uint8_t PC_4            = 18;                           //not used, input 
 const uint8_t PC_5            = 19;                           //not used, input pullup
 
 const uint8_t AVR_ENA_Serial  = 3;                            //PD3; GPIO0 from ESP
-
 
 struct tm{
   uint16_t capture_val;
@@ -70,12 +70,12 @@ void setup() {
 
  //-------------------------------------------------------
  // Timer
-  noInterrupts();                                           //Timer 1 on, input capture Pin PB0 = ICP1 = 8
+  noInterrupts();                                             //Timer 1 on, input capture Pin PB0 = ICP1 = 8
   TCCR1A = 0;
   TCCR1B = 0;
-  TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);      //noise cancel, rising edge, clock/8
+  TCCR1B |= (1 << ICNC1) | (1 << ICES1) | (1 << CS10);        //noise cancel, rising edge, clock/8
   //TIMSK1  |= (1 << ICIE1) | (1 << TOIE1);                   //Mega 328 input capture interrupt, overflow interrupt
-  TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                   //Mega 8 input capture interrupt, overflow interrupt
+  TIMSK  |= (1 << TICIE1) | (1 << TOIE1);                     //Mega 8 input capture interrupt, overflow interrupt
   interrupts();
   
 }
@@ -89,11 +89,11 @@ void loop() {
   if(get_freq == 1){
     digitalWrite(AVR_ENA_Sen12V, HIGH);                       //switch sensor on
     get_freq = 2;
-    delay(2000);                                               //wait 300mS...
+    delay(2000);                                              //wait 300mS...
     rst_timeout = 1;
   }
   if(get_freq == 0){
-    digitalWrite(AVR_ENA_Sen12V, LOW);                       //switch sensor off
+    digitalWrite(AVR_ENA_Sen12V, LOW);                        //switch sensor off
   }
   
 static uint32_t ms_start_measure;
@@ -122,7 +122,7 @@ if(get_freq == 2){
 //TIM1 OVF 
 ISR(TIMER1_OVF_vect){
   if(ICP.curr_ovf_val < 0xFFFF){
-    ICP.curr_ovf_val ++;                                          // count overflows
+    ICP.curr_ovf_val ++;                                      // count overflows
   }
 }
 

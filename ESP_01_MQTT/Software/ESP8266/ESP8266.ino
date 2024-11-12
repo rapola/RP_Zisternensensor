@@ -1,9 +1,10 @@
 /*
 Software für ESP-01 Füllstand Zisterne zu MQTT
 Arduino 1.8.19
+https://github.com/rapola/RP_Zisternensensor/blob/main/ESP_01_MQTT/Software
 
+- mqtt beispiel
 https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMOSminiD1_x92.V1/Software/WemosD1min-U1_Hackschn_V0.2/WemosD1min-U1_Hackschn_V0.2.ino
-
 - publish Softwarversion every 2s
 - listens to command "zisterne/cmd/get_freq", if payload "true" is received, send serial response to sensor (mega8) and wait for answer
 - Serial answer from mega8 will be "ICP1val: xx123xx" (value or timeout message)
@@ -23,7 +24,7 @@ https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMO
 
 //-------------------------------------------------------
 //global variables / constants
-char SWVERSION[] = "OTA_ESP8266-V1.0";                  		  //current software version 
+char SWVERSION[] = "ESP8266-V1.0";                  		      //current software version 
 const char* ssid = "KellerHorst";
 const char* password = "BIRP7913";
 
