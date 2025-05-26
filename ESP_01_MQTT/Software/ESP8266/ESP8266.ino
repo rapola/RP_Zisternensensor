@@ -25,8 +25,11 @@ https://github.com/rapola/RP_HomeCAN/blob/main/Basis-Module/ESP-System/BASE-WEMO
 //-------------------------------------------------------
 //global variables / constants
 char SWVERSION[] = "ESP8266-V1.0";                  		      //current software version 
-const char* ssid = "KellerHorst";
-const char* password = "BIRP7913";
+//const char* ssid = "KellerHorst";
+//const char* password = "BIRP7913";
+
+const char* ssid = "Taschner_HausNordOst";
+const char* password = "birp7913-14042020";
 
 const uint8_t Rdy_Pin        = 0;                             //GPIO0; set low to enable Mega8 connection
 
