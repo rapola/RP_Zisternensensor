@@ -127,6 +127,10 @@ void loop(void) {
   client.loop();    //MQTT
   delay(10);  // <- fixes some issues with WiFi stability
   
+  if (!client.connected()) {
+    mqtt_connect();
+  }
+  
   //---------------------------------------------------------------------
   // MQTT publish softwareversion
   static uint32_t last_ms;
